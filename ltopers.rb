@@ -3,7 +3,7 @@ require 'formula'
 class Ltopers < Formula
   homepage 'https://github.com/amiaopensource/ltopers'
   url 'http://github.com/amiaopensource/ltopers/archive/v0.0.1.tar.gz'
-  md5 'b43dffc882249c42232ad0856fb1e0c1'
+  sha256 '947463bcd99a07f9bab26b8c35c037f4ecc5a0d565aecd0d00c870f59e59b949'
   
   head 'git://github.com/amiaopensource/ltopers.git'
 
