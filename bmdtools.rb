@@ -11,7 +11,7 @@ class Bmdtools < Formula
   depends_on 'libav' => :build
  
   def install
-     system "make", "SDK_PATH=/usr/local/include"
+     system "make", "SDK_PATH=/usr/local/include", "SYS=Darwin"
      bin.install 'bmdcapture'
      bin.install 'bmdgenlock'
      bin.install 'bmdplay'
