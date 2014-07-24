@@ -2,8 +2,8 @@ require 'formula'
 
 class Decklinksdk < Formula
   homepage 'http://www.blackmagicdesign.com/support/sdks/'
-  url 'http://software.blackmagicdesign.com/SDK/Blackmagic_DeckLink_SDK_10.1.zip'
-  sha256 '9b7bd745c470c3710885f5a3128a8e6ee44052a6684813e30bf9196b863b84a2'
+  url 'http://software.blackmagicdesign.com/SDK/Blackmagic_DeckLink_SDK_10.1.1.zip'
+  sha256 '72ba22362b94182e055200e3c577c196ded61eff20e8d6d2d756a76c79424405'
 
   def install
     bin.install 'Mac/Samples/bin/BypassControl'
