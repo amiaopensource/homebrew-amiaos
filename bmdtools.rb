@@ -7,7 +7,7 @@ class Bmdtools < Formula
   env :std
  
   depends_on 'pkg-config' => :build
-  depends_on 'bastibeckr/amiaos/decklinksdk' => :build
+  depends_on 'amiaopensource/amiaos/decklinksdk' => :build
   depends_on 'libav' => :build
  
   def install
