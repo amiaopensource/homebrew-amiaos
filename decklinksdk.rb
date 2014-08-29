@@ -8,7 +8,7 @@ class Decklinksdk < Formula
   def install
       
     # blackmagic's DeckControl bin names conflict with deckcontrol by BAVC
-    mv "DeckControl", "DeckControlsdk"
+    mv "Mac/Samples/bin/DeckControl", "Mac/Samples/bin/DeckControlsdk"
     
     bin.install 'Mac/Samples/bin/BypassControl'
     bin.install 'Mac/Samples/bin/CaptureFromTape'
