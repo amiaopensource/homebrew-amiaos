@@ -2,8 +2,8 @@ require 'formula'
 
 class Vrecord < Formula
   homepage 'https://github.com/amiaopensource/vrecord'
-  url "https://github.com/amiaopensource/vrecord/archive/v0.5.zip"
-  sha256 "02afb1949b52a90d41d481efcf534718037328ab4c69727515b574069065e8d6"
+  url "https://github.com/amiaopensource/vrecord/archive/V0.6.zip"
+  sha256 "b124adc1894f98d42565dd58bf867192f9dd0f597b4ec85a2eb312451446e7f3"
   head 'https://github.com/amiaopensource/vrecord.git'
 
   depends_on 'amiaopensource/amiaos/bmdtools'
