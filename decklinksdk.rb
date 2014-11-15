@@ -2,8 +2,8 @@ require 'formula'
 
 class Decklinksdk < Formula
   homepage 'http://www.blackmagicdesign.com/support/sdks/'
-  url 'http://software.blackmagicdesign.com/SDK/Blackmagic_DeckLink_SDK_10.1.4.zip'
-  sha256 '65d4517a454f3809fffea1c2e1ceab11887e1e4530f278078a63cd52bb24ff73'
+  url 'http://software.blackmagicdesign.com/SDK/Blackmagic_DeckLink_SDK_10.3.zip'
+  sha256 '7e07867b39ea036e3f9f9cd1b6e9ef627b6a12366e5bb6cf717cb839e7d5b2be'
 
   def install
       
