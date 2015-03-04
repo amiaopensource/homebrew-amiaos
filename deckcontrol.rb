@@ -2,8 +2,8 @@ require 'formula'
 
 class Deckcontrol < Formula
     homepage 'https://github.com/bavc/deckcontrol'
-    url "https://github.com/bavc/deckcontrol/archive/v0.2.zip"
-    sha256 "b9e12036c164c888fe3c42dabba181cfb0e9ddac3229e735ee48eb5d96811ccc"
+    url "https://github.com/bavc/deckcontrol/archive/v0.3.zip"
+    sha256 "2c9bfda0d08a85e2057eeccc24f371183b3f524951ab399773cab20de89a0d77"
     head 'https://github.com/bavc/deckcontrol.git'
 
     depends_on 'amiaopensource/amiaos/decklinksdk' => :build
