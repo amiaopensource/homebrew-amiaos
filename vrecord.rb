@@ -8,7 +8,7 @@ class Vrecord < Formula
 
   depends_on 'amiaopensource/amiaos/bmdtools'
   depends_on "xmlstarlet" => :recommended
-  depends_on "ffmpeg"
+  depends_on "ffmpeg" => [ 'with-ffplay', 'with-openjpeg', 'with-libass', 'with-freetype', 'with-faac' ]
 
   def install
      bin.install 'vrecord'
