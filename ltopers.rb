@@ -2,8 +2,8 @@ require 'formula'
 
 class Ltopers < Formula
   homepage 'https://github.com/amiaopensource/ltopers'
-  url 'http://github.com/amiaopensource/ltopers/archive/v0.0.2.tar.gz'
-  sha256 '62f812d308121fe4bd6cfdbcbefaa37b1068c6cee907ced4ed01f26b24c43394'
+  url 'https://github.com/amiaopensource/ltopers/archive/v0.0.3.zip'
+  sha256 '08ef384631045243f19c9bdbbdff70fd65263fdb79a632df565e2aef998900e8'
   
   head 'git://github.com/amiaopensource/ltopers.git'
 
