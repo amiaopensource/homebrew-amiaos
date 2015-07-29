@@ -13,7 +13,6 @@ class Vrecord < Formula
   depends_on "caskroom/cask/brew-cask"
 
   def install
-     system "brew", "cask", "install", "pashua"
      bin.install 'vrecord'
      bin.install 'vstop'
      bin.install 'shotcutsaveas'
