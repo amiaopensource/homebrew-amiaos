@@ -14,7 +14,6 @@ class Vrecord < Formula
 
   def install
      bin.install 'vrecord'
-     bin.install 'vstop'
      bin.install 'shotcutsaveas'
   end
 end
