@@ -15,5 +15,6 @@ class Ltopers < Formula
     bin.install "ltoperconfig"
     bin.install "mountlto"
     bin.install "writelto"
+    bin.install "ltofunctions"
   end
 end
