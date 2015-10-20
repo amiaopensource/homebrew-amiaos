@@ -2,8 +2,8 @@ require 'formula'
 
 class Ltopers < Formula
   homepage 'https://github.com/amiaopensource/ltopers'
-  url 'https://github.com/amiaopensource/ltopers/archive/v0.0.6.zip'
-  sha256 '6acc61a3da1f7cafd6f9c0dd627742c5cfdbed26b78dd86f3754bb1bbd7f3fc4'
+  url 'https://github.com/amiaopensource/ltopers/archive/v0.0.7.zip'
+  sha256 'c5a02378963988cdf4f30b0b16a781364439513b363e125b50bdafff19362b9b'
   
   head 'git://github.com/amiaopensource/ltopers.git'
 
@@ -16,5 +16,6 @@ class Ltopers < Formula
     bin.install "mountlto"
     bin.install "writelto"
     bin.install "ltofunctions"
+    bin.install "renameschemas"
   end
 end
