@@ -2,8 +2,8 @@ require 'formula'
 
 class Vrecord < Formula
   homepage 'https://github.com/amiaopensource/vrecord'
-  url "https://github.com/amiaopensource/vrecord/archive/v0.7.9.zip"
-  sha256 "0b4eaddd704729a79b9120a908c8317654c82b57ebfb5b3d0ea04f06cf1d1494"
+  url "https://github.com/amiaopensource/vrecord/archive/v0.7.10.zip"
+  sha256 "efdf09276643b23fbca99e9e7f44020b6e0052534540d81c74ca2e7ad246657f" 
   head 'https://github.com/amiaopensource/vrecord.git'
 
   depends_on "sdl"
