@@ -8,7 +8,7 @@ class Vrecord < Formula
 
   depends_on "sdl"
   depends_on "cowsay"
-  depends_on "ffmpeg" => [ 'with-ffplay', 'with-libass', 'with-freetype', 'with-faac' ]
+  depends_on "ffmpeg" => [ 'with-ffplay', 'with-libass', 'with-freetype' ]
   depends_on 'amiaopensource/amiaos/bmdtools'
   depends_on "xmlstarlet" => :recommended
   depends_on "caskroom/cask/brew-cask"
