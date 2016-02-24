@@ -5,7 +5,7 @@ class Decklinksdk < Formula
   url 'http://software.blackmagicdesign.com/SDK/Blackmagic_DeckLink_SDK_10.1.4.zip'
   mirror 'http://slackware.uk/sbosrcarch/by-name/multimedia/vlc/Blackmagic_DeckLink_SDK_10.1.4.zip'
   sha256 '65d4517a454f3809fffea1c2e1ceab11887e1e4530f278078a63cd52bb24ff73'
-  rev 1
+  revision 1
 
   def install
       
