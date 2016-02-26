@@ -2,12 +2,13 @@ require 'formula'
 
 class Ltopers < Formula
   homepage 'https://github.com/amiaopensource/ltopers'
-  url 'https://github.com/amiaopensource/ltopers/archive/v0.0.8.zip'
-  sha256 '5f7bced428f230253a1bbba11d4ad08f1cdd293aae8626ab581718a77f271bb6'
+  url 'https://github.com/amiaopensource/ltopers/archive/v0.0.9.zip'
+  sha256 '93b792bb826abc04b2bf15431c31dfa502e053867cc1da948f70542728bf9e49'
   
   head 'git://github.com/amiaopensource/ltopers.git'
 
   depends_on 'xmlstarlet'
+  depends_on 'mediamicroservices/mm/mm'
 
   def install
     bin.install "formatlto"
