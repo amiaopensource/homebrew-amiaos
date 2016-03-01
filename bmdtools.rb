@@ -1,10 +1,10 @@
 class Bmdtools < Formula
   desc "Basic capture and play programs for Blackmagic Design Decklink"
-  homepage "https://github.com/lu-zero/bmdtools"
-  url "https://github.com/lu-zero/bmdtools/archive/v0.1.tar.gz"
-  sha256 "5576bb626fe7a69a54decb7eade7ab4254228cba333eebc292ffcbc492ef142f"
-  head "https://github.com/lu-zero/bmdtools.git"
-  revision 1
+  homepage "https://github.com/amiaopensource/bmdtools"
+  url "https://github.com/amiaopensource/bmdtools/archive/v0.2alpha.tar.gz"
+  sha256 "286ee1c6db52b1d76c59e9a93456dc43b5ac3b6bf32ec765b5718fc286b703c6"
+  head "https://github.com/amiaopensource/bmdtools.git"
+  version "0.2alpha"
 
   depends_on "pkg-config" => :build
   depends_on "decklinksdk" => :build
