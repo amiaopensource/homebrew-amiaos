@@ -8,12 +8,30 @@ class Qctools < Formula
   depends_on "qt5"
   depends_on "decklinksdk"
   depends_on "ffmpeg"
+  depends_on "freetype"
+
+  patch :DATA
 
   def install
     cd "Project/Homebrew" do
-      qmake = "#{Formula["qt5"].bin}/qmake"
-      system qmake, "qctools.pro"
+      system "#{Formula["qt5"].bin}/qmake", "qctools.pro"
       system "make"
+      prefix.install "QCTools.app"
     end
   end
 end
+
+__END__
+diff --git a/Project/Homebrew/qctools.pro b/Project/Homebrew/qctools.pro
+index d6b17ac..cd9c5ac 100755
+--- a/Project/Homebrew/qctools.pro
++++ b/Project/Homebrew/qctools.pro
+@@ -7,7 +7,7 @@ QMAKE_TARGET_BUNDLE_PREFIX = org.bavc
+ 
+ QT_CONFIG -= no-pkg-config
+ 
+-include ( $$system(brew --prefix qwt-qt5)/features/qwt.prf )
++include ( "/usr/local/opt/qwt-qt5/features/qwt.prf" )
+ 
+ CONFIG += qt qwt release no_keywords
+ 
