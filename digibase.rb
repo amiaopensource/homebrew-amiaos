@@ -7,6 +7,7 @@ class Digibase < Formula
   head 'https://github.com/amiaopensource/digibase.git'
 
   depends_on "mysql"
+  depends_on "caskroom/cask/brew-cask"
 
   def install
      bin.install 'setuptables'
