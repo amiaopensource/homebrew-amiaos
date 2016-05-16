@@ -3,11 +3,10 @@ require 'formula'
 class Digibase < Formula
   homepage 'https://github.com/amiaopensource/digibase'
   url "https://github.com/amiaopensource/digibase/archive/v0.1-beta.zip"
-  sha256 "417f06922de26dac8fcef7c4770034064add901d" 
+  sha256 "e69c23135e188bf7a2e71aa81fd1a9993131d0d1a239f879206eada302f28207" 
   head 'https://github.com/amiaopensource/digibase.git'
 
   depends_on "mysql"
-  depends_on "caskroom/cask/brew-cask"
 
   def install
      bin.install 'setuptables'
