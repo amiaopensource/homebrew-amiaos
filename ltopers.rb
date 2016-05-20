@@ -4,6 +4,7 @@ class Ltopers < Formula
   homepage 'https://github.com/amiaopensource/ltopers'
   url 'https://github.com/amiaopensource/ltopers/archive/v0.1.2.zip'
   sha256 '4b08ef199fecf4f4281df622b1646733fd1a1c563bd9711b22e72a3ecf556276'
+  revision 2
   
   head 'git://github.com/amiaopensource/ltopers.git'
 
