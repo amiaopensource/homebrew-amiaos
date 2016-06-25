@@ -1,8 +1,8 @@
 class QwtQt5 < Formula
   desc "Qt Widgets for Technical Applications (for Qt5)"
   homepage "http://qwt.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/qwt/qwt/6.1.2/qwt-6.1.2.tar.bz2"
-  sha256 "2b08f18d1d3970e7c3c6096d850f17aea6b54459389731d3ce715d193e243d0c"
+  url "https://downloads.sourceforge.net/project/qwt/qwt/6.1.3/qwt-6.1.3.tar.bz2"
+  sha256 "f3ecd34e72a9a2b08422fb6c8e909ca76f4ce5fa77acad7a2883b701f4309733"
 
   keg_only "Qwt for Qt 5 conflicts with Qwt for Qt 4"
 
