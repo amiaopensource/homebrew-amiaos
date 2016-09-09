@@ -2,8 +2,8 @@ require 'formula'
 
 class Vrecord < Formula
   homepage 'https://github.com/amiaopensource/vrecord'
-  url "https://github.com/amiaopensource/vrecord/archive/v0.7.18.zip"
-  sha256 "a201db150fe792ef68f2530eef9416ff974a0923f338eb53e26fca3136d51da1" 
+  url "https://github.com/amiaopensource/vrecord/archive/v0.7.19.zip"
+  sha256 "7abdf253b8531fada690e1745a4a16ab9fcc46291aa1941671a09a0bab857571" 
   head 'https://github.com/amiaopensource/vrecord.git'
 
 
@@ -12,6 +12,7 @@ class Vrecord < Formula
   depends_on "ffmpeg" => [ 'with-ffplay', 'with-freetype' ]
   depends_on 'amiaopensource/amiaos/bmdtools'
   depends_on "xmlstarlet" => :recommended
+  depends_on "mpv"
 
   def install
      bin.install 'vrecord'
