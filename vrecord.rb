@@ -5,7 +5,8 @@ class Vrecord < Formula
   url "https://github.com/amiaopensource/vrecord/archive/v0.7.25.zip"
   sha256 "42eef7fdf320b03613689041f00ebaa23cef847f5dc34e25f970be617f2d90ba" 
   head 'https://github.com/amiaopensource/vrecord.git'
-
+  revision 1
+  
   depends_on "sdl"
   depends_on "cowsay"
   depends_on "ffmpeg" => [ 'with-sdl2', 'with-freetype' ]
@@ -15,6 +16,5 @@ class Vrecord < Formula
 
   def install
      bin.install 'vrecord'
-     bin.install 'shotcutsaveas'
   end
 end
