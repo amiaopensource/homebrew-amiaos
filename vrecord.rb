@@ -5,7 +5,7 @@ class Vrecord < Formula
   url "https://github.com/amiaopensource/vrecord/archive/v0.7.25.zip"
   sha256 "42eef7fdf320b03613689041f00ebaa23cef847f5dc34e25f970be617f2d90ba" 
   head 'https://github.com/amiaopensource/vrecord.git'
-  revision 1
+  revision 2
   
   depends_on "sdl"
   depends_on "cowsay"
@@ -16,5 +16,6 @@ class Vrecord < Formula
 
   def install
      bin.install 'vrecord'
+     prefix.install 'vrecord_logo.png'
   end
 end
