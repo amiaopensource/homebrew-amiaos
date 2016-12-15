@@ -14,20 +14,20 @@ class Vrecord < Formula
   depends_on "mpv"
 
   def install
-     bin.install 'vrecord'
-     prefix.install 'vrecord_logo.png'
-     man1.install 'vrecord.1'
+    bin.install 'vrecord'
+    prefix.install 'vrecord_logo.png'
+    man1.install 'vrecord.1'
   end
   def post_install;
-      puts "Checking for dependency Pashua. If Pashua is not found will attempt to install"
+    puts "Checking for dependency Pashua. If Pashua is not found will attempt to install"
       if File.exist? File.expand_path '/Applications/Pashua.app'
         puts 'Pashua was found'
       else
         if `brew cask ls --versions pashua 2>&1 | head -n1`.include? 'Warning: pashua is not installed'
-            puts 'installing Pashua'
-            system `echo 'brew cask install pashua > /dev/null'`
-          else
-            puts 'Pashua was found'
+          puts 'installing Pashua'
+          system `echo 'brew cask install pashua > /dev/null'`
+        else
+          puts 'Pashua was found'
         end
       end
   end
