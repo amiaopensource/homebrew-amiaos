@@ -1,9 +1,9 @@
 class Decklinksdk < Formula
   desc "The Blackmagic Design Decklink Software Development Kit libraries"
   homepage "https://www.blackmagicdesign.com/support/family/capture-and-playback"
-  url "http://slackware.uk/sbosrcarch/by-name/multimedia/vlc/Blackmagic_DeckLink_SDK_10.1.4.zip"
-  sha256 "65d4517a454f3809fffea1c2e1ceab11887e1e4530f278078a63cd52bb24ff73"
-  revision 3
+  url "https://github.com/amiaopensource/decklinksdk/archive/v10.1.4.tar.gz"
+  sha256 "f0cda862b8f8ffc05695180f2cec1998b1ec70dc280dc67c70b6c711a1950ffc"
+  head "https://github.com/amiaopensource/decklinksdk.git"
 
   def install
     include.install Dir["Mac/include/*"]
