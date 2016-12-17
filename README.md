@@ -1,6 +1,7 @@
 # homebrew-amiaos
 Homebrew tap for AMIA Open Source formulae:
 
+- audiorecorder
 - bmdtools
 - deckcontrol
 - decklinksdk
