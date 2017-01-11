@@ -2,8 +2,8 @@ require 'formula'
 
 class Pbprotracktor < Formula
   homepage 'https://github.com/amiaopensource/pbprotracktor'
-  url "https://github.com/amiaopensource/pbprotracktor/archive/v20170111.tar.gz"
-  sha256 "5f6082407ca9e771a39193034b78b98af89c189daa757421ff4b8f4b8c133461" 
+  url "https://github.com/amiaopensource/pbprotracktor/archive/v20170111-2.tar.gz"
+  sha256 "fe2d3967ca3be964d7f06ec25d34bbd6ecdd916c6084ad460d01a2d56981e3bc" 
   head 'https://github.com/amiaopensource/pbprotracktor.git'
 
   depends_on "mysql"
