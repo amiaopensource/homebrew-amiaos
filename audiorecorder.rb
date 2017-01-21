@@ -2,8 +2,8 @@ require 'formula'
 
 class Audiorecorder < Formula
   homepage 'https://github.com/amiaopensource/audiorecorder'
-  url "https://github.com/amiaopensource/audiorecorder/archive/0.0.02.zip"
-  sha256 "34db6d0c359162bb4dee27aadbf641c866568954c4ad0e7966bb03ff15c7daf6"
+  url "https://github.com/amiaopensource/audiorecorder/archive/0.0.03.tar.gz"
+  sha256 "9741683835f9da6f3f05e346b826d93aba21384c3ed72df8fa07b47a957029e1"
   
   depends_on "sdl"
   depends_on "ffmpeg" => [ 'with-sdl2', 'with-freetype' ]
