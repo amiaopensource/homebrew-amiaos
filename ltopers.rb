@@ -2,8 +2,8 @@ require 'formula'
 
 class Ltopers < Formula
   homepage 'https://github.com/amiaopensource/ltopers'
-  url 'https://github.com/amiaopensource/ltopers/archive/v0.1.6.tar.gz'
-  sha256 'd12404d9dd07f5027b47c23902bf83baf28572972c206f99ad1ace6b480e972c'
+  url 'https://github.com/amiaopensource/ltopers/archive/v0.1.7.tar.gz'
+  sha256 '9cdbc96f4c03ef4f694bb3149d51c890117f74ed5e0522c1673e218e71c2f2d7'
   head 'git://github.com/amiaopensource/ltopers.git'
   revision 2
 
@@ -21,5 +21,6 @@ class Ltopers < Formula
     bin.install "indexschemas"
     bin.install "collectionchecksum"
     bin.install "verifylto"
+    bin.install "ingestschemas"
   end
 end
