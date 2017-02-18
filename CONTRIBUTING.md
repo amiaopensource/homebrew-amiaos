@@ -1,6 +1,6 @@
 # Contributing Guidelines
 
-## Semantic Versioning
+## Versioning
 
 We encourage the use of either:
 
