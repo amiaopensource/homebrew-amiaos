@@ -5,7 +5,7 @@ class Audiorecorder < Formula
   url "https://github.com/amiaopensource/audiorecorder/archive/0.0.04.tar.gz"
   sha256 "b16aa7e17b3ae6df58a64d92a30b210c8e5c0f8edf4badb410743bbfceee6129"
   head 'https://github.com/amiaopensource/audiorecorder.git'
-  revision 2
+  revision 3
   
   depends_on "sdl"
   depends_on "ffmpeg" => [ 'with-sdl2', 'with-freetype' ]
@@ -27,7 +27,7 @@ class Audiorecorder < Formula
       else
         if `brew cask ls --versions pashua 2>&1 | head -n1`.include? 'Warning: pashua is not installed'
           puts 'installing Pashua'
-          system `echo 'brew cask install pashua > /dev/null'`
+          system `echo 'brew install Caskroom/cask/pashua > /dev/null'`
         else
           puts 'Pashua was found'
         end
