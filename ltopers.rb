@@ -13,7 +13,6 @@ class Ltopers < Formula
 
   def install
     bin.install "formatlto"
-    bin.install "lto2filemaker"
     bin.install "ltoperconfig"
     bin.install "mountlto"
     bin.install "writelto"
