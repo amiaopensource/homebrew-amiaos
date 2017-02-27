@@ -5,6 +5,7 @@ class Vrecord < Formula
   url "https://github.com/amiaopensource/vrecord/archive/v0.7.27.zip"
   sha256 "acb9c82060f5ed76e762340edeb9daf92d19f15ee1afc3abe80baf05c67c9e2e" 
   head 'https://github.com/amiaopensource/vrecord.git'
+  revision 1
   
   depends_on "sdl"
   depends_on "cowsay"
@@ -25,7 +26,7 @@ class Vrecord < Formula
       else
         if `brew cask ls --versions pashua 2>&1 | head -n1`.include? 'Warning: pashua is not installed'
           puts 'installing Pashua'
-          system `echo 'brew cask install pashua > /dev/null'`
+          system `echo 'brew install Caskroom/cask/pashua > /dev/null'`
         else
           puts 'Pashua was found'
         end
