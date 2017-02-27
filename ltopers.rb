@@ -5,7 +5,7 @@ class Ltopers < Formula
   url 'https://github.com/amiaopensource/ltopers/archive/v0.1.9.tar.gz'
   sha256 'dda5cb09613b17cb98ce258ded3020b67fdb6765ced0d81c046a3377db992da6'
   head 'git://github.com/amiaopensource/ltopers.git'
-  revision 4
+  revision 5
 
   depends_on 'coreutils'
   depends_on 'xmlstarlet'
@@ -21,7 +21,6 @@ class Ltopers < Formula
     bin.install "verifylto"
     bin.install "ingestschemas"
     bin.install "searchlto"
-    bin.install "ingestschemas"
     bin.install "ingestcollectionchecksum"
   end
 end
