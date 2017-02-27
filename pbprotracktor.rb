@@ -2,15 +2,14 @@ require 'formula'
 
 class Pbprotracktor < Formula
   homepage 'https://github.com/amiaopensource/pbprotracktor'
-  url "https://github.com/amiaopensource/pbprotracktor/archive/v20170111-2.tar.gz"
-  sha256 "fe2d3967ca3be964d7f06ec25d34bbd6ecdd916c6084ad460d01a2d56981e3bc" 
+  url "https://github.com/amiaopensource/pbprotracktor/archive/v20170227.tar.gz"
+  sha256 "081e27ba510eeb6d157ca282508c8ffc06707fdd354157c36df2161c9606fe5b" 
   head 'https://github.com/amiaopensource/pbprotracktor.git'
 
   depends_on "mysql"
   depends_on "postgresql"
 
   def install
-     bin.install 'pbcore2resourcespace.xsl'
      bin.install 'pbprotracktor'
      bin.install 'prot2rs'
   end
