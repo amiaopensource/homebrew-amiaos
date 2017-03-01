@@ -2,10 +2,9 @@ require 'formula'
 
 class Ltopers < Formula
   homepage 'https://github.com/amiaopensource/ltopers'
-  url 'https://github.com/amiaopensource/ltopers/archive/v0.1.9.tar.gz'
-  sha256 'dda5cb09613b17cb98ce258ded3020b67fdb6765ced0d81c046a3377db992da6'
+  url 'https://github.com/amiaopensource/ltopers/archive/v0.1.10.tar.gz'
+  sha256 'bb1ee66f5a9c7a1e3d07c16d0d0b2eb707bf475a4d4cf77941c2c62952cafc55'
   head 'git://github.com/amiaopensource/ltopers.git'
-  revision 5
 
   depends_on 'coreutils'
   depends_on 'xmlstarlet'
