@@ -5,11 +5,13 @@ class Audiorecorder < Formula
   url "https://github.com/amiaopensource/audiorecorder/archive/0.1.00.zip"
   sha256 "4c300fe1bb21aaf27a99fc6d67da7900b42105354124517096d04fb7674a4aa0"
   head 'https://github.com/amiaopensource/audiorecorder.git'
+  revision 1
   
   depends_on "sdl"
   depends_on "ffmpeg" => [ 'with-sdl2', 'with-freetype' ]
   depends_on "mpv"
   depends_on "sox"
+  depends_on "dialog"
 
   def install
     bin.install 'audiorecorder'
