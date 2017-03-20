@@ -21,5 +21,6 @@ class Ltopers < Formula
     bin.install "ingestschemas"
     bin.install "searchlto"
     bin.install "ingestcollectionchecksum"
+    bin.install "migratelto"
   end
 end
