@@ -2,8 +2,8 @@ require 'formula'
 
 class Ltopers < Formula
   homepage 'https://github.com/amiaopensource/ltopers'
-  url 'https://github.com/amiaopensource/ltopers/archive/v0.1.11.tar.gz'
-  sha256 'e0ba8a59ea0523bfd3920f1fc524563f7daa1d86ecffd9bbef116dc51d59fa6a'
+  url 'https://github.com/amiaopensource/ltopers/archive/v0.1.12.tar.gz'
+  sha256 'c2f355eed18f398174eb4e14eb4ec99e58cd18ae02191813d3ea0b6b82bc3d2d'
   head 'git://github.com/amiaopensource/ltopers.git'
 
   depends_on 'coreutils'
@@ -21,5 +21,6 @@ class Ltopers < Formula
     bin.install "ingestschemas"
     bin.install "searchlto"
     bin.install "ingestcollectionchecksum"
+    bin.install "readlto"
   end
 end
