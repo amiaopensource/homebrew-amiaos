@@ -17,8 +17,13 @@ class Qctools < Formula
     ENV["PATH"] = "#{path}:#{HOMEBREW_PREFIX}/bin"
 
     cd "Project/QtCreator" do
-      system "qmake", "qctools.pro"
+      cd "qctools-lib"
+      system "qmake", "qctools-lib.pro"
       system "make"
+      cd "../qctools-gui"
+      system "qmake", "qctools-gui.pro"
+      system "make"
+      cd ".."
       prefix.install "qctools-gui/QCTools.app"
     end
   end
