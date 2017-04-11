@@ -9,8 +9,8 @@ class Qctools < Formula
   depends_on "amiaopensource/amiaos/qwt-qt5"
   depends_on "qt"
   depends_on "decklinksdk"
-  depends_on "ffmpeg"
   depends_on "freetype"
+  depends_on "ffmpeg" => ["with-freetype"]
 
   def install
     ENV["QCTOOLS_USE_BREW"]="true"
