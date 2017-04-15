@@ -9,6 +9,7 @@ Homebrew tap for AMIA Open Source formulae:
 - **LTOpers** — Scripts for doing stuff with LTFS.
 - **mkvparse**
 - **pbprotracktor** — Make postgres calls to public broadcasting scheduling databases to produce a PBCore XML output.
+- **qcli**
 - **QCTools**
 - **qwt-qt5**
 - **vrecord** — Open-source software for capturing a video signal and turning it into a digital file.
