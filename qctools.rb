@@ -1,8 +1,8 @@
 class Qctools < Formula
   desc "Quality control archival video via libavfilter."
   homepage "https://bavc.org/preserve-media/preservation-tools"
-  url "https://github.com/bavc/qctools/archive/v0.7.3.tar.gz"
-  sha256 "e30dc3618598d7ad1fc663b5060dbaeadacfcb795378c7c4e579aa08ca9c6540"
+  url "https://github.com/bavc/qctools/archive/v0.8.tar.gz"
+  sha256 "ad8dc56465db2d03dd804ef0d322d04a24cd9bcd2daba95d7f2aca789cc8a6aa"
   head "https://github.com/bavc/qctools.git"
 
   depends_on "pkg-config" => :build
