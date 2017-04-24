@@ -8,7 +8,7 @@ We encourage the writing of portable code. Often only little additional work is 
 
 We encourage the use of either:
 
+- date-based versioning i.e. the `YYYY-MM-DD` format (e.g. `v2017-02-18`)
 - [semantic versioning](http://semver.org/) i.e. the `major.minor.patch` format (e.g. `v1.17.2`)
-- date-based versioning i.e. the `YYYYMMDD` format (e.g. `v20170218`)
 
 for the releases.
