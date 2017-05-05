@@ -1,8 +1,8 @@
 class Ffmprovisr < Formula
   desc ""
   homepage ""
-  url "https://github.com/amiaopensource/ffmprovisr/archive/v2017-04-19.tar.gz"
-  sha256 "4120fb650d35ab8fa8b96e6ec78740b3ade27249dd4193d858ffb1956a6098dc"
+  url "https://github.com/amiaopensource/ffmprovisr/archive/v2017-05-05.tar.gz"
+  sha256 "914952725bcf481174ffb1b7c2915eede7d2162de4e2c6d884faf4e10b8f93f8"
 
   def install
     bin.install 'scripts/ffmprovisr'
