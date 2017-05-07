@@ -1,5 +1,3 @@
-require "formula"
-
 class Vrecord < Formula
   homepage "https://github.com/amiaopensource/vrecord"
   url "https://github.com/amiaopensource/vrecord/archive/v0.7.28.tar.gz"
