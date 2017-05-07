@@ -1,5 +1,3 @@
-require 'formula'
-
 class Ltopers < Formula
   homepage 'https://github.com/amiaopensource/ltopers'
   url 'https://github.com/amiaopensource/ltopers/archive/v0.1.16.tar.gz'

@@ -1,5 +1,3 @@
-require 'formula'
-
 class Digibase < Formula
   homepage 'https://github.com/amiaopensource/digibase'
   url "https://github.com/amiaopensource/digibase/archive/v0.1-beta.zip"
