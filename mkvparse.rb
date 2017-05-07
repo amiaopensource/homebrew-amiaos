@@ -1,5 +1,3 @@
-require 'formula'
- 
 class Mkvparse < Formula
   homepage 'https://github.com/vi/mkvparse'
   head 'https://github.com/vi/mkvparse.git'
