@@ -1,5 +1,3 @@
-require 'formula'
-
 class Pbprotracktor < Formula
   homepage 'https://github.com/amiaopensource/pbprotracktor'
   url "https://github.com/amiaopensource/pbprotracktor/archive/v20170407.tar.gz"
