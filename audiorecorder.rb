@@ -1,5 +1,3 @@
-require "formula"
-
 class Audiorecorder < Formula
   homepage "https://github.com/amiaopensource/audiorecorder"
   url "https://github.com/amiaopensource/audiorecorder/archive/0.1.02.zip"
