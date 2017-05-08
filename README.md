@@ -3,6 +3,7 @@ Homebrew tap for AMIA Open Source formulae:
 
 - **audiorecorder** — Tool for calibration and recording of analog audio sources.
 - **bmdtools** — Basic capture and play programs for Blackmagic Design Decklink (forked from https://github.com/lu-zero/bmdtools).
+- **cable-bible.rb** — A comprehensive guide to cables and connectors used in audiovisual archiving.
 - **deckcontrol** — Control an attached videodeck via Blackmagic Design Decklink SDK.
 - **decklinksdk** — An unofficial repository for openly-licensed SDK files from Blackmagic’s Desktop Video software development kit.
 - **digibase** — Uses MySQL to create a database which tracks tapes through a digitization workflow, designed to work with vrecord and [mediamicroservices](https://github.com/mediamicroservices).
