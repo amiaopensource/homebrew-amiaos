@@ -5,6 +5,7 @@ class Vrecord < Formula
   sha256 "6aac56382e4b8229a55966a4a482d1979ceeae37d428ae6a2d74a35b78faf6ad"
   head "https://github.com/amiaopensource/vrecord.git"
 
+  depends_on "doxygen"
   depends_on "sdl"
   depends_on "cowsay"
   depends_on "ffmpeg" => ["with-sdl2", "with-freetype"]
