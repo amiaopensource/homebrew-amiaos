@@ -6,6 +6,7 @@ class Qcli < Formula
   head "https://github.com/bavc/qctools.git"
   revision 2
 
+  depends_on "doxygen"
   depends_on "pkg-config" => :build
   depends_on "qwt"
   depends_on "qt"
@@ -13,8 +14,6 @@ class Qcli < Formula
 
   def install
     ENV["QCTOOLS_USE_BREW"]="true"
-    path = ENV["PATH"]
-    ENV["PATH"] = "#{path}:#{HOMEBREW_PREFIX}/bin"
 
     cd "Project/QtCreator" do
       cd "qctools-lib"
