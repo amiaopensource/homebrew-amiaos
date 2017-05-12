@@ -6,7 +6,6 @@ class Ltopers < Formula
   head "https://github.com/amiaopensource/ltopers.git"
 
   depends_on "coreutils"
-  depends_on "doxygen"
   depends_on "xmlstarlet"
   depends_on "mediamicroservices/mm/mm"
 
