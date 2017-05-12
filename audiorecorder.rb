@@ -5,7 +5,6 @@ class Audiorecorder < Formula
   sha256 "37ecde4a080f95b882c6642e2a35b031253c9bb5208a4469fdf19157a20ca257"
   head "https://github.com/amiaopensource/audiorecorder.git"
 
-  depends_on "doxygen"
   depends_on "sdl"
   depends_on "ffmpeg" => ["with-sdl2", "with-freetype"]
   depends_on "mpv"
