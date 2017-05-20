@@ -3,8 +3,8 @@ class Ltopers < Formula
   homepage "https://github.com/amiaopensource/ltopers"
   url "https://github.com/amiaopensource/ltopers/archive/v2017-05-20.tar.gz"
   sha256 "85323514cf12de4a3eea2883963242371986654c473fc26fb99efe9383a2361e"
-  head "https://github.com/amiaopensource/ltopers.git"
   version "2017-05-20"
+  head "https://github.com/amiaopensource/ltopers.git"
   
   option "with-db", "Build database-related commands"
   option "with-cuny", "Build database-related and CUNY-specific commands"
