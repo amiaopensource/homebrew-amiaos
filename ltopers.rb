@@ -14,12 +14,12 @@ class Ltopers < Formula
   depends_on "xmlstarlet"
 
   def install
-    bin.install "ltopers"
     bin.install "formatlto"
+    bin.install "ltopers"
     bin.install "mountlto"
     bin.install "readlto"
-    bin.install "writelto"
     bin.install "verifylto"
+    bin.install "writelto"
  
     if build.with? "db"
       bin.install "ingestcollectionchecksum"
@@ -28,12 +28,12 @@ class Ltopers < Formula
     end
     
     if build.with? "cuny"
+      bin.install "collectionchecksum"
+      bin.install "indexschemas"
       bin.install "ingestcollectionchecksum"
       bin.install "ingestschemas"
-      bin.install "searchlto"
       bin.install "renameschemas"
-      bin.install "indexschemas"
-      bin.install "collectionchecksum"
+      bin.install "searchlto"
     end
   end
 end
