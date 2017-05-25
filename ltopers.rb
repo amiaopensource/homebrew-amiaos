@@ -21,16 +21,19 @@ class Ltopers < Formula
     bin.install "verifylto"
     bin.install "writelto"
  
-    if build.with? "db" || build.with? "cuny"
+    if build.with? "db"
       bin.install "ingestcollectionchecksum"
       bin.install "ingestschemas"
       bin.install "searchlto"
     end
     
     if build.with? "cuny"
-      bin.install "collectionchecksum"
-      bin.install "indexschemas"
+      bin.install "ingestcollectionchecksum"
+      bin.install "ingestschemas"
+      bin.install "searchlto"
       bin.install "renameschemas"
+      bin.install "indexschemas"
+      bin.install "collectionchecksum"
     end
   end
 end
