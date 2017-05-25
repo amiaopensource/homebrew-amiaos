@@ -20,20 +20,18 @@ class Ltopers < Formula
     bin.install "readlto"
     bin.install "verifylto"
     bin.install "writelto"
+    man1.install "ltopers.1"
  
-    if build.with? "db"
+    if build.with?("db") || build.with?("cuny")
       bin.install "ingestcollectionchecksum"
       bin.install "ingestschemas"
       bin.install "searchlto"
-    end
-    
-    if build.with? "cuny"
-      bin.install "ingestcollectionchecksum"
-      bin.install "ingestschemas"
-      bin.install "searchlto"
-      bin.install "renameschemas"
-      bin.install "indexschemas"
-      bin.install "collectionchecksum"
+
+      if build.with? "cuny"
+        bin.install "collectionchecksum"
+        bin.install "indexschemas"
+        bin.install "renameschemas"
+      end
     end
   end
 end
