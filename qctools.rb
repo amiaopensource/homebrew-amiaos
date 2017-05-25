@@ -9,7 +9,6 @@ class Qctools < Formula
   depends_on "pkg-config" => :build
   depends_on "amiaopensource/amiaos/qwt-qt5"
   depends_on "qt"
-  depends_on "freetype"
   depends_on "ffmpeg" => ["with-freetype"]
 
   def install
