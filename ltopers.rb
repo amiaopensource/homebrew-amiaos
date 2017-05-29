@@ -18,6 +18,7 @@ class Ltopers < Formula
     bin.install "ltopers"
     bin.install "mountlto"
     bin.install "readlto"
+    bin.install "renameschemas"
     bin.install "verifylto"
     bin.install "writelto"
     man1.install "ltopers.1"
@@ -30,7 +31,6 @@ class Ltopers < Formula
       if build.with? "cuny"
         bin.install "collectionchecksum"
         bin.install "indexschemas"
-        bin.install "renameschemas"
       end
     end
   end
