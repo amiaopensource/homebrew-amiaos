@@ -4,7 +4,7 @@ class Qctools < Formula
   url "https://github.com/bavc/qctools/archive/v0.8.tar.gz"
   sha256 "5362dc8325aeb37e0742a5e5df7b831e7fe82a7b06c72c50463a43a7ad0b56bc"
   head "https://github.com/bavc/qctools.git"
-  revision 2
+  revision 4
 
   depends_on "pkg-config" => :build
   depends_on "amiaopensource/amiaos/qwt-qt5"
