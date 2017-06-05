@@ -4,6 +4,7 @@ class Audiorecorder < Formula
   url "https://github.com/amiaopensource/audiorecorder/archive/0.1.03.zip"
   sha256 "fc743946418189eb7886f46a7ca24f7a6432628ab6367d84134d542618a4b377"
   head "https://github.com/amiaopensource/audiorecorder.git"
+  revision 1
 
   depends_on "sdl"
   depends_on "ffmpeg" => ["with-sdl2", "with-freetype"]
@@ -13,6 +14,7 @@ class Audiorecorder < Formula
 
   def install
     bin.install "audiorecorder"
+    man1.install "audiorecorder.1"
     if File.exist? File.expand_path "/usr/local/bin/bwfmetaedit"
       puts "BWF Metaedit confirmed"
     else
