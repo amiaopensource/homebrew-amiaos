@@ -1,8 +1,11 @@
 class Pbprotracktor < Formula
   homepage 'https://github.com/amiaopensource/pbprotracktor'
-  url "https://github.com/amiaopensource/pbprotracktor/archive/v20170407.tar.gz"
-  sha256 "cd9f70291b0a8871b4e3d28a95a09663b1e9700a673c8aaa8b2a6da87e5e8a4e" 
+  url "https://github.com/amiaopensource/pbprotracktor/archive/v2017-06-16.tar.gz"
+  version "2017-06-16"
+  sha256 "7d170947ce83964923873322542d383c3ee4d7927363bd4246b9d931468e3936" 
   head 'https://github.com/amiaopensource/pbprotracktor.git'
+
+  bottle :unneeded
 
   depends_on "mysql"
   depends_on "postgresql"
