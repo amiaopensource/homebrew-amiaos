@@ -2,7 +2,7 @@ class Ltopers < Formula
   desc "Scripts for doing stuff with LTFS"
   homepage "https://github.com/amiaopensource/ltopers"
   url "https://github.com/amiaopensource/ltopers/archive/v2017-07-15.tar.gz"
-  sha256 "fea230ea7d779693a637bb5fbc5b6b5042f7fe20b71d99ac40ef7550b675e338"
+  sha256 "cc7bd25ee36beb512ce1e807f9913aa1f11a03efd42c5f763810fc512b70079c"
   version "2017-07-15"
   head "https://github.com/amiaopensource/ltopers.git"
 
