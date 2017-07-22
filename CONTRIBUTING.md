@@ -12,3 +12,8 @@ We encourage the use of either:
 - [semantic versioning](http://semver.org/) i.e. the `major.minor.patch` format (e.g. `v1.17.2`)
 
 for the releases.
+
+## Hints
+
+- If you choose date-based versioning, then you may add a line like: `version "2017-07-22"`
+- If you do not need to compile the code, then you may add the line: `bottle :unneeded`
