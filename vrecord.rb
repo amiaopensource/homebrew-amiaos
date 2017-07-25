@@ -5,11 +5,13 @@ class Vrecord < Formula
   version "2017-07-15"
   sha256 "f16d770d65e4bd6dc96f3f9f49b5102288d8598dc6cceebe2079fb136141d535"
   head "https://github.com/amiaopensource/vrecord.git"
+  revision 1
 
   bottle :unneeded
 
   depends_on "sdl"
   depends_on "cowsay"
+  depends_on "freetype"
   depends_on "ffmpeg" => ["with-sdl2", "with-freetype"]
   depends_on "amiaopensource/amiaos/bmdtools"
   depends_on "xmlstarlet" => :recommended
