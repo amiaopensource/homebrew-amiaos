@@ -3,7 +3,7 @@ class CableBible < Formula
   homepage "https://github.com/amiaopensource/cable-bible"
   url "https://github.com/amiaopensource/cable-bible/archive/v2017-07-29.tar.gz"
   version "2017-07-29"
-  sha256 "21928e539570dbbac137450c24762863988551f886811183206a16e7b5906a46"
+  sha256 "f7f7f1bc7ce2b3a1859035fdfc8ce9a228cfbe02958a2550e614458f586a100e"
 
   bottle :unneeded
 
