@@ -14,3 +14,5 @@ Homebrew tap for AMIA Open Source formulae:
 - **QCTools** — Quality Control Tools for video preservation.
 - **qwt-qt5** — Qt Widgets for Technical Applications (for Qt5).
 - **vrecord** — Open-source software for capturing a video signal and turning it into a digital file.
+
+All the formulae work fine on Homebrew and some of them also on Linuxbrew (including the Windows Subsystem for Linux).
