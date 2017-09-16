@@ -16,3 +16,18 @@ Homebrew tap for AMIA Open Source formulae:
 - **vrecord** — Open-source software for capturing a video signal and turning it into a digital file.
 
 All the formulae work fine on Homebrew and some of them also on Linuxbrew (including the Windows Subsystem for Linux).
+
+## A note regarding qwt-qt5
+
+If, when installing, you got the error message:
+```
+Project ERROR: Could not resolve SDK Path for 'macosx'
+```
+then you might download `XCode`, start it and then do:
+```
+Preferences -> Locations -> Command Line Tools -> select SDK
+```
+
+## Contributing
+
+Contributions are very welcome! Please consider the [Contributing Guidelines](CONTRIBUTING.md).
