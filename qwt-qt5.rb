@@ -3,13 +3,14 @@ class QwtQt5 < Formula
   homepage "http://qwt.sourceforge.net/"
   url "https://downloads.sourceforge.net/project/qwt/qwt/6.1.3/qwt-6.1.3.tar.bz2"
   sha256 "f3ecd34e72a9a2b08422fb6c8e909ca76f4ce5fa77acad7a2883b701f4309733"
+  revision 1
 
   keg_only "Qwt for Qt 5 conflicts with Qwt for Qt 4"
 
   option "with-qwtmathml", "Build the qwtmathml library"
   option "without-plugin", "Skip building the Qt Designer plugin"
 
-  depends_on "qt5"
+  depends_on "qt"
 
   # Update designer plugin linking back to qwt framework/lib after install
   # See: https://sourceforge.net/p/qwt/patches/45/
