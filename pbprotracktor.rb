@@ -1,5 +1,5 @@
 class Pbprotracktor < Formula
-  desc "Postgres calls to databases to produce a PBCore XML output"
+  desc "Postgres calls to databases to produce a PBCore XML or CSV output"
   homepage "https://github.com/amiaopensource/pbprotracktor"
   url "https://github.com/amiaopensource/pbprotracktor/archive/v2017-08-28.tar.gz"
   version "2017-08-28"
