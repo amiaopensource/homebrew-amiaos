@@ -1,9 +1,9 @@
 class Ltopers < Formula
   desc "Scripts for doing stuff with LTFS"
   homepage "https://github.com/amiaopensource/ltopers"
-  url "https://github.com/amiaopensource/ltopers/archive/v2017-08-04.tar.gz"
-  version "2017-08-04"
-  sha256 "bfbe8a2e7ec6ae29a913efbd9babf1f4c9ddbf9c1d8853643bc2a987b0863dd3"
+  url "https://github.com/amiaopensource/ltopers/archive/v2017-09-19.tar.gz"
+  version "2017-09-19"
+  sha256 "eac5fd51bf5faadf5e12ee327bba17a3ca8177a373a4ea0ffb0f186c7d2d79ac"
   head "https://github.com/amiaopensource/ltopers.git"
 
   bottle :unneeded
