@@ -1,5 +1,5 @@
-class Ffmpeg < Formula
-  desc "Play, record, convert, and stream audio and video"
+class Ffmpegdecklink < Formula
+  desc "Play, record, convert, and stream audio and video (built with --enable-decklink)"
   homepage "https://ffmpeg.org/"
 
   stable do
@@ -17,12 +17,6 @@ class Ffmpeg < Formula
       url "https://raw.githubusercontent.com/Homebrew/formula-patches/dfe0fd6/ffmpeg/openjpeg-2.2.patch"
       sha256 "77fbc0f61f2e5742f33116e0da3d246882717affeee2f25112a8a8a69dc17815"
     end
-  end
-
-  bottle do
-    sha256 "eef67826064913b12cc1b62ea816f63fd66d8390da3c0d85078157942bf18b7a" => :high_sierra
-    sha256 "9553237b03315cbb567ad610c56c44b334adfc9ff46dbf224c90d01f99e9e4e2" => :sierra
-    sha256 "35a316fe3ac1be79163726e5b45f53c07ab25f10155b69d2df43d1a72878b7c8" => :el_capitan
   end
 
   head do
@@ -44,7 +38,7 @@ class Ffmpeg < Formula
   option "with-openssl", "Enable SSL support"
   option "with-rtmpdump", "Enable RTMP protocol"
   option "with-rubberband", "Enable rubberband library"
-  option "with-sdl2", "Enable FFplay media player"
+  #option "with-sdl2", "Enable FFplay media player"
   option "with-snappy", "Enable Snappy library"
   option "with-tools", "Enable additional FFmpeg tools"
   option "with-webp", "Enable using libwebp to encode WEBP images"
@@ -109,7 +103,7 @@ class Ffmpeg < Formula
   def install
     args = %W[
       --prefix=#{prefix}
-      --enable-shared
+      --disable-shared
       --enable-pthreads
       --enable-gpl
       --enable-version3
@@ -123,7 +117,7 @@ class Ffmpeg < Formula
     args << "--disable-indev=qtkit" if build.without? "qtkit"
     args << "--disable-securetransport" if build.without? "securetransport"
     args << "--enable-chromaprint" if build.with? "chromaprint"
-    args << "--enable-ffplay" if build.with? "sdl2"
+    #args << "--enable-ffplay" if build.with? "sdl2"
     args << "--enable-frei0r" if build.with? "frei0r"
     args << "--enable-libass" if build.with? "libass"
     args << "--enable-libbluray" if build.with? "libbluray"
@@ -175,6 +169,12 @@ class Ffmpeg < Formula
       args << "--extra-cflags=" + `pkg-config --cflags libopenjp2`.chomp
     end
 
+    # decklink options
+    args << "--enable-nonfree"
+    args << "--enable-decklink"
+    args << "--extra-cflags=-I#{HOMEBREW_PREFIX}/include"
+    args << "--extra-ldflags=-L#{HOMEBREW_PREFIX}/include"
+
     # These librares are GPL-incompatible, and require ffmpeg be built with
     # the "--enable-nonfree" flag, which produces unredistributable libraries
     args << "--enable-nonfree" if build.with?("fdk-aac") || build.with?("openssl")
@@ -190,7 +190,9 @@ class Ffmpeg < Formula
 
     system "./configure", *args
 
-    system "make", "install"
+    system "make"
+    mv "ffmpeg", "ffmpeg-dl"
+    bin.install "ffmpeg-dl"
 
     if build.with? "tools"
       system "make", "alltools"
@@ -201,7 +203,7 @@ class Ffmpeg < Formula
   test do
     # Create an example mp4 file
     mp4out = testpath/"video.mp4"
-    system bin/"ffmpeg", "-filter_complex", "testsrc=rate=1:duration=1", mp4out
+    system bin/"ffmpeg-dl", "-filter_complex", "testsrc=rate=1:duration=1", mp4out
     assert mp4out.exist?
   end
 end
