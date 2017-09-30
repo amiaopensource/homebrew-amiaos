@@ -1,11 +1,11 @@
 class Decklinksdk < Formula
   desc "The Blackmagic Design Decklink Software Development Kit libraries"
   homepage "https://www.blackmagicdesign.com/support/family/capture-and-playback"
-  url "https://github.com/amiaopensource/decklinksdk/archive/v10.1.4.tar.gz"
-  sha256 "f0cda862b8f8ffc05695180f2cec1998b1ec70dc280dc67c70b6c711a1950ffc"
-  head "https://github.com/amiaopensource/decklinksdk.git"
+  url "https://github.com/Streampunk/macadam/archive/v0.2.9.tar.gz"
+  sha256 "f07b7f5b5c9354cb5b9e4e393ce99f8640bf22038cb1d8f8ce624f823cac6a3a"
+  head "https://github.com/Streampunk/macadam.git"
 
   def install
-    include.install Dir["Mac/include/*"]
+    include.install Dir["decklink/Mac/include/*"]
   end
 end
