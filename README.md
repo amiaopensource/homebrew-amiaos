@@ -7,7 +7,7 @@ Homebrew tap for AMIA Open Source formulae:
 - **deckcontrol** — Control an attached videodeck via Blackmagic Design Decklink SDK.
 - **decklinksdk** — An unofficial repository for openly-licensed SDK files from Blackmagic’s Desktop Video software development kit.
 - **digibase** — Uses MySQL to create a database which tracks tapes through a digitization workflow, designed to work with vrecord and [mediamicroservices](https://github.com/mediamicroservices).
-- **ffmpegdecklink** – A static build of FFmpeg with Decklink.
+- **ffmpegdecklink** — A static build of FFmpeg with Decklink.
 - **ffmprovisr** — Repository of useful FFmpeg command lines for archivists.
 - **LTOpers** — Scripts for doing stuff with LTFS.
 - **mkvparse** — A simple Matroska (MKV) parser.
