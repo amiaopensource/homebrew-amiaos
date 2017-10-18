@@ -1,9 +1,9 @@
 class Ltopers < Formula
   desc "Scripts for doing stuff with LTFS"
   homepage "https://github.com/amiaopensource/ltopers"
-  url "https://github.com/amiaopensource/ltopers/archive/v2017-09-19.tar.gz"
-  version "2017-09-19"
-  sha256 "eac5fd51bf5faadf5e12ee327bba17a3ca8177a373a4ea0ffb0f186c7d2d79ac"
+  url "https://github.com/amiaopensource/ltopers/archive/v2017-10-18.tar.gz"
+  version "v2017-10-18"
+  sha256 "969a0f0312799d8e3a705b04079682424d3a7ad3442e2201e58805a637ff3763"
   head "https://github.com/amiaopensource/ltopers.git"
 
   bottle :unneeded
@@ -14,6 +14,9 @@ class Ltopers < Formula
   depends_on "coreutils"
   depends_on "mediamicroservices/mm/mm"
   depends_on "xmlstarlet"
+
+  conflicts_with "openlto",
+    :because => "both install some scripts having the same name"
 
   def install
     bin.install "formatlto"
