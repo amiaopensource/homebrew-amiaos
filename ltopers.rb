@@ -7,6 +7,9 @@ class Ltopers < Formula
   head "https://github.com/amiaopensource/ltopers.git"
 
   bottle :unneeded
+  
+  conflicts_with "openlto",
+    :because => "both install some scripts having the same name"
 
   option "with-db", "Build database-related commands"
   option "with-cuny", "Build database-related and CUNY-specific commands"
