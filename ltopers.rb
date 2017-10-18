@@ -7,9 +7,6 @@ class Ltopers < Formula
   head "https://github.com/amiaopensource/ltopers.git"
 
   bottle :unneeded
-  
-  conflicts_with "openlto",
-    :because => "both install some scripts having the same name"
 
   option "with-db", "Build database-related commands"
   option "with-cuny", "Build database-related and CUNY-specific commands"
@@ -17,6 +14,9 @@ class Ltopers < Formula
   depends_on "coreutils"
   depends_on "mediamicroservices/mm/mm"
   depends_on "xmlstarlet"
+
+  conflicts_with "openlto",
+    :because => "both install some scripts having the same name"
 
   def install
     bin.install "formatlto"
