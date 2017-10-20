@@ -4,6 +4,7 @@ class Ltopers < Formula
   url "https://github.com/amiaopensource/ltopers/archive/v2017-10-18.tar.gz"
   version "2017-10-18"
   sha256 "969a0f0312799d8e3a705b04079682424d3a7ad3442e2201e58805a637ff3763"
+  revision 1
   head "https://github.com/amiaopensource/ltopers.git"
 
   bottle :unneeded
@@ -15,7 +16,7 @@ class Ltopers < Formula
   depends_on "mediamicroservices/mm/mm"
   depends_on "xmlstarlet"
 
-  conflicts_with "openlto",
+  conflicts_with "avpres/formulae/openlto",
     :because => "both install some scripts having the same name"
 
   def install
