@@ -1,29 +1,9 @@
 class Ffmpegdecklink < Formula
-  desc "Play, record, convert, and stream audio and video (built with --enable-decklink)"
+  desc "FFmpeg with --enable-decklink"
   homepage "https://ffmpeg.org/"
-
-  stable do
-    url "https://ffmpeg.org/releases/ffmpeg-3.3.4.tar.bz2"
-    sha256 "5ef5e9276c311c74ab2e9d301c2d7ee10e1f2cbd758c6f13d6cb9514dffbac7e"
-
-    option "with-schroedinger", "Enable Dirac video format"
-
-    depends_on "yasm" => :build
-    depends_on "schroedinger" => :optional
-
-    # Upstream commit from 23 Jun 2017 "Add support for LibOpenJPEG v2.2/git"
-    # See https://github.com/FFmpeg/FFmpeg/commit/078322f33ced4b2db6ac3e5002f98233d6fbf643
-    patch do
-      url "https://raw.githubusercontent.com/Homebrew/formula-patches/dfe0fd6/ffmpeg/openjpeg-2.2.patch"
-      sha256 "77fbc0f61f2e5742f33116e0da3d246882717affeee2f25112a8a8a69dc17815"
-    end
-  end
-
-  head do
-    url "https://github.com/FFmpeg/FFmpeg.git"
-
-    depends_on "nasm" => :build
-  end
+  url "https://ffmpeg.org/releases/ffmpeg-3.4.tar.bz2"
+  sha256 "5d8911fe6017d00c98a359d7c8e7818e48f2c0cc2c9086a986ea8cb4d478c85e"
+  head "https://github.com/FFmpeg/FFmpeg.git"
 
   option "with-chromaprint", "Enable the Chromaprint audio fingerprinting library"
   option "with-fdk-aac", "Enable the Fraunhofer FDK AAC library"
@@ -38,7 +18,7 @@ class Ffmpegdecklink < Formula
   option "with-openssl", "Enable SSL support"
   option "with-rtmpdump", "Enable RTMP protocol"
   option "with-rubberband", "Enable rubberband library"
-  #option "with-sdl2", "Enable FFplay media player"
+  option "with-sdl2", "Enable FFplay media player"
   option "with-snappy", "Enable Snappy library"
   option "with-tools", "Enable additional FFmpeg tools"
   option "with-webp", "Enable using libwebp to encode WEBP images"
@@ -51,11 +31,13 @@ class Ffmpegdecklink < Formula
   option "without-securetransport", "Disable use of SecureTransport"
   option "without-x264", "Disable H.264 encoder"
   option "without-xvid", "Disable Xvid MPEG-4 video encoder"
+  option "without-gpl", "Disable building GPL licensed parts of FFmpeg"
 
   deprecated_option "with-ffplay" => "with-sdl2"
   deprecated_option "with-sdl" => "with-sdl2"
   deprecated_option "with-libtesseract" => "with-tesseract"
 
+  depends_on "nasm" => :build
   depends_on "pkg-config" => :build
   depends_on "texi2html" => :build
 
@@ -114,10 +96,11 @@ class Ffmpegdecklink < Formula
       --host-ldflags=#{ENV.ldflags}
     ]
 
+    args << "--enable-gpl" if build.with? "gpl"
     args << "--disable-indev=qtkit" if build.without? "qtkit"
     args << "--disable-securetransport" if build.without? "securetransport"
     args << "--enable-chromaprint" if build.with? "chromaprint"
-    #args << "--enable-ffplay" if build.with? "sdl2"
+    args << "--enable-ffplay" if build.with? "sdl2"
     args << "--enable-frei0r" if build.with? "frei0r"
     args << "--enable-libass" if build.with? "libass"
     args << "--enable-libbluray" if build.with? "libbluray"
@@ -135,7 +118,6 @@ class Ffmpegdecklink < Formula
     args << "--enable-libopus" if build.with? "opus"
     args << "--enable-librtmp" if build.with? "rtmpdump"
     args << "--enable-librubberband" if build.with? "rubberband"
-    args << "--enable-libschroedinger" if build.with? "schroedinger"
     args << "--enable-libsnappy" if build.with? "snappy"
     args << "--enable-libsoxr" if build.with? "libsoxr"
     args << "--enable-libspeex" if build.with? "speex"
@@ -179,20 +161,16 @@ class Ffmpegdecklink < Formula
     # the "--enable-nonfree" flag, which produces unredistributable libraries
     args << "--enable-nonfree" if build.with?("fdk-aac") || build.with?("openssl")
 
-    # A bug in a dispatch header on 10.10, included via CoreFoundation,
-    # prevents GCC from building VDA support.
-    # See: https://github.com/Homebrew/homebrew/issues/33741
-    if !build.head? && (MacOS.version != :yosemite || ENV.compiler == :clang)
-      args << "--enable-vda"
-    else
-      args << "--disable-vda"
-    end
-
     system "./configure", *args
 
     system "make"
     mv "ffmpeg", "ffmpeg-dl"
     bin.install "ffmpeg-dl"
+
+    if build.with? "sdl2"
+      mv "ffplay", "ffplay-dl"
+      bin.install "ffplay-dl"
+    end
 
     if build.with? "tools"
       system "make", "alltools"
