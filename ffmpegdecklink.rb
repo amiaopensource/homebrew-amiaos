@@ -4,6 +4,7 @@ class Ffmpegdecklink < Formula
   url "https://ffmpeg.org/releases/ffmpeg-3.4.tar.bz2"
   sha256 "5d8911fe6017d00c98a359d7c8e7818e48f2c0cc2c9086a986ea8cb4d478c85e"
   head "https://github.com/FFmpeg/FFmpeg.git"
+  keg_only 'Anything that needs this will know where to look'
 
   option "with-chromaprint", "Enable the Chromaprint audio fingerprinting library"
   option "with-fdk-aac", "Enable the Fraunhofer FDK AAC library"
