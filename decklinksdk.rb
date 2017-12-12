@@ -2,7 +2,9 @@ class Decklinksdk < Formula
   desc "The Blackmagic Design Decklink Software Development Kit libraries"
   homepage "https://www.blackmagicdesign.com/support/family/capture-and-playback"
   url "https://github.com/Streampunk/macadam/archive/v0.2.9.tar.gz"
+  version "10.9.3"
   sha256 "f07b7f5b5c9354cb5b9e4e393ce99f8640bf22038cb1d8f8ce624f823cac6a3a"
+  revision 1
   head "https://github.com/Streampunk/macadam.git"
 
   patch :DATA
