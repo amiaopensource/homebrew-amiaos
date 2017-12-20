@@ -6,7 +6,6 @@ Homebrew tap for AMIA Open Source formulae:
 - **Cable Bible** — A comprehensive guide to cables and connectors used in audiovisual archiving.
 - **deckcontrol** — Control an attached videodeck via Blackmagic Design Decklink SDK.
 - **decklinksdk** — An unofficial repository for openly-licensed SDK files from Blackmagic’s Desktop Video software development kit.
-- **digibase** — Uses MySQL to create a database which tracks tapes through a digitization workflow, designed to work with vrecord and [mediamicroservices](https://github.com/mediamicroservices).
 - **ffmpegdecklink** — A static build of FFmpeg with Decklink.
 - **ffmprovisr** — Repository of useful FFmpeg command lines for archivists.
 - **LTOpers** — Scripts for doing stuff with LTFS.
@@ -32,3 +31,10 @@ Preferences -> Locations -> Command Line Tools -> select SDK
 ## Contributing
 
 Contributions are very welcome! Please consider the [Contributing Guidelines](CONTRIBUTING.md).
+
+## Abandoned project
+
+This project is no longer developed nor maintaied. Yet please feel free to reactivate it, if you are interested in!
+
+- **digibase** — Uses MySQL to create a database which tracks tapes through a digitization workflow, designed to work with vrecord and [mediamicroservices](https://github.com/mediamicroservices).
+
