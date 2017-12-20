@@ -1,8 +1,8 @@
 class Digibase < Formula
   desc "MySQL to create a DB tracking tapes through a digitization workflow"
   homepage "https://github.com/amiaopensource/digibase"
-  url "https://github.com/amiaopensource/digibase/archive/v0.2-beta.tar.gz"
-  sha256 "bba6b7da1d3dca0d0da8efc9cf992e0bc21b2769c6aeb611e461715542341746"
+  url "https://github.com/amiaopensource/digibase/archive/v0.3.tar.gz"
+  sha256 "5abbd0a9b660bd456113a0c576ae1209f216841ffd27963dd9f874f1c3492aa8"
   head "https://github.com/amiaopensource/digibase.git"
 
   depends_on "mysql"
