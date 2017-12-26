@@ -3,7 +3,7 @@ class Pbprotracktor < Formula
   homepage "https://github.com/amiaopensource/pbprotracktor"
   url "https://github.com/amiaopensource/pbprotracktor/archive/v2017-12-26.tar.gz"
   version "2017-12-26"
-  sha256 "a5bc6a0b953dabe62ef672dd8fc306282109066bfcd8cc09b03b3d78e1a7bf72"
+  sha256 "ec824cd2f94f9e87ea351170a656db21409b20a243c760061f08ca4168930b54"
   head "https://github.com/amiaopensource/pbprotracktor.git"
 
   bottle :unneeded
