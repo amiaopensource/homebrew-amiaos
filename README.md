@@ -37,4 +37,3 @@ Contributions are very welcome! Please consider the [Contributing Guidelines](CO
 This project is no longer developed nor maintaied. Yet please feel free to reactivate it, if you are interested in!
 
 - **digibase** — Uses MySQL to create a database which tracks tapes through a digitization workflow, designed to work with vrecord and [mediamicroservices](https://github.com/mediamicroservices).
-
