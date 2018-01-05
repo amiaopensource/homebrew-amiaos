@@ -1,9 +1,9 @@
 class Vrecord < Formula
   desc "Capturing a video signal and turning it into a digital file"
   homepage "https://github.com/amiaopensource/vrecord"
-  url "https://github.com/amiaopensource/vrecord/archive/v2017-12-15.tar.gz"
-  version "2017-12-15"
-  sha256 "0151d498109858d9c0df61ad6d432d0c9e87e0a64f16e930a198d2518c737673"
+  url "https://github.com/amiaopensource/vrecord/archive/v2018-01-05.tar.gz"
+  version "2018-01-05"
+  sha256 "06e89bd1cc7a7cc3f8575d93f3cf5fdd3623091a7928361ee5da0459a68c3e84"
   head "https://github.com/amiaopensource/vrecord.git"
 
   bottle :unneeded
@@ -11,8 +11,8 @@ class Vrecord < Formula
   depends_on "sdl"
   depends_on "cowsay"
   depends_on "freetype"
-  depends_on "ffmpegdecklink" => ["with-sdl2", "with-freetype"]
-  depends_on "amiaopensource/amiaos/bmdtools"
+  depends_on "amiaopensource/amiaos/decklinksdk"
+  depends_on "amiaopensource/amiaos/ffmpegdecklink" => ["with-sdl2", "with-freetype"]
   depends_on "xmlstarlet" => :recommended
   depends_on "mpv"
   depends_on "qcli"
