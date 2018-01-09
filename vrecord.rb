@@ -13,7 +13,7 @@ class Vrecord < Formula
   depends_on "cowsay"
   depends_on "freetype"
   depends_on "amiaopensource/amiaos/decklinksdk"
-  depends_on "amiaopensource/amiaos/ffmpegdecklink" => ["with-sdl2", "with-freetype", "with-libopenjpeg"]
+  depends_on "amiaopensource/amiaos/ffmpegdecklink" => ["with-sdl2", "with-freetype", "with-openjpeg"]
   depends_on "xmlstarlet" => :recommended
   depends_on "mpv"
   depends_on "qcli"
