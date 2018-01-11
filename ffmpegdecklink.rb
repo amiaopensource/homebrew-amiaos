@@ -3,6 +3,7 @@ class Ffmpegdecklink < Formula
   homepage "https://ffmpeg.org/"
   url "https://ffmpeg.org/releases/ffmpeg-3.4.1.tar.bz2"
   sha256 "f3443e20154a590ab8a9eef7bc951e8731425efc75b44ff4bee31d8a7a574a2c"
+  revision 1
   head "https://github.com/FFmpeg/FFmpeg.git"
   keg_only 'Anything that needs this will know where to look'
 
@@ -82,6 +83,8 @@ class Ffmpegdecklink < Formula
   depends_on "xz" => :optional
   depends_on "zeromq" => :optional
   depends_on "zimg" => :optional
+
+  patch :DATA
 
   def install
     args = %W[
@@ -186,3 +189,17 @@ class Ffmpegdecklink < Formula
     assert_predicate mp4out, :exist?
   end
 end
+
+__END__
+diff --git a/fftools/ffmpeg.c b/fftools/ffmpeg.c
+index 0c16e75ab0..dfcc865dcf 100644
+--- a/fftools/ffmpeg.c
++++ b/fftools/ffmpeg.c
+@@ -406,6 +406,7 @@ void term_init(void)
+ 
+     signal(SIGINT , sigterm_handler); /* Interrupt (ANSI).    */
+     signal(SIGTERM, sigterm_handler); /* Termination (ANSI).  */
++    signal(SIGPIPE, sigterm_handler); /* Termination (pipe closed).  */
+ #ifdef SIGXCPU
+     signal(SIGXCPU, sigterm_handler);
+ #endif
