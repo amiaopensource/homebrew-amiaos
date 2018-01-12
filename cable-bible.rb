@@ -1,9 +1,9 @@
 class CableBible < Formula
   desc "Guide to cables and connectors used in audiovisual archiving"
   homepage "https://github.com/amiaopensource/cable-bible"
-  url "https://github.com/amiaopensource/cable-bible/archive/v2017-08-25.tar.gz"
-  version "2017-08-25"
-  sha256 "00c96af890319065e2e4000c6e5685de08a577a3ff8c2738f8dced7b73a4ed15"
+  url "https://github.com/amiaopensource/cable-bible/archive/v2018-01-12.tar.gz"
+  version "2018-01-12"
+  sha256 "ea1386bc3237e67e97eb7ea54a97a712adcfc661b891981d2830efbb5cdb0d65"
 
   bottle :unneeded
 
