@@ -5,7 +5,7 @@ class Ffmpegdecklink < Formula
   sha256 "f3443e20154a590ab8a9eef7bc951e8731425efc75b44ff4bee31d8a7a574a2c"
   revision 1
   head "https://github.com/FFmpeg/FFmpeg.git"
-  keg_only 'Anything that needs this will know where to look'
+  keg_only "anything that needs this will know where to look"
 
   option "with-chromaprint", "Enable the Chromaprint audio fingerprinting library"
   option "with-fdk-aac", "Enable the Fraunhofer FDK AAC library"
