@@ -3,7 +3,7 @@ class Ffmpegdecklink < Formula
   homepage "https://ffmpeg.org/"
   url "https://ffmpeg.org/releases/ffmpeg-3.4.1.tar.bz2"
   sha256 "f3443e20154a590ab8a9eef7bc951e8731425efc75b44ff4bee31d8a7a574a2c"
-  revision 1
+  revision 2
   head "https://github.com/FFmpeg/FFmpeg.git"
   keg_only "anything that needs this will know where to look"
 
@@ -192,14 +192,16 @@ end
 
 __END__
 diff --git a/fftools/ffmpeg.c b/fftools/ffmpeg.c
-index 0c16e75ab0..dfcc865dcf 100644
+index 528849a..918eb35 100644 (file)
 --- a/fftools/ffmpeg.c
 +++ b/fftools/ffmpeg.c
-@@ -406,6 +406,7 @@ void term_init(void)
- 
-     signal(SIGINT , sigterm_handler); /* Interrupt (ANSI).    */
-     signal(SIGTERM, sigterm_handler); /* Termination (ANSI).  */
-+    signal(SIGPIPE, sigterm_handler); /* Termination (pipe closed).  */
+@@ -406,6 +406,9 @@ void term_init(void)
  #ifdef SIGXCPU
      signal(SIGXCPU, sigterm_handler);
+ #endif
++#ifdef SIGPIPE
++    signal(SIGPIPE, SIG_IGN); /* Broken pipe (POSIX). */
++#endif
+ #if HAVE_SETCONSOLECTRLHANDLER
+     SetConsoleCtrlHandler((PHANDLER_ROUTINE) CtrlHandler, TRUE);
  #endif
