@@ -3,7 +3,7 @@ class Ffmpegdecklink < Formula
   homepage "https://ffmpeg.org/"
   url "https://ffmpeg.org/releases/ffmpeg-3.4.1.tar.bz2"
   sha256 "f3443e20154a590ab8a9eef7bc951e8731425efc75b44ff4bee31d8a7a574a2c"
-  revision 2
+  revision 3
   head "https://github.com/FFmpeg/FFmpeg.git"
   keg_only "anything that needs this will know where to look"
 
@@ -95,6 +95,7 @@ class Ffmpegdecklink < Formula
       --enable-version3
       --enable-hardcoded-tables
       --enable-avresample
+      --disable-jack
       --cc=#{ENV.cc}
       --host-cflags=#{ENV.cflags}
       --host-ldflags=#{ENV.ldflags}
