@@ -8,7 +8,7 @@ class Lenticular < Formula
 
   def install
     cd "lenticular" do
-      system "make", "clean"
+      system "make && make clean"
       bin.install "doLCE"
     end
   end
