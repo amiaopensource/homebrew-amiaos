@@ -4,6 +4,7 @@ class Vrecord < Formula
   url "https://github.com/amiaopensource/vrecord/archive/v2018-02-08.tar.gz"
   version "2018-02-08"
   sha256 "bbe562375d1ee8ff610b31ebaee019f29fe5f386588a8102a757f885048293c6"
+  revision 1
   head "https://github.com/amiaopensource/vrecord.git"
 
   bottle :unneeded
@@ -16,6 +17,7 @@ class Vrecord < Formula
   depends_on "xmlstarlet" => :recommended
   depends_on "mpv"
   depends_on "qcli"
+  depends_on "mediaconch"
 
   def install
     bin.install "vrecord"
