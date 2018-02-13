@@ -8,7 +8,7 @@ Homebrew tap for AMIA Open Source formulae:
 - **decklinksdk** — An unofficial repository for openly-licensed SDK files from Blackmagic’s Desktop Video software development kit. Note that decklinksdk is used by vrecord.
 - **ffmpegdecklink** — A static build of FFmpeg with Decklink. Note that ffmpegdecklink is used by vrecord.
 - **ffmprovisr** — Repository of useful FFmpeg command lines for archivists.
-- **lenticular** - Digital Reconstruction of Lenticular Colours. This is a _work in progress_.
+- **lenticular** - Digital restoration of lenticular colours from greyscale digitisations. This is a work in progress: an alpha is available for testing purpose.
 - **LTOpers** — Scripts for doing stuff with LTFS.
 - **mkvparse** — A simple Matroska (MKV) parser.
 - **pbprotracktor** — Make postgres calls to public broadcasting scheduling databases to produce a PBCore XML output.
