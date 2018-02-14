@@ -1,9 +1,9 @@
 class Pbprotracktor < Formula
   desc "Postgres calls to databases to produce a PBCore XML or CSV output"
   homepage "https://github.com/amiaopensource/pbprotracktor"
-  url "https://github.com/amiaopensource/pbprotracktor/archive/v2017-12-26.tar.gz"
-  version "2017-12-26"
-  sha256 "ec824cd2f94f9e87ea351170a656db21409b20a243c760061f08ca4168930b54"
+  url "https://github.com/amiaopensource/pbprotracktor/archive/v2018-02-14.tar.gz"
+  version "2018-02-14"
+  sha256 "1dacef32c1f09274b1e6f6c3a62cc50325a938cf288552e35a78529605516aa7"
   head "https://github.com/amiaopensource/pbprotracktor.git"
 
   bottle :unneeded
@@ -11,6 +11,7 @@ class Pbprotracktor < Formula
   depends_on "jq"
   depends_on "mysql"
   depends_on "postgresql"
+  depends_on "xmlstarlet"
 
   def install
     bin.install "pbprotracktor"
