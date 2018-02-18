@@ -1,9 +1,9 @@
 class Lenticular < Formula
   desc "Digital Restoration of Lenticular Colours"
   homepage "https://github.com/amiaopensource/lenticular"
-  url "https://github.com/amiaopensource/lenticular/archive/v2018-02-16.tar.gz"
-  version "2018-02-16"
-  sha256 "f9c06d594ba65bc49af1aa09f0691a789a7f0a27c8512388082bc26e8f8ed4d8"
+  url "https://github.com/amiaopensource/lenticular/archive/v2018-02-18.tar.gz"
+  version "2018-02-18"
+  sha256 "1c631ed4bf567e17fe997f17428a9e30524061906a6e6becc62a79417a44d27a"
   head "https://github.com/amiaopensource/lenticular.git"
 
   option "with-frameCropper", "Add the 'frameCropper' tool"
@@ -15,6 +15,7 @@ class Lenticular < Formula
       bin.install "doLCE"
       bin.install "frameCropper" if build.with? "frameCropper"
       bin.install "inStudy" if build.with? "inStudy"
+      man1.install "lenticular.1"
     end
   end
 end
