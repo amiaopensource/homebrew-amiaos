@@ -12,7 +12,7 @@ class Lenticular < Formula
   def install
     cd "lenticular" do
       system "make"
-      bin.install "doLCE"
+      bin.install "lenticular"
       bin.install "frameCropper" if build.with? "frameCropper"
       bin.install "inStudy" if build.with? "inStudy"
       man1.install "lenticular.1"
