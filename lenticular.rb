@@ -1,10 +1,9 @@
 class Lenticular < Formula
   desc "Digital Restoration of Lenticular Colours"
   homepage "https://github.com/amiaopensource/lenticular"
-  url "https://github.com/amiaopensource/lenticular/archive/v2018-03-04.tar.gz"
-  version "2018-03-04"
-  sha256 "bfa7e0b1492684a9537966c078a2c775c16cb31325498f8911d5f126a6f3cbe2"
-  revision 2
+  url "https://github.com/amiaopensource/lenticular/archive/v2018-03-24.tar.gz"
+  version "2018-03-24"
+  sha256 "ef12691c25d8301092e0576b934bf90def9a4a1a14a5c182b90c7807b8a984e3"
   head "https://github.com/amiaopensource/lenticular.git"
 
   option "with-framecropper", "Install frame-cropper tool"
@@ -24,5 +23,7 @@ class Lenticular < Formula
 
   test do
     system "#{bin}/lenticular"
+    system "#{bin}/framecropper" if build.with? "framecropper"
+    system "#{bin}/interpolationstudy" if build.with? "interpolationstudy"
   end
 end
