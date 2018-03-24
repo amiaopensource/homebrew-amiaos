@@ -4,20 +4,21 @@ class Vrecord < Formula
   url "https://github.com/amiaopensource/vrecord/archive/v2018-02-08.tar.gz"
   version "2018-02-08"
   sha256 "bbe562375d1ee8ff610b31ebaee019f29fe5f386588a8102a757f885048293c6"
-  revision 1
   head "https://github.com/amiaopensource/vrecord.git"
 
   bottle :unneeded
 
-  depends_on "sdl"
   depends_on "cowsay"
-  depends_on "freetype"
   depends_on "amiaopensource/amiaos/decklinksdk"
   depends_on "amiaopensource/amiaos/ffmpegdecklink" => ["with-sdl2", "with-freetype", "with-openjpeg"]
-  depends_on "xmlstarlet" => :recommended
+  depends_on "freetype"
+  depends_on "mediaconch"
+  depends_on "mkvtoolnix"
   depends_on "mpv"
   depends_on "qcli"
-  depends_on "mediaconch"
+  depends_on "sdl"
+
+  depends_on "xmlstarlet" => :recommended
 
   def install
     bin.install "vrecord"
@@ -38,5 +39,9 @@ class Vrecord < Formula
     else
       puts "Pashua was found"
     end
+  end
+
+  test do
+    system "#{bin}/vrecord", "-h"
   end
 end
