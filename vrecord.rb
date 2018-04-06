@@ -1,10 +1,9 @@
 class Vrecord < Formula
   desc "Capturing a video signal and turning it into a digital file"
   homepage "https://github.com/amiaopensource/vrecord"
-  url "https://github.com/amiaopensource/vrecord/archive/v2018-02-08.tar.gz"
-  version "2018-02-08"
-  sha256 "bbe562375d1ee8ff610b31ebaee019f29fe5f386588a8102a757f885048293c6"
-  revision 1
+  url "https://github.com/amiaopensource/vrecord/archive/v2018-04-06.tar.gz"
+  version "2018-04-06"
+  sha256 "d7198a5455d91db6a1704b9df920c64582fb684086b8782087e7848db053eda8"
   head "https://github.com/amiaopensource/vrecord.git"
 
   bottle :unneeded
@@ -18,6 +17,7 @@ class Vrecord < Formula
   depends_on "mpv"
   depends_on "qcli"
   depends_on "mediaconch"
+  depends_on "mkvtoolnix"
 
   def install
     bin.install "vrecord"
