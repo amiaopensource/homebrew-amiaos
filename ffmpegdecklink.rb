@@ -83,8 +83,6 @@ class Ffmpegdecklink < Formula
   depends_on "zeromq" => :optional
   depends_on "zimg" => :optional
 
-  patch :DATA
-
   def install
     args = %W[
       --prefix=#{prefix}
@@ -189,19 +187,3 @@ class Ffmpegdecklink < Formula
     assert_predicate mp4out, :exist?
   end
 end
-
-__END__
-diff --git a/fftools/ffmpeg.c b/fftools/ffmpeg.c
-index 528849a..918eb35 100644 (file)
---- a/fftools/ffmpeg.c
-+++ b/fftools/ffmpeg.c
-@@ -406,6 +406,9 @@ void term_init(void)
- #ifdef SIGXCPU
-     signal(SIGXCPU, sigterm_handler);
- #endif
-+#ifdef SIGPIPE
-+    signal(SIGPIPE, SIG_IGN); /* Broken pipe (POSIX). */
-+#endif
- #if HAVE_SETCONSOLECTRLHANDLER
-     SetConsoleCtrlHandler((PHANDLER_ROUTINE) CtrlHandler, TRUE);
- #endif
