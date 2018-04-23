@@ -1,14 +1,15 @@
 class Ffmpegdecklink < Formula
   desc "FFmpeg with --enable-decklink"
   homepage "https://ffmpeg.org/"
-  url "https://ffmpeg.org/releases/ffmpeg-3.4.2.tar.bz2"
-  sha256 "eb0370bf223809b9ebb359fed5318f826ac038ce77933b3afd55ab1a0a21785a"
+  url "https://ffmpeg.org/releases/ffmpeg-4.0.tar.xz"
+  sha256 "ed945daf40b124e77a685893cc025d086f638bc703183460aff49508edb3a43f"
   head "https://github.com/FFmpeg/FFmpeg.git"
   keg_only "anything that needs this will know where to look"
 
   option "with-chromaprint", "Enable the Chromaprint audio fingerprinting library"
   option "with-fdk-aac", "Enable the Fraunhofer FDK AAC library"
   option "with-libass", "Enable ASS/SSA subtitle format"
+  option "with-librsvg", "Enable SVG files as inputs via librsvg"
   option "with-libsoxr", "Enable the soxr resample library"
   option "with-libssh", "Enable SFTP protocol via libssh"
   option "with-tesseract", "Enable the tesseract OCR engine"
@@ -58,6 +59,7 @@ class Ffmpegdecklink < Formula
   depends_on "libcaca" => :optional
   depends_on "libgsm" => :optional
   depends_on "libmodplug" => :optional
+  depends_on "librsvg" => :optional
   depends_on "libsoxr" => :optional
   depends_on "libssh" => :optional
   depends_on "libvidstab" => :optional
@@ -83,18 +85,14 @@ class Ffmpegdecklink < Formula
   depends_on "zeromq" => :optional
   depends_on "zimg" => :optional
 
-  patch :DATA
-
   def install
     args = %W[
       --prefix=#{prefix}
       --disable-shared
       --enable-pthreads
-      --enable-gpl
       --enable-version3
       --enable-hardcoded-tables
       --enable-avresample
-      --disable-jack
       --cc=#{ENV.cc}
       --host-cflags=#{ENV.cflags}
       --host-ldflags=#{ENV.ldflags}
@@ -120,6 +118,7 @@ class Ffmpegdecklink < Formula
     args << "--enable-libopencore-amrnb" << "--enable-libopencore-amrwb" if build.with? "opencore-amr"
     args << "--enable-libopenh264" if build.with? "openh264"
     args << "--enable-libopus" if build.with? "opus"
+    args << "--enable-librsvg" if build.with? "librsvg"
     args << "--enable-librtmp" if build.with? "rtmpdump"
     args << "--enable-librubberband" if build.with? "rubberband"
     args << "--enable-libsnappy" if build.with? "snappy"
@@ -189,19 +188,3 @@ class Ffmpegdecklink < Formula
     assert_predicate mp4out, :exist?
   end
 end
-
-__END__
-diff --git a/fftools/ffmpeg.c b/fftools/ffmpeg.c
-index 528849a..918eb35 100644 (file)
---- a/fftools/ffmpeg.c
-+++ b/fftools/ffmpeg.c
-@@ -406,6 +406,9 @@ void term_init(void)
- #ifdef SIGXCPU
-     signal(SIGXCPU, sigterm_handler);
- #endif
-+#ifdef SIGPIPE
-+    signal(SIGPIPE, SIG_IGN); /* Broken pipe (POSIX). */
-+#endif
- #if HAVE_SETCONSOLECTRLHANDLER
-     SetConsoleCtrlHandler((PHANDLER_ROUTINE) CtrlHandler, TRUE);
- #endif
