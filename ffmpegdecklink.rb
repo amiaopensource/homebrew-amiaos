@@ -1,8 +1,8 @@
 class Ffmpegdecklink < Formula
   desc "FFmpeg with --enable-decklink"
   homepage "https://ffmpeg.org/"
-  url "https://ffmpeg.org/releases/ffmpeg-3.4.2.tar.bz2"
-  sha256 "eb0370bf223809b9ebb359fed5318f826ac038ce77933b3afd55ab1a0a21785a"
+  url "https://ffmpeg.org/releases/ffmpeg-4.0.tar.xz"
+  sha256 "ed945daf40b124e77a685893cc025d086f638bc703183460aff49508edb3a43f"
   head "https://github.com/FFmpeg/FFmpeg.git"
   keg_only "anything that needs this will know where to look"
 
