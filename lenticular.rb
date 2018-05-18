@@ -1,5 +1,5 @@
 class Lenticular < Formula
-  desc "Digital Restoration of Lenticular Colours"
+  desc "Digital restoration of lenticular colours"
   homepage "https://github.com/amiaopensource/lenticular"
   url "https://github.com/amiaopensource/lenticular/archive/v2018-04-13.tar.gz"
   version "2018-04-13"
