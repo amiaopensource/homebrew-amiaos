@@ -34,7 +34,7 @@ Contributions are very welcome! Please consider the [Contributing Guidelines](CO
 
 ## Abandoned project
 
-This project is no longer developed nor maintaied. Yet please feel free to reactivate it, if you are interested in!
+These projects are no longer developed nor maintaied. Yet please feel free to reactivate them, if you are interested in!
 
 - **digibase** — Uses MySQL to create a database which tracks tapes through a digitization workflow, designed to work with vrecord and [mediamicroservices](https://github.com/mediamicroservices).
 - **lenticular** — Digital restoration of lenticular colours from greyscale digitisations.
