@@ -8,6 +8,8 @@ class Vrecord < Formula
 
   bottle :unneeded
 
+  option "with-vtest", "Test streams from computer out to monitor through Blackmagic card"
+
   depends_on "cowsay"
   depends_on "amiaopensource/amiaos/decklinksdk"
   depends_on "amiaopensource/amiaos/ffmpegdecklink" => ["with-sdl2", "with-freetype", "with-openjpeg"]
@@ -25,6 +27,7 @@ class Vrecord < Formula
     bin.install "qcview.lua"
     bin.install "vrecord_policy_ffv1.xml"
     bin.install "vrecord_policy_uncompressed.xml"
+    bin.install "vtest" if build.with? "vtest"
     prefix.install "vrecord_logo.png"
     man1.install "vrecord.1"
   end
@@ -43,5 +46,6 @@ class Vrecord < Formula
 
   test do
     system "#{bin}/vrecord", "-h"
+    system "#{bin}/vtest", "-h" if build.with? "vtest"
   end
 end
