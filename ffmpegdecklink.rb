@@ -85,6 +85,8 @@ class Ffmpegdecklink < Formula
   depends_on "zeromq" => :optional
   depends_on "zimg" => :optional
 
+  patch :DATA
+
   def install
     args = %W[
       --prefix=#{prefix}
@@ -188,3 +190,188 @@ class Ffmpegdecklink < Formula
     assert_predicate mp4out, :exist?
   end
 end
+
+
+__END__
+diff --git a/libavdevice/decklink_dec.cpp b/libavdevice/decklink_dec.cpp
+index 510637676c..897fca1003 100644
+--- a/libavdevice/decklink_dec.cpp
++++ b/libavdevice/decklink_dec.cpp
+@@ -21,6 +21,9 @@
+  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
+  */
+ 
++#include <atomic>
++using std::atomic;
++
+ /* Include internal.h first to avoid conflict between winsock.h (used by
+  * DeckLink headers) and winsock2.h (used by libavformat) in MSVC++ builds */
+ extern "C" {
+@@ -98,6 +101,44 @@ static VANCLineNumber vanc_line_numbers[] = {
+     {bmdModeUnknown, 0, -1, -1, -1}
+ };
+ 
++class decklink_allocator : public IDeckLinkMemoryAllocator
++{
++public:
++        decklink_allocator(): _refs(1) { }
++        virtual ~decklink_allocator() { }
++
++        // IDeckLinkMemoryAllocator methods
++        virtual HRESULT STDMETHODCALLTYPE AllocateBuffer(unsigned int bufferSize, void* *allocatedBuffer)
++        {
++            void *buf = av_malloc(bufferSize + AV_INPUT_BUFFER_PADDING_SIZE);
++            if (!buf)
++                return E_OUTOFMEMORY;
++            *allocatedBuffer = buf;
++            return S_OK;
++        }
++        virtual HRESULT STDMETHODCALLTYPE ReleaseBuffer(void* buffer)
++        {
++            av_free(buffer);
++            return S_OK;
++        }
++        virtual HRESULT STDMETHODCALLTYPE Commit() { return S_OK; }
++        virtual HRESULT STDMETHODCALLTYPE Decommit() { return S_OK; }
++
++        // IUnknown methods
++        virtual HRESULT STDMETHODCALLTYPE QueryInterface(REFIID iid, LPVOID *ppv) { return E_NOINTERFACE; }
++        virtual ULONG   STDMETHODCALLTYPE AddRef(void) { return ++_refs; }
++        virtual ULONG   STDMETHODCALLTYPE Release(void)
++        {
++            int ret = --_refs;
++            if (!ret)
++                delete this;
++            return ret;
++        }
++
++private:
++        std::atomic<int>  _refs;
++};
++
+ extern "C" {
+ static void decklink_object_free(void *opaque, uint8_t *data)
+ {
+@@ -924,6 +965,7 @@ av_cold int ff_decklink_read_header(AVFormatContext *avctx)
+ {
+     struct decklink_cctx *cctx = (struct decklink_cctx *)avctx->priv_data;
+     struct decklink_ctx *ctx;
++    class decklink_allocator *allocator;
+     AVStream *st;
+     HRESULT result;
+     char fname[1024];
+@@ -1017,6 +1059,14 @@ av_cold int ff_decklink_read_header(AVFormatContext *avctx)
+     ctx->input_callback = new decklink_input_callback(avctx);
+     ctx->dli->SetCallback(ctx->input_callback);
+ 
++    allocator = new decklink_allocator();
++    ret = (ctx->dli->SetVideoInputFrameMemoryAllocator(allocator) == S_OK ? 0 : AVERROR_EXTERNAL);
++    allocator->Release();
++    if (ret < 0) {
++        av_log(avctx, AV_LOG_ERROR, "Cannot set custom memory allocator\n");
++        goto error;
++    }
++
+     if (mode_num == 0 && !cctx->format_code) {
+         if (decklink_autodetect(cctx) < 0) {
+             av_log(avctx, AV_LOG_ERROR, "Cannot Autodetect input stream or No signal\n");
+diff --git a/libavdevice/decklink_common.h b/libavdevice/decklink_common.h
+index 57ee7d1d68..f416134b8a 100644
+--- a/libavdevice/decklink_common.h
++++ b/libavdevice/decklink_common.h
+@@ -56,7 +56,6 @@ struct decklink_ctx {
+     IDeckLinkConfiguration *cfg;
+     IDeckLinkAttributes *attr;
+     decklink_output_callback *output_callback;
+-    decklink_input_callback *input_callback;
+ 
+     /* DeckLink mode information */
+     BMDTimeValue bmd_tb_den;
+diff --git a/libavdevice/decklink_dec.cpp b/libavdevice/decklink_dec.cpp
+index 897fca1003..974ee1d94c 100644
+--- a/libavdevice/decklink_dec.cpp
++++ b/libavdevice/decklink_dec.cpp
+@@ -596,8 +596,7 @@ public:
+         virtual HRESULT STDMETHODCALLTYPE VideoInputFrameArrived(IDeckLinkVideoInputFrame*, IDeckLinkAudioInputPacket*);
+ 
+ private:
+-        ULONG           m_refCount;
+-        pthread_mutex_t m_mutex;
++        std::atomic<int>  _refs;
+         AVFormatContext *avctx;
+         decklink_ctx    *ctx;
+         int no_video;
+@@ -605,42 +604,30 @@ private:
+         int64_t initial_audio_pts;
+ };
+ 
+-decklink_input_callback::decklink_input_callback(AVFormatContext *_avctx) : m_refCount(0)
++decklink_input_callback::decklink_input_callback(AVFormatContext *_avctx) : _refs(1)
+ {
+     avctx = _avctx;
+     decklink_cctx       *cctx = (struct decklink_cctx *)avctx->priv_data;
+     ctx = (struct decklink_ctx *)cctx->ctx;
+     no_video = 0;
+     initial_audio_pts = initial_video_pts = AV_NOPTS_VALUE;
+-    pthread_mutex_init(&m_mutex, NULL);
+ }
+ 
+ decklink_input_callback::~decklink_input_callback()
+ {
+-    pthread_mutex_destroy(&m_mutex);
+ }
+ 
+ ULONG decklink_input_callback::AddRef(void)
+ {
+-    pthread_mutex_lock(&m_mutex);
+-    m_refCount++;
+-    pthread_mutex_unlock(&m_mutex);
+-
+-    return (ULONG)m_refCount;
++    return ++_refs;
+ }
+ 
+ ULONG decklink_input_callback::Release(void)
+ {
+-    pthread_mutex_lock(&m_mutex);
+-    m_refCount--;
+-    pthread_mutex_unlock(&m_mutex);
+-
+-    if (m_refCount == 0) {
++    int ret = --_refs;
++    if (!ret)
+         delete this;
+-        return 0;
+-    }
+-
+-    return (ULONG)m_refCount;
++    return ret;
+ }
+ 
+ static int64_t get_pkt_pts(IDeckLinkVideoInputFrame *videoFrame,
+@@ -966,6 +953,7 @@ av_cold int ff_decklink_read_header(AVFormatContext *avctx)
+     struct decklink_cctx *cctx = (struct decklink_cctx *)avctx->priv_data;
+     struct decklink_ctx *ctx;
+     class decklink_allocator *allocator;
++    class decklink_input_callback *input_callback;
+     AVStream *st;
+     HRESULT result;
+     char fname[1024];
+@@ -1056,8 +1044,13 @@ av_cold int ff_decklink_read_header(AVFormatContext *avctx)
+         goto error;
+     }
+ 
+-    ctx->input_callback = new decklink_input_callback(avctx);
+-    ctx->dli->SetCallback(ctx->input_callback);
++    input_callback = new decklink_input_callback(avctx);
++    ret = (ctx->dli->SetCallback(input_callback) == S_OK ? 0 : AVERROR_EXTERNAL);
++    input_callback->Release();
++    if (ret < 0) {
++        av_log(avctx, AV_LOG_ERROR, "Cannot set input callback\n");
++        goto error;
++    }
+ 
+     allocator = new decklink_allocator();
+     ret = (ctx->dli->SetVideoInputFrameMemoryAllocator(allocator) == S_OK ? 0 : AVERROR_EXTERNAL);
+-- 
+2.16.3
