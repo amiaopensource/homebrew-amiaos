@@ -1,9 +1,9 @@
 class Vrecord < Formula
   desc "Capturing a video signal and turning it into a digital file"
   homepage "https://github.com/amiaopensource/vrecord"
-  url "https://github.com/amiaopensource/vrecord/archive/v2018-05-14.tar.gz"
-  version "2018-05-14"
-  sha256 "0506f22c0877c6ac2b13c8c21f097f61b524a96b311a2a244bbf8b99258faf63"
+  url "https://github.com/amiaopensource/vrecord/archive/v2018-06-11.tar.gz"
+  version "2018-06-11"
+  sha256 "cba0ff013b9d555281e41234275525b191e85533797ab9a76b6020d35c220ed9"
   head "https://github.com/amiaopensource/vrecord.git"
 
   bottle :unneeded
@@ -22,6 +22,7 @@ class Vrecord < Formula
 
   def install
     bin.install "vrecord"
+    bin.install "vtest"
     bin.install "qcview.lua"
     bin.install "vrecord_policy_ffv1.xml"
     bin.install "vrecord_policy_uncompressed.xml"
