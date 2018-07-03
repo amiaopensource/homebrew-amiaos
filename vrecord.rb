@@ -1,16 +1,16 @@
 class Vrecord < Formula
   desc "Capturing a video signal and turning it into a digital file"
   homepage "https://github.com/amiaopensource/vrecord"
-  url "https://github.com/amiaopensource/vrecord/archive/v2018-06-11.tar.gz"
-  version "2018-06-11"
-  sha256 "cba0ff013b9d555281e41234275525b191e85533797ab9a76b6020d35c220ed9"
+  url "https://github.com/amiaopensource/vrecord/archive/v2018-07-03.tar.gz"
+  version "2018-07-03"
+  sha256 "934cdeae9153e59d493968f114b898603ff8075558dde8388ecddd9f5c4fb24b"
   head "https://github.com/amiaopensource/vrecord.git"
 
   bottle :unneeded
 
-  depends_on "cowsay"
   depends_on "amiaopensource/amiaos/decklinksdk"
   depends_on "amiaopensource/amiaos/ffmpegdecklink" => ["with-sdl2", "with-freetype", "with-openjpeg"]
+  depends_on "cowsay"
   depends_on "freetype"
   depends_on "mediaconch"
   depends_on "mkvtoolnix"
@@ -28,6 +28,7 @@ class Vrecord < Formula
     bin.install "vrecord_policy_uncompressed.xml"
     prefix.install "vrecord_logo.png"
     man1.install "vrecord.1"
+    man1.install "vtest.1"
   end
 
   def post_install
