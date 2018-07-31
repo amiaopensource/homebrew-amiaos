@@ -1,9 +1,9 @@
 class Vrecord < Formula
   desc "Capturing a video signal and turning it into a digital file"
   homepage "https://github.com/amiaopensource/vrecord"
-  url "https://github.com/amiaopensource/vrecord/archive/v2018-07-30.tar.gz"
-  version "2018-07-30"
-  sha256 "ab11efcae71ef8813470c60d3e62e6285e6eb6af6cf8681336bee759d0c2ad82"
+  url "https://github.com/amiaopensource/vrecord/archive/v2018-07-31.tar.gz"
+  version "2018-07-31"
+  sha256 "685b01a833eb028e070171c26cd212412a8f26b034bb0c556da50fad87e318a3"
   head "https://github.com/amiaopensource/vrecord.git"
 
   bottle :unneeded
@@ -12,7 +12,6 @@ class Vrecord < Formula
   depends_on "amiaopensource/amiaos/ffmpegdecklink" => ["with-sdl2", "with-freetype", "with-openjpeg"]
   depends_on "cowsay"
   depends_on "freetype"
-  depends_on "gnuplot"
   depends_on "mediaconch"
   depends_on "mkvtoolnix"
   depends_on "mpv"
@@ -32,6 +31,13 @@ class Vrecord < Formula
   end
 
   def post_install
+    if `brew ls -1 gnuplot 2>/dev/null | head -n1`.empty?
+      puts "Warning: gnuplot is not installed"
+      puts "consider running 'brew install gnuplot --without-lua'"
+      puts "If gnuplot is installed, you'll receive extra quality control images along with your qctools report"
+    else
+      puts "gnuplot was found"
+    end
     puts "Checking for dependency Pashua. If Pashua is not found will attempt to install"
     if File.exist? File.expand_path "/Applications/Pashua.app"
       puts "Pashua was found"
