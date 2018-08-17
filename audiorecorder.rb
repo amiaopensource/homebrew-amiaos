@@ -1,9 +1,11 @@
 class Audiorecorder < Formula
   desc "Tool for calibration and recording of analog audio sources"
   homepage "https://github.com/amiaopensource/audiorecorder"
-  url "https://github.com/amiaopensource/audiorecorder/archive/0.1.09.tar.gz"
-  sha256 "d244888d5b569a84e541d86a4e8141bd0dec59435a1b815643a2ae15bc87c722"
+  url "https://github.com/amiaopensource/audiorecorder/archive/2018-08-17.tar.gz"
+  sha256 "2c784b7dc70faf6befb5602ae61ee119bcceee8ad7db90d9ca891af423d9d617"
   head "https://github.com/amiaopensource/audiorecorder.git"
+  
+  option "with-audiorecorder2"
 
   depends_on "sdl"
   depends_on "ffmpeg" => ["with-sdl2", "with-freetype"]
@@ -15,6 +17,16 @@ class Audiorecorder < Formula
   def install
     bin.install "audiorecorder"
     man1.install "audiorecorder.1"
+    
+    if build.with?("audiorecorder2")
+      if RUBY_PLATFORM.include?('linux')
+        bin.install "Linux/audiorecorder2"
+      elsif
+        RUBY_PLATFORM.include?('darwin')
+        prefix.install "macOS/audiorecorder2-osx.tgz"
+        system("open #{prefix}/audiorecorder2-osx.tgz")
+      end
+    end
   end
 
   def post_install
