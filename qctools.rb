@@ -1,8 +1,8 @@
 class Qctools < Formula
   desc "Quality control archival video via libavfilter"
   homepage "https://bavc.org/preserve-media/preservation-tools"
-  url "https://github.com/bavc/qctools/archive/v0.9.tar.gz"
-  sha256 "19ef4be054ebfca70a07043afea20bcca241ba08d70a47acda837ead849aff03"
+  url "https://github.com/bavc/qctools/archive/v1.0.tar.gz"
+  sha256 "4b687eb9aedf29a8262393079669d3870c04b510669b9df406021243b8ebd918"
   head "https://github.com/bavc/qctools.git"
 
   depends_on "pkg-config" => :build
@@ -25,6 +25,8 @@ class Qctools < Formula
       system "make"
       cd ".."
       prefix.install "qctools-gui/QCTools.app"
+      puts "To create a link in the Application folder, run:"
+      puts "  ln -Fs `find /usr/local -name QCTools.app` /Applications/QCTools.app"
     end
   end
 end
