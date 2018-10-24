@@ -1,9 +1,9 @@
 class Vrecord < Formula
   desc "Capturing a video signal and turning it into a digital file"
   homepage "https://github.com/amiaopensource/vrecord"
-  url "https://github.com/amiaopensource/vrecord/archive/v2018-09-12.tar.gz"
-  version "2018-09-12"
-  sha256 "dd0af6e9448c97993859045b4ebd1abad6bbf89a404511b6df9022664a2509e5"
+  url "https://github.com/amiaopensource/vrecord/archive/v2018-10-23.tar.gz"
+  version "2018-10-23"
+  sha256 "c4dd4e0161d9834abf65bc0d6d4b6b70ef782ba4301fa82258a901659169ff39"
   head "https://github.com/amiaopensource/vrecord.git"
 
   bottle :unneeded
