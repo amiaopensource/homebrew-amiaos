@@ -1,9 +1,9 @@
 class Ffmprovisr < Formula
   desc "Repository of useful FFmpeg command-lines for archivists"
   homepage "https://github.com/amiaopensource/ffmprovisr"
-  url "https://github.com/amiaopensource/ffmprovisr/archive/v2018-10-21.tar.gz"
-  version "2018-10-21"
-  sha256 "023fffcac653d408044a3b62f018c173652e80d35353331b1d0c16204048ce98"
+  url "https://github.com/amiaopensource/ffmprovisr/archive/v2018-11-01.tar.gz"
+  version "2018-11-01"
+  sha256 "e9b477bb1a329674476ee0612ee91c1061ae8c0234aba531401f511ffdf62980"
 
   bottle :unneeded
 
