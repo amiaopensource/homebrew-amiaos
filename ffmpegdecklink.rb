@@ -169,6 +169,8 @@ class Ffmpegdecklink < Formula
     system "make"
     mv "ffmpeg", "ffmpeg-dl"
     bin.install "ffmpeg-dl"
+    mv "ffprobe", "ffprobe-dl"
+    bin.install "ffprobe-dl"
 
     if build.with? "sdl2"
       mv "ffplay", "ffplay-dl"
