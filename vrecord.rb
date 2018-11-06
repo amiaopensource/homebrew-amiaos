@@ -9,7 +9,7 @@ class Vrecord < Formula
   bottle :unneeded
 
   depends_on "amiaopensource/amiaos/decklinksdk"
-  depends_on "amiaopensource/amiaos/ffmpegdecklink" => ["with-sdl2", "with-freetype", "with-openjpeg"]
+  depends_on "amiaopensource/amiaos/ffmpegdecklink"
   depends_on "cowsay"
   depends_on "freetype"
   depends_on "mediaconch"
