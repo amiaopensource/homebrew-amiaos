@@ -10,7 +10,7 @@ class Audiorecorder < Formula
   option "with-audiorecorder2"
 
   depends_on "sdl"
-  depends_on "ffmpeg" => ["with-sdl2", "with-freetype"]
+  depends_on "ffmpeg" => ["with-freetype"]
   depends_on "mpv"
   depends_on "sox"
   depends_on "dialog"
