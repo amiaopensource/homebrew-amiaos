@@ -1,15 +1,16 @@
 class Vrecord < Formula
   desc "Capturing a video signal and turning it into a digital file"
   homepage "https://github.com/amiaopensource/vrecord"
-  url "https://github.com/amiaopensource/vrecord/archive/v2018-12-05.tar.gz"
-  version "2018-12-05"
-  sha256 "b1328d7f9f3183c2436a19b5983160d7d9d3b377a17088464d1092cfad43c7fa"
+  url "https://github.com/amiaopensource/vrecord/archive/v2018-12-13.tar.gz"
+  version "2018-12-13"
+  sha256 "479ef8bea1e7b2dadcea9ac929496457223df0844c4251a1d99f2bdf2e218f12"
   head "https://github.com/amiaopensource/vrecord.git"
 
   bottle :unneeded
 
   depends_on "amiaopensource/amiaos/decklinksdk"
   depends_on "amiaopensource/amiaos/ffmpegdecklink"
+  depends_on "amiaopensource/amiaos/gtkdialog"
   depends_on "cowsay"
   depends_on "freetype"
   depends_on "mediaconch"
@@ -37,15 +38,6 @@ class Vrecord < Formula
       puts "If gnuplot is installed, you'll receive extra quality control images along with your qctools report"
     else
       puts "gnuplot was found"
-    end
-    puts "Checking for dependency Pashua. If Pashua is not found will attempt to install"
-    if File.exist? File.expand_path "/Applications/Pashua.app"
-      puts "Pashua was found"
-    elsif `brew cask ls --versions pashua 2>&1 | head -n1`.include? "Warning: pashua is not installed"
-      puts "installing Pashua"
-      system `echo 'brew install Caskroom/cask/pashua > /dev/null'`
-    else
-      puts "Pashua was found"
     end
   end
 
