@@ -1,7 +1,7 @@
 # homebrew-amiaos
 Homebrew tap for AMIA Open Source formulae:
 
-To tap, run `brew tap amiaopensource/homebrew-amiaos` in your terminal.
+To tap, run `brew tap amiaopensource/amiaos` in your terminal.
 
 - **audiorecorder** — Tool for calibration and recording of analog audio sources.
 - **bmdtools** — Basic capture and play programs for Blackmagic Design Decklink (forked from https://github.com/lu-zero/bmdtools).
