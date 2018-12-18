@@ -1,8 +1,6 @@
 # homebrew-amiaos
 Homebrew tap for AMIA Open Source formulae:
 
-To tap, run `brew tap amiaopensource/amiaos` in your terminal.
-
 - **audiorecorder** — Tool for calibration and recording of analog audio sources.
 - **bmdtools** — Basic capture and play programs for Blackmagic Design Decklink (forked from https://github.com/lu-zero/bmdtools).
 - **Cable Bible** — A comprehensive guide to cables and connectors used in audiovisual archiving.
@@ -16,6 +14,8 @@ To tap, run `brew tap amiaopensource/amiaos` in your terminal.
 - **pbprotracktor** — Make postgres calls to public broadcasting scheduling databases to produce a PBCore XML output.
 - **qwt-qt5** — Qt Widgets for Technical Applications (for Qt5). Note that qwt-qt5 is used by QCTools.
 - **vrecord** — Open-source software for capturing a video signal and turning it into a digital file.
+
+To tap, run `brew tap amiaopensource/amiaos` in your terminal.
 
 All the formulae work fine on Homebrew and some of them also on Linuxbrew (including the Windows Subsystem for Linux).
 
