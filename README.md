@@ -14,7 +14,9 @@ Homebrew tap for AMIA Open Source formulae:
 - **pbprotracktor** — Make postgres calls to public broadcasting scheduling databases to produce a PBCore XML output.
 - **vrecord** — Open-source software for capturing a video signal and turning it into a digital file.
 
-All the formulae work fine on Homebrew and some of them also on Linuxbrew (including as Windows app).
+To tap, run `brew tap amiaopensource/amiaos` in your terminal.
+
+All the formulae work fine on Homebrew and some of them also on Linuxbrew (including the Windows Subsystem for Linux).
 
 ## Contributing
 
