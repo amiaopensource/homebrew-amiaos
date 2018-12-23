@@ -9,12 +9,12 @@ class Audiorecorder < Formula
 
   option "with-audiorecorder2"
 
-  depends_on "sdl"
+  depends_on "bwfmetaedit"
+  depends_on "dialog"
   depends_on "ffmpeg" => ["with-freetype"]
   depends_on "mpv"
+  depends_on "sdl"
   depends_on "sox"
-  depends_on "dialog"
-  depends_on "bwfmetaedit"
 
   def install
     bin.install "audiorecorder"
