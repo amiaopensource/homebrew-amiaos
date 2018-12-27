@@ -44,7 +44,6 @@ class Ffmpegdecklink < Formula
   depends_on "x265"
   depends_on "xvid"
   depends_on "xz"
-  depends_on "freetype"
 
   depends_on "chromaprint" => :optional
   depends_on "fdk-aac" => :optional
