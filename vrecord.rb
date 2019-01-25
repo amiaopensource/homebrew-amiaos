@@ -5,6 +5,7 @@ class Vrecord < Formula
   version "2018-12-13"
   sha256 "479ef8bea1e7b2dadcea9ac929496457223df0844c4251a1d99f2bdf2e218f12"
   head "https://github.com/amiaopensource/vrecord.git"
+  revision 1
 
   bottle :unneeded
 
@@ -23,10 +24,16 @@ class Vrecord < Formula
   def install
     bin.install "vrecord"
     bin.install "vtest"
-    bin.install "qcview.lua"
-    bin.install "vrecord_policy_ffv1.xml"
-    bin.install "vrecord_policy_uncompressed.xml"
-    prefix.install "vrecord_logo.png"
+    prefix.install "Resources/qcview.lua"
+    prefix.install "Resources/vrecord_policy_ffv1.xml"
+    prefix.install "Resources/vrecord_policy_uncompressed.xml"
+    prefix.install "Resources/vrecord_logo.png"
+    prefix.install "Resources/vrecord logo.png"
+    prefix.install "Resources/vrecord logo playback.png"
+    prefix.install "Resources/vrecord logo audio.png"
+    prefix.install "Resources/vrecord logo edit.png"
+    prefix.install "Resources/vrecord logo help.png"
+    prefix.install "Resources/vrecord logo documentation.png"
     man1.install "vrecord.1"
     man1.install "vtest.1"
   end
