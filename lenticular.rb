@@ -1,9 +1,9 @@
 class Lenticular < Formula
   desc "Digital restoration of lenticular colours"
   homepage "https://github.com/amiaopensource/lenticular"
-  url "https://github.com/amiaopensource/lenticular/archive/v2018-05-26.tar.gz"
-  version "2018-05-26"
-  sha256 "56b51d782b317df952070626c6fd693a7af18d1fa579b20f8bc02747f48fd4ec"
+  url "https://github.com/amiaopensource/lenticular/archive/v2019-01-27.tar.gz"
+  version "2019-01-27"
+  sha256 "831a397ecf8080395ac69374bc38ce2a305845cc057a5ef8c93caa3f148bff44"
   head "https://github.com/amiaopensource/lenticular.git"
 
   option "with-framecropper", "Install frame-cropper tool"
