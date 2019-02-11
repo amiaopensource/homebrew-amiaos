@@ -4,14 +4,14 @@ class Audiorecorder < Formula
   url "https://github.com/amiaopensource/audiorecorder/archive/2018-08-17.tar.gz"
   version "2018-08-17"
   sha256 "2c784b7dc70faf6befb5602ae61ee119bcceee8ad7db90d9ca891af423d9d617"
-  revision 1
+  revision 2
   head "https://github.com/amiaopensource/audiorecorder.git"
 
   option "with-audiorecorder2"
 
   depends_on "bwfmetaedit"
   depends_on "dialog"
-  depends_on "ffmpeg" => ["with-freetype"]
+  depends_on "ffmpeg"
   depends_on "mpv"
   depends_on "sdl"
   depends_on "sox"
