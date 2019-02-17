@@ -1,8 +1,8 @@
 class Ffmpegdecklink < Formula
   desc "FFmpeg with --enable-decklink"
   homepage "https://ffmpeg.org/"
-  url "https://ffmpeg.org/releases/ffmpeg-4.1.tar.xz"
-  sha256 "a38ec4d026efb58506a99ad5cd23d5a9793b4bf415f2c4c2e9c1bb444acd1994"
+  url "https://ffmpeg.org/releases/ffmpeg-4.1.1.tar.xz"
+  sha256 "373749824dfd334d84e55dff406729edfd1606575ee44dd485d97d45ea4d2d86"
   head "https://github.com/FFmpeg/FFmpeg.git"
   keg_only "anything that needs this will know where to look"
 
@@ -78,14 +78,11 @@ class Ffmpegdecklink < Formula
     args = %W[
       --prefix=#{prefix}
       --disable-shared
-      --enable-pthreads
       --enable-version3
       --enable-hardcoded-tables
-      --enable-avresample
       --cc=#{ENV.cc}
       --host-cflags=#{ENV.cflags}
       --host-ldflags=#{ENV.ldflags}
-      --enable-ffplay
       --enable-gpl
       --enable-libfreetype
       --enable-libmp3lame
@@ -97,7 +94,6 @@ class Ffmpegdecklink < Formula
       --enable-libx264
       --enable-libx265
       --enable-libxvid
-      --enable-lzma
     ]
 
     args << "--enable-chromaprint" if build.with? "chromaprint"
