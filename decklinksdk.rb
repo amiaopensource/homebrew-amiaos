@@ -6,6 +6,10 @@ class Decklinksdk < Formula
   head "https://github.com/amiaopensource/SoyDecklink.git"
 
   def install
-    include.install Dir["DecklinkSdk/Mac/include/*"]
+    if RUBY_PLATFORM.include?("linux")
+        include.install Dir["DecklinkSdk/Linux/include/*"]
+    elsif RUBY_PLATFORM.include?("darwin")
+        include.install Dir["DecklinkSdk/Mac/include/*"]
+    end
   end
 end
