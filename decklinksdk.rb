@@ -5,7 +5,26 @@ class Decklinksdk < Formula
   sha256 "edff8c6bcc58cb61c003b792298f0254d9373aaae12e13435e4fc0c41dead21a"
   head "https://github.com/amiaopensource/SoyDecklink.git"
 
+  option "with-macOS", "Install DecklinkSDK for macOS"
+  option "with-linux", "Install DecklinkSDK for linux"
+
   def install
-    include.install Dir["DecklinkSdk/Mac/include/*"]
+    if (build.with?("macOS") && build.with?("linux"))
+      puts "Please select only one build option."
+      puts "To manually install a specific version, use the flags --with-macOS or --with-linux"
+    elsif build.with?("linux")
+      include.install Dir["DecklinkSdk/Linux/include/*"]
+    elsif build.with?("macOS")
+      include.install Dir["DecklinkSdk/Mac/include/*"]
+    else    
+      if RUBY_PLATFORM.include?("linux")
+        include.install Dir["DecklinkSdk/Linux/include/*"]
+      elsif RUBY_PLATFORM.include?("darwin")
+        include.install Dir["DecklinkSdk/Mac/include/*"]
+      else
+        puts "Unable to detect supported system. Skipping Install."
+        puts "To manually install a specific version, use the flags --with-macOS or --with-linux"
+      end
+    end
   end
 end
