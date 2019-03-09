@@ -15,6 +15,7 @@ class Gtkdialog < Formula
   depends_on "graphite2" => :build
   depends_on "gtk+" => :build
   depends_on "harfbuzz" => :build
+  depends_on "libffi" => :build
   depends_on "libpng" => :build
   depends_on "pango" => :build
   depends_on "pixman" => :build
