@@ -138,10 +138,6 @@ class Ffmpegdecklink < Formula
     args << "--extra-cflags=-I#{HOMEBREW_PREFIX}/include"
     args << "--extra-ldflags=-L#{HOMEBREW_PREFIX}/include"
 
-    # These librares are GPL-incompatible, and require ffmpeg be built with
-    # the "--enable-nonfree" flag, which produces unredistributable libraries
-    args << "--enable-nonfree" if build.with?("fdk-aac") || build.with?("openssl")
-
     system "./configure", *args
 
     system "make"
