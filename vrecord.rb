@@ -39,7 +39,7 @@ class Vrecord < Formula
   def post_install
     if `brew ls -1 gnuplot 2>/dev/null | head -n1`.empty?
       puts "Warning: gnuplot is not installed"
-      puts "consider running 'brew install gnuplot --without-lua'"
+      puts "consider running 'brew install gnuplot'"
       puts "If gnuplot is installed, you'll receive extra quality control images along with your qctools report"
     else
       puts "gnuplot was found"
