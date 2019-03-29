@@ -26,9 +26,29 @@ Contributions are very welcome! Please consider the [Contributing Guidelines](CO
 
 Our code of conduct is [Contributor Covenant](CODE_OF_CONDUCT.md). All contributors agree to abide by its terms. To report violations contact a member of the [Goverance Interest Group](https://github.com/amiaopensource/governance).
 
-## Maintainers
+## Maintainer
 
-[Reto Kromer](retokromer)
+Reto Kromer (@retokromer)
+
+## Contributors
+
+- Andrew Weaver (@privatezero)
+- Annie Schweikert (@aeschweik)
+- Ashley Blewer (@ablwr)
+- Basti Becker (@bastibeckr)
+- Catriona Schlosser (@CSchloss385)
+- Dave Rice (@dericed)
+- Dinah Handel (@dinahhandel)
+- Elder Orb (@ElderOrb)
+- Ethan Gates (@EG-tech)
+- Fabio Utzig (@utzig)
+- Jonathan Farbowitz (@jfarbowitz)
+- Kieran O'Leary (@kieranjol)
+- Reto Kromer (@retokromer)
+- Savannah Campbell (@savcampbell)
+- Smithsonian National Museum of African American History and Culture (@NMAAHC)
+
+Last updated on 2019-03-29.
 
 ## Copyright, Licence and Disclaimer
 
