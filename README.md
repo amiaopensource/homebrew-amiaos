@@ -26,7 +26,7 @@ Contributions are very welcome! Please consider the [Contributing Guidelines](CO
 
 Our code of conduct is [Contributor Covenant](CODE_OF_CONDUCT.md). All contributors agree to abide by its terms. To report violations contact a member of the [Goverance Interest Group](https://github.com/amiaopensource/governance).
 
-## Maintainer
+## Maintainers
 
 Reto Kromer (@retokromer)
 
