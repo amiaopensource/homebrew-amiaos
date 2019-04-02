@@ -4,6 +4,7 @@ class Vrecord < Formula
   url "https://github.com/amiaopensource/vrecord/archive/v2019-01-25.tar.gz"
   version "2019-01-25"
   sha256 "fd13fe98013e9568b17008ba9132e31f8c16b18a72149d9a4771eb0c9f6fe0d0"
+  revision 1
   head "https://github.com/amiaopensource/vrecord.git"
 
   bottle :unneeded
@@ -13,6 +14,7 @@ class Vrecord < Formula
   depends_on "amiaopensource/amiaos/gtkdialog"
   depends_on "cowsay"
   depends_on "freetype"
+  depends_on "gnuplot"
   depends_on "mediaconch"
   depends_on "mkvtoolnix"
   depends_on "mpv"
@@ -34,16 +36,6 @@ class Vrecord < Formula
     prefix.install "Resources/vrecord logo documentation.png"
     man1.install "vrecord.1"
     man1.install "vtest.1"
-  end
-
-  def post_install
-    if `brew ls -1 gnuplot 2>/dev/null | head -n1`.empty?
-      puts "Warning: gnuplot is not installed"
-      puts "consider running 'brew install gnuplot --without-lua'"
-      puts "If gnuplot is installed, you'll receive extra quality control images along with your qctools report"
-    else
-      puts "gnuplot was found"
-    end
   end
 
   test do
