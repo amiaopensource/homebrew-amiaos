@@ -4,8 +4,8 @@ class Vrecord < Formula
   url "https://github.com/amiaopensource/vrecord/archive/v2019-01-25.tar.gz"
   version "2019-01-25"
   sha256 "fd13fe98013e9568b17008ba9132e31f8c16b18a72149d9a4771eb0c9f6fe0d0"
-  head "https://github.com/amiaopensource/vrecord.git"
   revision 1
+  head "https://github.com/amiaopensource/vrecord.git"
 
   bottle :unneeded
 
