@@ -1,9 +1,9 @@
 class Pbprotracktor < Formula
   desc "Postgres calls to databases to produce a PBCore XML or CSV output"
   homepage "https://github.com/amiaopensource/pbprotracktor"
-  url "https://github.com/amiaopensource/pbprotracktor/archive/v2018-02-14.tar.gz"
-  version "2018-02-14"
-  sha256 "1dacef32c1f09274b1e6f6c3a62cc50325a938cf288552e35a78529605516aa7"
+  url "https://github.com/amiaopensource/pbprotracktor/archive/v2019-04-10.tar.gz"
+  version "2019-04-10"
+  sha256 "ee889b74569f3649d1e3042ab1357101d19dee63ae2776c8b9b75853fc76e0ff"
   head "https://github.com/amiaopensource/pbprotracktor.git"
 
   bottle :unneeded
