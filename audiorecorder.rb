@@ -1,10 +1,9 @@
 class Audiorecorder < Formula
   desc "Tool for calibration and recording of analog audio sources"
   homepage "https://github.com/amiaopensource/audiorecorder"
-  url "https://github.com/amiaopensource/audiorecorder/archive/2018-08-17.tar.gz"
-  version "2018-08-17"
-  sha256 "2c784b7dc70faf6befb5602ae61ee119bcceee8ad7db90d9ca891af423d9d617"
-  revision 2
+  url "https://github.com/amiaopensource/audiorecorder/archive/2019-05-21.tar.gz"
+  version "2019-05-21"
+  sha256 "c23d318e5c77fe8e6ccf637a5f8100625e2459a97b20a4f1c3cbb07b66ce7aa3"
   head "https://github.com/amiaopensource/audiorecorder.git"
 
   option "with-audiorecorder2"
