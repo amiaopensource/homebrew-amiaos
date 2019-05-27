@@ -23,7 +23,7 @@ class Gtkdialog < Formula
 
   # Update patch to compile gtkdialog on macOS
   # See: http://www.murga-linux.com/puppy/viewtopic.php?t=108945
-  patch :DATA
+  patch :DATA if OS.mac?
 
   def install
     system "./configure"
