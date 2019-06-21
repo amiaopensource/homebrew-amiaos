@@ -12,13 +12,9 @@ class Decklinksdk < Formula
     if build.with?("macOS") && build.with?("linux")
       puts "Please select only one build option."
       puts "To manually install a specific version, use the flags --with-macOS or --with-linux"
-    elsif build.with?("linux")
+    elsif build.with?("linux") || RUBY_PLATFORM.include?("linux")
       include.install Dir["DecklinkSdk/Linux/include/*"]
-    elsif build.with?("macOS")
-      include.install Dir["DecklinkSdk/Mac/include/*"]
-    elsif RUBY_PLATFORM.include?("linux")
-      include.install Dir["DecklinkSdk/Linux/include/*"]
-    elsif RUBY_PLATFORM.include?("darwin")
+    elsif build.with?("macOS") || RUBY_PLATFORM.include?("darwin")
       include.install Dir["DecklinkSdk/Mac/include/*"]
     else
       puts "Unable to detect supported system. Skipping Install."
