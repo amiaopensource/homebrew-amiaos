@@ -16,11 +16,49 @@ Homebrew tap for AMIA Open Source formulae:
 
 To tap, run `brew tap amiaopensource/amiaos` in your terminal.
 
-All the formulae work fine on Homebrew and some of them also on Linuxbrew (including the Windows Subsystem for Linux).
+All the formulae work on macOS and some of them also on Linux (including the Windows Subsystem for Linux).
 
 ## Contributing
 
 Contributions are very welcome! Please consider the [Contributing Guidelines](CONTRIBUTING.md).
+
+## Code of Conduct
+
+Our code of conduct is [Contributor Covenant](CODE_OF_CONDUCT.md). All contributors agree to abide by its terms. To report violations contact a member of the [Goverance Interest Group](https://github.com/amiaopensource/governance).
+
+## Maintainers
+
+Reto Kromer (@retokromer)
+
+## Contributors
+
+- Andrew Weaver (@privatezero)
+- Annie Schweikert (@aeschweik)
+- Ashley Blewer (@ablwr)
+- Basti Becker (@bastibeckr)
+- Catriona Schlosser (@CSchloss385)
+- Dave Rice (@dericed)
+- Dinah Handel (@dinahhandel)
+- Elder Orb (@ElderOrb)
+- Ethan Gates (@EG-tech)
+- Fabio Utzig (@utzig)
+- Jonathan Farbowitz (@jfarbowitz)
+- Kieran O'Leary (@kieranjol)
+- Reto Kromer (@retokromer)
+- Savannah Campbell (@savcampbell)
+- Smithsonian National Museum of African American History and Culture (@NMAAHC)
+
+Last updated on 2019-03-29.
+
+## Copyright, Licence and Disclaimer
+
+Copyright (c) 2014-2019 AMIA Open Source
+
+The formulae are released under a [MIT License](LICENSE).
+
+The formulae are provided "as is" without warranty or support of any kind.
+
+---
 
 ## Abandoned project
 
