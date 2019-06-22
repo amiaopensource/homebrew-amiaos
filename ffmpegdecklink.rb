@@ -141,12 +141,9 @@ class Ffmpegdecklink < Formula
     system "./configure", *args
 
     system "make"
-    mv "ffmpeg", "ffmpeg-dl"
-    bin.install "ffmpeg-dl"
-    mv "ffprobe", "ffprobe-dl"
-    bin.install "ffprobe-dl"
-    mv "ffplay", "ffplay-dl"
-    bin.install "ffplay-dl"
+    bin.install "ffmpeg" => "ffmpeg-dl"
+    bin.install "ffprobe" => "ffprobe-dl"
+    bin.install "ffplay" => "ffplay-dl"
 
     if build.with? "tools"
       system "make", "alltools"
