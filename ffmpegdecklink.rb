@@ -1,8 +1,8 @@
 class Ffmpegdecklink < Formula
   desc "FFmpeg with --enable-decklink"
   homepage "https://ffmpeg.org/"
-  url "https://ffmpeg.org/releases/ffmpeg-4.1.3.tar.xz"
-  sha256 "0c3020452880581a8face91595b239198078645e7d7184273b8bcc7758beb63d"
+  url "https://ffmpeg.org/releases/ffmpeg-4.1.4.tar.xz"
+  sha256 "f1f049a82fcfbf156564e73a3935d7e750891fab2abf302e735104fd4050a7e1"
   head "https://github.com/FFmpeg/FFmpeg.git"
   keg_only "anything that needs this will know where to look"
 
@@ -79,7 +79,6 @@ class Ffmpegdecklink < Formula
       --prefix=#{prefix}
       --disable-shared
       --enable-version3
-      --enable-hardcoded-tables
       --cc=#{ENV.cc}
       --host-cflags=#{ENV.cflags}
       --host-ldflags=#{ENV.ldflags}
