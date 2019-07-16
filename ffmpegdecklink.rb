@@ -106,7 +106,7 @@ class Ffmpegdecklink < Formula
     args << "--enable-libfontconfig" if build.with? "fontconfig"
     args << "--enable-libgme" if build.with? "game-music-emu"
     args << "--enable-libgsm" if build.with? "libgsm"
-    args << "--enable-libiec61883" if build.with? "iec61883"
+    args << "--enable-libiec61883" if (build.with? "iec61883") && OS.linux?
     args << "--enable-libmodplug" if build.with? "libmodplug"
     args << "--enable-libopencore-amrnb" << "--enable-libopencore-amrwb" if build.with? "opencore-amr"
     args << "--enable-libopenh264" if build.with? "openh264"
