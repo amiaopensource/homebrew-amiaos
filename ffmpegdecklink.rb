@@ -32,6 +32,7 @@ class Ffmpegdecklink < Formula
   depends_on "pkg-config" => :build
   depends_on "texi2html" => :build
 
+  depends_on "decklinksdk"
   depends_on "freetype"
   depends_on "lame"
   depends_on "libvorbis"
