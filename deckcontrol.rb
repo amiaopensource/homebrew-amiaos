@@ -11,4 +11,8 @@ class Deckcontrol < Formula
     system "make"
     bin.install "deckcontrol"
   end
+
+  test do
+    system "#{bin}/deckcontrol", "getcurrentstate"
+  end
 end
