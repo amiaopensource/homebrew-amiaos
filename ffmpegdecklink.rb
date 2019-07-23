@@ -9,7 +9,7 @@ class Ffmpegdecklink < Formula
   option "with-chromaprint", "Enable the Chromaprint audio fingerprinting library"
   option "with-fdk-aac", "Enable the Fraunhofer FDK AAC library"
   option "with-libass", "Enable ASS/SSA subtitle format"
-  option "with-iec61883", "Enable DV device (Linux)"
+  option "with-iec61883", "Enable DV device (Linux)" if OS.linux?
   option "with-librsvg", "Enable SVG files as inputs via librsvg"
   option "with-libsoxr", "Enable the soxr resample library"
   option "with-libssh", "Enable SFTP protocol via libssh"
@@ -32,6 +32,7 @@ class Ffmpegdecklink < Formula
   depends_on "pkg-config" => :build
   depends_on "texi2html" => :build
 
+  depends_on "amiaopensource/amiaos/decklinksdk"
   depends_on "freetype"
   depends_on "lame"
   depends_on "libvorbis"
