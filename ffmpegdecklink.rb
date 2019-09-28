@@ -1,8 +1,8 @@
 class Ffmpegdecklink < Formula
   desc "FFmpeg with --enable-decklink"
   homepage "https://ffmpeg.org/"
-  url "https://ffmpeg.org/releases/ffmpeg-4.1.4.tar.xz"
-  sha256 "f1f049a82fcfbf156564e73a3935d7e750891fab2abf302e735104fd4050a7e1"
+  url "https://ffmpeg.org/releases/ffmpeg-4.2.1.tar.xz"
+  sha256 "cec7c87e9b60d174509e263ac4011b522385fd0775292e1670ecc1180c9bb6d4"
   head "https://github.com/FFmpeg/FFmpeg.git"
   keg_only "anything that needs this will know where to look"
 
@@ -150,7 +150,17 @@ class Ffmpegdecklink < Formula
     if build.with? "tools"
       system "make", "alltools"
       bin.install Dir["tools/*"].select { |f| File.executable? f }
+      mv bin/"python", pkgshare/"python", :force => true
     end
+  end
+
+  def caveats; <<~EOS
+    This flavour of `ffmpeg` may conflict with `mpv`, because its last tag/release
+    is too old. You may instead use the `mpv` cask:
+      brew uninstall mpv (use if there is a prior install of mpv that was installed
+                          with Homebrew core)
+      brew cask install mpv
+  EOS
   end
 
   test do
