@@ -4,6 +4,7 @@ class Vrecord < Formula
   url "https://github.com/amiaopensource/vrecord/archive/v2019-07-22.tar.gz"
   version "2019-07-22"
   sha256 "534e9daff42c95e300969e840b278a91ada3db739220bf67bd989834298bd11c"
+  revision 1
   head "https://github.com/amiaopensource/vrecord.git"
 
   bottle :unneeded
@@ -16,7 +17,6 @@ class Vrecord < Formula
   depends_on "gnuplot"
   depends_on "mediaconch"
   depends_on "mkvtoolnix"
-  depends_on "mpv"
   depends_on "qcli"
   depends_on "sdl"
   depends_on "xmlstarlet"
@@ -35,6 +35,16 @@ class Vrecord < Formula
     prefix.install "Resources/vrecord logo documentation.png"
     man1.install "vrecord.1"
     man1.install "vtest.1"
+  end
+
+  def caveats; <<~EOS
+    For full use of vrecord, the program mpv must be installed.
+    The mpv install formula has been removed from core Homebrew, but mpv can be
+    installed via Homebrew Cask with the following commands:
+      brew uninstall mpv (use if there is a prior install of mpv that was installed
+                          with Homebrew core)
+      brew cask install mpv
+  EOS
   end
 
   test do
