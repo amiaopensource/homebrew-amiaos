@@ -4,7 +4,7 @@ class Vrecord < Formula
   url "https://github.com/amiaopensource/vrecord/archive/v2019-07-22.tar.gz"
   version "2019-07-22"
   sha256 "534e9daff42c95e300969e840b278a91ada3db739220bf67bd989834298bd11c"
-  revision 1
+  revision 2
   head "https://github.com/amiaopensource/vrecord.git"
 
   bottle :unneeded
@@ -12,6 +12,7 @@ class Vrecord < Formula
   depends_on "amiaopensource/amiaos/decklinksdk"
   depends_on "amiaopensource/amiaos/ffmpegdecklink"
   depends_on "amiaopensource/amiaos/gtkdialog"
+  depends_on "amiaopensource/amiaos/mpv"
   depends_on "cowsay"
   depends_on "freetype"
   depends_on "gnuplot"
