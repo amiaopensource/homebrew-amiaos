@@ -37,17 +37,7 @@ class Vrecord < Formula
     man1.install "vrecord.1"
     man1.install "vtest.1"
   end
-
-  def caveats; <<~EOS
-    For full use of vrecord, the program mpv must be installed.
-    The mpv install formula has been removed from core Homebrew, but mpv can be
-    installed via Homebrew Cask with the following commands:
-      brew uninstall mpv (use if there is a prior install of mpv that was installed
-                          with Homebrew core)
-      brew cask install mpv
-  EOS
-  end
-
+  
   test do
     system "#{bin}/vrecord", "-h"
   end
