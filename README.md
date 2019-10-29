@@ -11,7 +11,7 @@ Homebrew tap for AMIA Open Source formulae:
 - **gtkdialog** — A small utility for fast and easy GUI building. Note that gtkdialog is used by vrecord.
 - **LTOpers** — Scripts for doing stuff with LTFS.
 - **mkvparse** — A simple Matroska (MKV) parser.
-- **mpv** - A cross platform media player (forked from https://github.com/mpv-player/mpv)
+- **mpv** — A cross platform media player (forked from https://github.com/mpv-player/mpv)
 - **pbprotracktor** — Make postgres calls to public broadcasting scheduling databases to produce a PBCore XML output.
 - **vrecord** — Open-source software for capturing a video signal and turning it into a digital file.
 
