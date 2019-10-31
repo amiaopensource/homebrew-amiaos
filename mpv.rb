@@ -17,7 +17,6 @@ class Mpv < Formula
   depends_on "libass"
   depends_on "little-cms2"
   depends_on "lua@5.1"
-
   depends_on "mujs"
   depends_on "uchardet"
   depends_on "vapoursynth"
@@ -59,8 +58,8 @@ class Mpv < Formula
   def caveats
     if File.exist?('/usr/local/Caskroom/mpv')
       <<~EOS
-      Warning: A brew cask installation of MPV was detected, so this version may not be linked.
-      To uninstall cask version and link this version run the command:
+      Warning: A brew cask installation of MPV was detected, so this version may not 
+      be linked. To uninstall cask version and link this version run the command:
       brew cask uninstall mpv && brew link mpv
       EOS
     end
