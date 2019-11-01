@@ -2,9 +2,9 @@ class Mpv < Formula
   # based upon the last version of homebrew-core/Formula/mpv.rb at https://github.com/Homebrew/homebrew-core/commit/41444d526c40b93069b7f0c5414539deb0534179
   desc "Media player based on MPlayer and mplayer2"
   homepage "https://mpv.io"
-  url "https://github.com/privatezero/mpv/archive/2019-10-11.tar.gz"
-  version "2019-10-11"
-  sha256 "948eb483718cab755bbd081c9d1c43f101832801ad9db07390e4df4e409cde61"
+  url "https://github.com/amiaopensource/mpv/archive/2019-10-31.tar.gz"
+  version "2019-10-31"
+  sha256 "3a76046fee81383d503ff1aca6668dd28d9f2c74b3aa08e7d73c403deb092676"
   head "https://github.com/mpv-player/mpv.git"
 
   depends_on "docutils" => :build
