@@ -37,7 +37,7 @@ class Vrecord < Formula
     man1.install "vrecord.1"
     man1.install "vtest.1"
   end
-  
+
   test do
     system "#{bin}/vrecord", "-h"
   end
