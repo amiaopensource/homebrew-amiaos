@@ -51,17 +51,17 @@ class Mpv < Formula
     prefix.install "build/mpv.app"
   end
 
-  test do
-    system bin/"mpv", "--ao=null", test_fixtures("test.wav")
-  end
-  
   def caveats
-    if File.exist?('/usr/local/Caskroom/mpv')
+    if File.exist?("/usr/local/Caskroom/mpv")
       <<~EOS
-      Warning: A brew cask installation of MPV was detected, so this version may not 
-      be linked. To uninstall cask version and link this version run the command:
-      brew cask uninstall mpv && brew link mpv
+        Warning: A brew cask installation of MPV was detected, so this version may not
+        be linked. To uninstall cask version and link this version run the command:
+        brew cask uninstall mpv && brew link mpv
       EOS
     end
+  end
+
+  test do
+    system bin/"mpv", "--ao=null", test_fixtures("test.wav")
   end
 end
