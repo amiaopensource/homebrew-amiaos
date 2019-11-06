@@ -11,7 +11,6 @@ Homebrew tap for AMIA Open Source formulae:
 - **gtkdialog** — A small utility for fast and easy GUI building. Note that gtkdialog is used by vrecord.
 - **LTOpers** — Scripts for doing stuff with LTFS.
 - **mkvparse** — A simple Matroska (MKV) parser.
-- **mpv** — A cross platform media player (forked from https://github.com/mpv-player/mpv)
 - **pbprotracktor** — Make postgres calls to public broadcasting scheduling databases to produce a PBCore XML output.
 - **vrecord** — Open-source software for capturing a video signal and turning it into a digital file.
 
@@ -67,3 +66,5 @@ These projects are no longer developed nor maintaied. Yet please feel free to re
 
 - **digibase** — Uses MySQL to create a database which tracks tapes through a digitization workflow, designed to work with vrecord and [mediamicroservices](https://github.com/mediamicroservices).
 - **lenticular** — Digital restoration of lenticular colours from greyscale digitisations.
+- **mpv** — A cross platform media player (forked from https://github.com/mpv-player/mpv)
+
