@@ -161,15 +161,6 @@ class Ffmpegdecklink < Formula
     end
   end
 
-  def caveats; <<~EOS
-    This flavour of `ffmpeg` may conflict with `mpv`, because its last tag/release
-    is too old. You may instead use the `mpv` cask:
-      brew uninstall mpv (use if there is a prior install of mpv that was installed
-                          with Homebrew core)
-      brew cask install mpv
-  EOS
-  end
-
   test do
     # Create an example mp4 file
     mp4out = testpath/"video.mp4"
