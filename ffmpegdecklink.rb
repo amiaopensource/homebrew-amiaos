@@ -13,6 +13,7 @@ class Ffmpegdecklink < Formula
   depends_on "texi2html" => :build
 
   depends_on "amiaopensource/amiaos/decklinksdk"
+  depends_on "fontconfig"
   depends_on "freetype"
   depends_on "lame"
   depends_on "libvorbis"
@@ -51,6 +52,7 @@ class Ffmpegdecklink < Formula
       --enable-libx264
       --enable-libx265
       --enable-libxvid
+      --enable-libfontconfig
       --disable-libjack
       --disable-indev=jack
     ]
