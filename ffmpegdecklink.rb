@@ -152,13 +152,6 @@ class Ffmpegdecklink < Formula
     bin.install "ffmpeg" => "ffmpeg-dl"
     bin.install "ffprobe" => "ffprobe-dl"
     bin.install "ffplay" => "ffplay-dl"
-
-    if build.with? "tools"
-      system "make", "alltools"
-      bin.install Dir["tools/*"].select { |f| File.executable? f }
-      # Fix for non-executables that were installed to bin
-      mv bin/"python", pkgshare/"python", :force => true
-    end
   end
 
   test do
