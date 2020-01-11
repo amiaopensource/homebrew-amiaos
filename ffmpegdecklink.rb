@@ -101,6 +101,8 @@ class Ffmpegdecklink < Formula
       --enable-libx264
       --enable-libx265
       --enable-libxvid
+      --disable-libjack
+      --disable-indev=jack
     ]
 
     args << "--enable-chromaprint" if build.with? "chromaprint"
