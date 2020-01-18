@@ -27,6 +27,8 @@ class Ffmpegdecklink < Formula
   depends_on "xvid"
   depends_on "xz"
 
+  patch :DATA
+
   def install
     # Work around Xcode 11 clang bug, see:
     # https://bitbucket.org/multicoreware/x265/issues/514/wrong-code-generated-on-macos-1015
@@ -83,3 +85,19 @@ class Ffmpegdecklink < Formula
     assert_predicate mp4out, :exist?
   end
 end
+
+__END__
+diff --git a/libavdevice/avfoundation.m b/libavdevice/avfoundation.m
+index af8fe31367..5ee2f0a1bc 100644
+--- a/libavdevice/avfoundation.m
++++ b/libavdevice/avfoundation.m
+@@ -496,7 +496,7 @@ static int add_video_device(AVFormatContext *s, AVCaptureDevice *video_device)
+ 
+         [ctx->video_output setVideoSettings:capture_dict];
+     }
+-    [ctx->video_output setAlwaysDiscardsLateVideoFrames:YES];
++    [ctx->video_output setAlwaysDiscardsLateVideoFrames:NO];
+ 
+     ctx->avf_delegate = [[AVFFrameReceiver alloc] initWithContext:ctx];
+ 
+--
