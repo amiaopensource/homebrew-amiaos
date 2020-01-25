@@ -3,6 +3,7 @@ class Ffmpegdecklink < Formula
   homepage "https://ffmpeg.org/"
   url "https://ffmpeg.org/releases/ffmpeg-4.2.2.tar.xz"
   sha256 "cb754255ab0ee2ea5f66f8850e1bd6ad5cac1cd855d0a2f4990fb8c668b0d29c"
+  revision 1
   head "https://github.com/FFmpeg/FFmpeg.git"
   keg_only "anything that needs this will know where to look"
 
@@ -45,6 +46,7 @@ class Ffmpegdecklink < Formula
       --enable-gpl
       --enable-libfreetype
       --enable-libmp3lame
+      --enable-libopenjpeg
       --enable-libopus
       --enable-libsnappy
       --enable-libtheora
@@ -59,10 +61,6 @@ class Ffmpegdecklink < Formula
     ]
 
     args << "--enable-libiec61883" if (build.with? "iec61883") && OS.linux?
-    # force libopenjpeg options
-    args << "--enable-libopenjpeg"
-    args << "--disable-decoder=jpeg2000"
-    args << "--extra-cflags=" + `pkg-config --cflags libopenjp2`.chomp
 
     # decklink options
     args << "--enable-nonfree"
@@ -71,7 +69,6 @@ class Ffmpegdecklink < Formula
     args << "--extra-ldflags=-L#{HOMEBREW_PREFIX}/include"
 
     system "./configure", *args
-
     system "make"
     bin.install "ffmpeg" => "ffmpeg-dl"
     bin.install "ffprobe" => "ffprobe-dl"
