@@ -1,9 +1,9 @@
 class Vrecord < Formula
   desc "Capturing a video signal and turning it into a digital file"
   homepage "https://github.com/amiaopensource/vrecord"
-  url "https://github.com/amiaopensource/vrecord/archive/v2019-11-14.tar.gz"
-  version "2019-11-14"
-  sha256 "246035ce52a8cc5017bf6f9d43160a9cb5311836f319a4d5e3accaaa18984419"
+  url "https://github.com/amiaopensource/vrecord/archive/v2020-01-27.tar.gz"
+  version "2020-01-27"
+  sha256 "d1fa8a0d887cdf6a789cc41222b9f0bb6b63a16ad206eb15f10aef5077dc3aa0"
   head "https://github.com/amiaopensource/vrecord.git"
 
   bottle :unneeded
@@ -27,12 +27,12 @@ class Vrecord < Formula
     prefix.install "Resources/qcview.lua"
     prefix.install "Resources/vrecord_policy_ffv1.xml"
     prefix.install "Resources/vrecord_policy_uncompressed.xml"
-    prefix.install "Resources/vrecord logo.png"
-    prefix.install "Resources/vrecord logo playback.png"
-    prefix.install "Resources/vrecord logo audio.png"
-    prefix.install "Resources/vrecord logo edit.png"
-    prefix.install "Resources/vrecord logo help.png"
-    prefix.install "Resources/vrecord logo documentation.png"
+    prefix.install "Resources/vrecord_logo.png"
+    prefix.install "Resources/vrecord_logo_playback.png"
+    prefix.install "Resources/vrecord_logo_audio.png"
+    prefix.install "Resources/vrecord_logo_edit.png"
+    prefix.install "Resources/vrecord_logo_help.png"
+    prefix.install "Resources/vrecord_logo_documentation.png"
     man1.install "vrecord.1"
     man1.install "vtest.1"
   end
