@@ -6,6 +6,7 @@ Homebrew tap for AMIA Open Source formulae:
 - **Cable Bible** — A comprehensive guide to cables and connectors used in audiovisual archiving.
 - **deckcontrol** — Control an attached videodeck via Blackmagic Design Decklink SDK.
 - **decklinksdk** — An unofficial repository for openly-licensed SDK files from Blackmagic’s Desktop Video software development kit. Note that decklinksdk is used by vrecord.
+- **dvrescue** – Data migration from DV tapes into digital files suitable for long-term preservation.
 - **ffmpegdecklink** — A static build of FFmpeg with Decklink. Note that ffmpegdecklink is used by vrecord.
 - **ffmprovisr** — Repository of useful FFmpeg command lines for archivists.
 - **gtkdialog** — A small utility for fast and easy GUI building. Note that gtkdialog is used by vrecord.
@@ -43,6 +44,7 @@ Reto Kromer (@retokromer)
 - Ethan Gates (@EG-tech)
 - Fabio Utzig (@utzig)
 - Jonathan Farbowitz (@jfarbowitz)
+- Maxime Gervais (g-maxime)
 - Kieran O'Leary (@kieranjol)
 - Reto Kromer (@retokromer)
 - Savannah Campbell (@savcampbell)
