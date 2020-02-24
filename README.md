@@ -54,7 +54,7 @@ Last updated on 2019-03-29.
 
 ## Copyright, Licence and Disclaimer
 
-Copyright (c) 2014-2019 AMIA Open Source
+Copyright (c) 2014-2020 AMIA Open Source
 
 The formulae are released under a [MIT License](LICENSE).
 
