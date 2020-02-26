@@ -15,9 +15,6 @@ class Ltopers < Formula
   depends_on "mediamicroservices/mm/mm"
   depends_on "xmlstarlet"
 
-  conflicts_with "avpres/formulae/openlto",
-    :because => "both install some scripts having the same name"
-
   def install
     bin.install "formatlto"
     bin.install "ltopers"
