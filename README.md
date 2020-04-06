@@ -19,6 +19,10 @@ To tap, run `brew tap amiaopensource/amiaos` in your terminal.
 
 All the formulae work on macOS and some of them also on Linux (including the Windows Subsystem for Linux).
 
+## Troubleshooting
+
+Known issues and their mitigation are grouped in a [dedicated page](TROUBLESHOOTING.md).
+
 ## Contributing
 
 Contributions are very welcome! Please consider the [Contributing Guidelines](CONTRIBUTING.md).
