@@ -1,8 +1,8 @@
 class Dvrescue < Formula
   desc "Data migration from DV tapes into files for long-term preservation"
   homepage "https://mediaarea.net/dvrescue"
-  url "https://mediaarea.net/download/snapshots/binary/dvrescue/20191114/dvrescue_CLI_0.19.11.20191114_GNU_FromSource.tar.xz"
-  sha256 "4bc15176157501f41f8c5a90c37b93c0ea1c6c8680bfee8fddb5d7b3fa251cb8"
+  url "https://mediaarea.net/download/binary/dvrescue/0.20.05/dvrescue_CLI_0.20.05_GNU_FromSource.tar.xz"
+  sha256 "69cbf2c9f04548cdb950e3442eb498a801c1ddc689fa10895ecd3a44923efb45"
 
   def install
     cd "ZenLib/Project/GNU/Library" do
