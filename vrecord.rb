@@ -40,6 +40,20 @@ class Vrecord < Formula
     man1.install "vtest.1"
   end
 
+  on_linux do
+    def caveats
+    <<~EOS
+      ** IMPORTANT FOR LINUX INSTALL **
+      Additional install steps are necessary for a fully functioning Vrecord
+      install on Linux. This includes using the standard package manager to
+      install gnuplot, xmlstarlet, mkvtoolnix and mediaconch. Additionally,
+      it often is necessary to remove the Homebrew installed version of SDL2
+      to prevent conflicts. For more information please see:
+      https://github.com/amiaopensource/vrecord/blob/master/Resources/Documentation/linux_installation.md
+    EOS
+    end
+  end
+
   test do
     system "#{bin}/vrecord", "-h"
   end
