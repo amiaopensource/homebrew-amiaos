@@ -4,8 +4,9 @@ class Deckcontrol < Formula
   url "https://github.com/bavc/deckcontrol/archive/v0.4.tar.gz"
   sha256 "511b71f139f045e78ca084ed3997a73c6a1c34ae0c02126e657c4120097974fa"
   head "https://github.com/bavc/deckcontrol.git"
+  revision 1
 
-  depends_on "decklinksdk" => :build
+  depends_on "amiaopensource/amiaos/decklinksdk" => :build
 
   def install
     system "make"
