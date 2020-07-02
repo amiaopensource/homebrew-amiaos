@@ -7,9 +7,9 @@ class Ffmpegdecklink < Formula
   keg_only "anything that needs this will know where to look"
 
   option "with-iec61883", "Enable DV device (Linux)" if OS.linux?
-  depends_on "nasm" => :build
   depends_on "pkg-config" => :build
   depends_on "texi2html" => :build
+  depends_on "yasm" => :build
 
   depends_on "amiaopensource/amiaos/decklinksdk"
   depends_on "fontconfig"
@@ -35,6 +35,7 @@ class Ffmpegdecklink < Formula
       --cc=#{ENV.cc}
       --host-cflags=#{ENV.cflags}
       --host-ldflags=#{ENV.ldflags}
+      --x86asmexe=yasm
       --enable-gpl
       --enable-libfreetype
       --enable-libmp3lame
