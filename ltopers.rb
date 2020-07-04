@@ -6,8 +6,6 @@ class Ltopers < Formula
   sha256 "7d3ba39bab196e352070ce5a4457113bf8682cdbc54469bc16f8f498313781bb"
   head "https://github.com/amiaopensource/ltopers.git"
 
-  bottle :unneeded
-
   option "with-db", "Build database-related commands"
   option "with-cuny", "Build database-related and CUNY-specific commands"
 
