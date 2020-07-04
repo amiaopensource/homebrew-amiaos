@@ -6,8 +6,6 @@ class Vrecord < Formula
   sha256 "983264ca6a69b78b4487a7479ab5a4db04cbc425f865ec2cb15844e72af4f4ac"
   head "https://github.com/amiaopensource/vrecord.git"
 
-  bottle :unneeded
-
   depends_on "amiaopensource/amiaos/deckcontrol"
   depends_on "amiaopensource/amiaos/ffmpegdecklink"
   depends_on "amiaopensource/amiaos/gtkdialog"
