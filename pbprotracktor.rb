@@ -6,8 +6,6 @@ class Pbprotracktor < Formula
   sha256 "9ffcd96fa5404f45f15602f1643fd6ecbbae8da65a519447f8641dc4ca1d6bf1"
   head "https://github.com/amiaopensource/pbprotracktor.git"
 
-  bottle :unneeded
-
   depends_on "jq"
   depends_on "mysql"
   depends_on "postgresql"
