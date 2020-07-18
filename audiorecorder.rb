@@ -25,7 +25,7 @@ class Audiorecorder < Formula
         bin.install "Linux/audiorecorder2"
       elsif RUBY_PLATFORM.include?("darwin")
         prefix.install "macOS/audiorecorder2-osx.tgz"
-        system("open #{prefix}/audiorecorder2-osx.tgz")
+        system("open", "#{prefix}/audiorecorder2-osx.tgz")
       end
     end
   end
