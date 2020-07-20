@@ -4,6 +4,7 @@ class Audiorecorder < Formula
   url "https://github.com/amiaopensource/audiorecorder/archive/2019-05-21.tar.gz"
   version "2019-05-21"
   sha256 "c23d318e5c77fe8e6ccf637a5f8100625e2459a97b20a4f1c3cbb07b66ce7aa3"
+  license "BSD-3-Clause"
   head "https://github.com/amiaopensource/audiorecorder.git"
 
   option "with-audiorecorder2"
@@ -24,7 +25,7 @@ class Audiorecorder < Formula
         bin.install "Linux/audiorecorder2"
       elsif RUBY_PLATFORM.include?("darwin")
         prefix.install "macOS/audiorecorder2-osx.tgz"
-        system("open #{prefix}/audiorecorder2-osx.tgz")
+        system("open", "#{prefix}/audiorecorder2-osx.tgz")
       end
     end
   end
