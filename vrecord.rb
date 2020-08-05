@@ -5,6 +5,7 @@ class Vrecord < Formula
   version "2020-08-05"
   sha256 "77162d2950397a10e51602478cd9b0dba910c673e83a71e66019fb064f3445b2"
   head "https://github.com/amiaopensource/vrecord.git"
+  revision 1
 
   depends_on "amiaopensource/amiaos/deckcontrol"
   depends_on "amiaopensource/amiaos/ffmpegdecklink"
@@ -15,7 +16,7 @@ class Vrecord < Formula
     depends_on "bash"
     depends_on "gnuplot"
     depends_on "mediaconch"
-    depends_on "mkvtoolnix"
+    depends_on "mkvtoolnix" unless MacOS.version < :mojave
     depends_on "mpv"
     depends_on "qcli"
     depends_on "xmlstarlet"
@@ -31,6 +32,20 @@ class Vrecord < Formula
         it often is necessary to remove the Homebrew installed version of SDL2
         to prevent conflicts. For more information please see:
         https://github.com/amiaopensource/vrecord/blob/master/Resources/Documentation/linux_installation.md
+      EOS
+    end
+  end
+
+  if MacOS.version < :mojave
+    def caveats
+      <<~EOS
+        ** IMPORTANT FOR macOS INSTALL **
+        Additional install steps are necessary for a fully functioning Vrecord
+        install on macOS. Vrecord uses mkvtoolnix for some optional steps such
+        as embedding logs into Matroska files. mkvtoolnix is automatically
+        installed via homebrew if the Mac OS is Mojave or greater, else we
+        recommend that mkvtoolnix is installed via
+        https://mkvtoolnix.download/macos/MKVToolNix-46.0.0.dmg
       EOS
     end
   end
