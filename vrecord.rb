@@ -14,11 +14,11 @@ class Vrecord < Formula
 
   on_macos do
     depends_on "bash"
-    depends_on "gnuplot"
+    depends_on "gnuplot" unless MacOS.version < :mojave
     depends_on "mediaconch"
     depends_on "mkvtoolnix" unless MacOS.version < :mojave
-    depends_on "mpv"
-    depends_on "qcli"
+    depends_on "mpv" unless MacOS.version < :mojave
+    depends_on "qcli" unless MacOS.version < :mojave
     depends_on "xmlstarlet"
   end
 
@@ -46,6 +46,8 @@ class Vrecord < Formula
         installed via homebrew if the Mac OS is Mojave or greater, else we
         recommend that mkvtoolnix is installed via
         https://mkvtoolnix.download/macos/MKVToolNix-46.0.0.dmg
+        Also note that vrecord works better with gnuplot, mpv, and qcli but
+        these have not been installed by this installer.
       EOS
     end
   end
