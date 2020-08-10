@@ -14,12 +14,12 @@ class Vrecord < Formula
 
   on_macos do
     depends_on "bash"
-    depends_on "gnuplot"
+    depends_on "gnuplot" unless MacOS.version < :mojave
     depends_on "mediaarea/mediaarea/dvrescue"
     depends_on "mediaconch"
     depends_on "mkvtoolnix" unless MacOS.version < :mojave
-    depends_on "mpv"
-    depends_on "qcli"
+    depends_on "mpv" unless MacOS.version < :mojave
+    depends_on "qcli" unless MacOS.version < :mojave
     depends_on "xmlstarlet"
   end
 
@@ -42,11 +42,14 @@ class Vrecord < Formula
       <<~EOS
         ** IMPORTANT FOR macOS INSTALL **
         Additional install steps are necessary for a fully functioning Vrecord
-        install on macOS. Vrecord uses mkvtoolnix for some optional steps such
-        as embedding logs into Matroska files. mkvtoolnix is automatically
-        installed via homebrew if the Mac OS is Mojave or greater, else we
-        recommend that mkvtoolnix is installed via
-        https://mkvtoolnix.download/macos/MKVToolNix-46.0.0.dmg
+        install on macOS. Vrecord uses gnuplot, mkvtoolnix, mpv, and qcli for
+        some optional (though sometimes recommeded) features steps such as
+        embedding logs into Matroska files and generating QCTools reports.
+        These programs are automatically installed via homebrew if the Mac OS
+        is Mojave or greater, else we recommend finding supported installers
+        (for example mkvtoolnix via
+        https://mkvtoolnix.download/macos/MKVToolNix-46.0.0.dmg) or consider
+        updating your version of macOS.
       EOS
     end
   end
