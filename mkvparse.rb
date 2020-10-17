@@ -1,8 +1,8 @@
 class Mkvparse < Formula
   desc "Simple Matroska (MKV) parser"
   homepage "https://github.com/vi/mkvparse"
-  url "https://github.com/vi/mkvparse/archive/v1.2.0.tar.gz"
-  sha256 "951282e3ffade95f5d9951d792578098616c1009264ea7cbd6178f1727ef406d"
+  url "https://github.com/vi/mkvparse/archive/v1.2.1.tar.gz"
+  sha256 "4050de75adf58e16796de9f684d0b30409b0e231c21f4930985a4c57a7bb9f4c"
   head "https://github.com/vi/mkvparse.git"
 
   def install
