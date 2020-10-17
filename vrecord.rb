@@ -1,10 +1,9 @@
 class Vrecord < Formula
   desc "Capturing a video signal and turning it into a digital file"
   homepage "https://github.com/amiaopensource/vrecord"
-  url "https://github.com/amiaopensource/vrecord/archive/v2020-08-05.tar.gz"
-  version "2020-08-05"
-  sha256 "77162d2950397a10e51602478cd9b0dba910c673e83a71e66019fb064f3445b2"
-  revision 1
+  url "https://github.com/amiaopensource/vrecord/archive/v2020-10-16.tar.gz"
+  version "2020-10-16"
+  sha256 "7689928f4aa8e721a2fefd4a27e3c78e697b4f757f46217af16a0bbe2c021985"
   head "https://github.com/amiaopensource/vrecord.git"
 
   depends_on "amiaopensource/amiaos/deckcontrol"
@@ -58,7 +57,9 @@ class Vrecord < Formula
     bin.install "vrecord"
     bin.install "vtest"
     prefix.install "Resources/audio_mode.gif"
+    prefix.install "Resources/dvrecord.png"
     prefix.install "Resources/qcview.lua"
+    prefix.install "Resources/vrecord_functions"
     prefix.install "Resources/vrecord_policy_ffv1.xml"
     prefix.install "Resources/vrecord_policy_uncompressed.xml"
     prefix.install "Resources/vrecord_logo.png"
