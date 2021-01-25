@@ -20,6 +20,22 @@ class Vrecord < Formula
     depends_on "mpv" unless MacOS.version < :mojave
     depends_on "qcli" unless MacOS.version < :mojave
     depends_on "xmlstarlet"
+    if MacOS.version < :mojave
+      def caveats
+        <<~EOS
+          ** IMPORTANT FOR macOS INSTALL **
+          Additional install steps are necessary for a fully functioning Vrecord
+          install on macOS. Vrecord uses gnuplot, mkvtoolnix, mpv, and qcli for
+          some optional (though sometimes recommeded) features steps such as
+          embedding logs into Matroska files and generating QCTools reports.
+          These programs are automatically installed via homebrew if the Mac OS
+          is Mojave or greater, else we recommend finding supported installers
+          (for example mkvtoolnix via
+          https://mkvtoolnix.download/macos/MKVToolNix-46.0.0.dmg) or consider
+          updating your version of macOS.
+        EOS
+      end
+    end
   end
 
   on_linux do
@@ -32,23 +48,6 @@ class Vrecord < Formula
         it often is necessary to remove the Homebrew installed version of SDL2
         to prevent conflicts. For more information please see:
         https://github.com/amiaopensource/vrecord/blob/master/Resources/Documentation/linux_installation.md
-      EOS
-    end
-  end
-
-  if MacOS.version < :mojave
-    def caveats
-      <<~EOS
-        ** IMPORTANT FOR macOS INSTALL **
-        Additional install steps are necessary for a fully functioning Vrecord
-        install on macOS. Vrecord uses gnuplot, mkvtoolnix, mpv, and qcli for
-        some optional (though sometimes recommeded) features steps such as
-        embedding logs into Matroska files and generating QCTools reports.
-        These programs are automatically installed via homebrew if the Mac OS
-        is Mojave or greater, else we recommend finding supported installers
-        (for example mkvtoolnix via
-        https://mkvtoolnix.download/macos/MKVToolNix-46.0.0.dmg) or consider
-        updating your version of macOS.
       EOS
     end
   end
