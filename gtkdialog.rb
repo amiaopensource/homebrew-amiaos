@@ -3,6 +3,7 @@ class Gtkdialog < Formula
   homepage "https://code.google.com/archive/p/gtkdialog/"
   url "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/gtkdialog/gtkdialog-0.8.3.tar.gz"
   sha256 "ff89d2d7f1e6488e5df5f895716ac1d4198c2467a2a5dc1f51ab408a2faec38e"
+  revision 1
 
   depends_on "atk" => :build
   depends_on "cairo" => :build
@@ -15,11 +16,20 @@ class Gtkdialog < Formula
   depends_on "graphite2" => :build
   depends_on "gtk+" => :build
   depends_on "harfbuzz" => :build
+  depends_on "libepoxy" => :build
   depends_on "libffi" => :build
   depends_on "libpng" => :build
+  depends_on "libpthread-stubs" => :build
+  depends_on "libx11" => :build
+  depends_on "libxau" => :build
+  depends_on "libxcb" => :build
+  depends_on "libxdmcp" => :build
+  depends_on "libxext" => :build
+  depends_on "libxrender" => :build
   depends_on "pango" => :build
   depends_on "pixman" => :build
   depends_on "pkg-config" => :build
+  depends_on "xorgproto" => :build
 
   # Update patch to compile gtkdialog on macOS
   # See: http://www.murga-linux.com/puppy/viewtopic.php?t=108945
