@@ -47,13 +47,13 @@ Reto Kromer (@retokromer)
 - Ethan Gates (@EG-tech)
 - Fabio Utzig (@utzig)
 - Jonathan Farbowitz (@jfarbowitz)
-- Maxime Gervais (@g-maxime)
 - Kieran O'Leary (@kieranjol)
+- Maxime Gervais (@g-maxime)
 - Reto Kromer (@retokromer)
 - Savannah Campbell (@savcampbell)
 - Smithsonian National Museum of African American History and Culture (@NMAAHC)
 
-Last updated on 2020-12-25.
+Last updated on 2021-03-13.
 
 ## Copyright, Licence and Disclaimer
 
