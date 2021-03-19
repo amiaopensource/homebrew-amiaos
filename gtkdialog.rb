@@ -6,6 +6,8 @@ class Gtkdialog < Formula
   revision 2
 
   depends_on "atk" => :build
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
   depends_on "cairo" => :build
   depends_on "fontconfig" => :build
   depends_on "freetype" => :build
