@@ -1,8 +1,8 @@
 class Ffmpegdecklink < Formula
   desc "FFmpeg with --enable-decklink"
   homepage "https://ffmpeg.org/"
-  url "https://ffmpeg.org/releases/ffmpeg-4.3.2.tar.xz"
-  sha256 "46e4e64f1dd0233cbc0934b9f1c0da676008cad34725113fb7f802cfa84ccddb"
+  url "https://ffmpeg.org/releases/ffmpeg-4.4.tar.xz"
+  sha256 "06b10a183ce5371f915c6bb15b7b1fffbe046e8275099c96affc29e17645d909"
   head "https://github.com/FFmpeg/FFmpeg.git"
   keg_only "anything that needs this will know where to look"
 
@@ -26,8 +26,6 @@ class Ffmpegdecklink < Formula
   depends_on "x265"
   depends_on "xvid"
   depends_on "xz"
-
-  patch :DATA
 
   def install
     args = %W[
@@ -76,62 +74,3 @@ class Ffmpegdecklink < Formula
     assert_predicate mp4out, :exist?
   end
 end
-
-__END__
-diff --git a/libavformat/dv.c b/libavformat/dv.c
-index 3e0d12c0e3..26a78139f5 100644
---- a/libavformat/dv.c
-+++ b/libavformat/dv.c
-@@ -49,7 +49,6 @@ struct DVDemuxContext {
-     uint8_t           audio_buf[4][8192];
-     int               ach;
-     int               frames;
--    uint64_t          abytes;
- };
- 
- static inline uint16_t dv_audio_12to16(uint16_t sample)
-@@ -258,7 +257,7 @@ static int dv_extract_audio_info(DVDemuxContext *c, const uint8_t *frame)
-             c->ast[i] = avformat_new_stream(c->fctx, NULL);
-             if (!c->ast[i])
-                 break;
--            avpriv_set_pts_info(c->ast[i], 64, 1, 30000);
-+            avpriv_set_pts_info(c->ast[i], 64, c->sys->time_base.num, c->sys->time_base.den);
-             c->ast[i]->codecpar->codec_type = AVMEDIA_TYPE_AUDIO;
-             c->ast[i]->codecpar->codec_id   = AV_CODEC_ID_PCM_S16LE;
- 
-@@ -387,8 +386,7 @@ int avpriv_dv_produce_packet(DVDemuxContext *c, AVPacket *pkt,
-     for (i = 0; i < c->ach; i++) {
-         c->audio_pkt[i].pos  = pos;
-         c->audio_pkt[i].size = size;
--        c->audio_pkt[i].pts  = c->abytes * 30000 * 8 /
--                               c->ast[i]->codecpar->bit_rate;
-+        c->audio_pkt[i].pts  = (c->sys->height == 720) ? (c->frames & ~1) : c->frames;
-         ppcm[i] = c->audio_buf[i];
-     }
-     if (c->ach)
-@@ -401,10 +399,7 @@ int avpriv_dv_produce_packet(DVDemuxContext *c, AVPacket *pkt,
-             c->audio_pkt[2].size = c->audio_pkt[3].size = 0;
-         } else {
-             c->audio_pkt[0].size = c->audio_pkt[1].size = 0;
--            c->abytes           += size;
-         }
--    } else {
--        c->abytes += size;
-     }
- 
-     /* Now it's time to return video packet */
-@@ -444,13 +439,6 @@ static int64_t dv_frame_offset(AVFormatContext *s, DVDemuxContext *c,
- void ff_dv_offset_reset(DVDemuxContext *c, int64_t frame_offset)
- {
-     c->frames = frame_offset;
--    if (c->ach) {
--        if (c->sys) {
--        c->abytes = av_rescale_q(c->frames, c->sys->time_base,
--                                 (AVRational) { 8, c->ast[0]->codecpar->bit_rate });
--        } else
--            av_log(c->fctx, AV_LOG_ERROR, "cannot adjust audio bytes\n");
--    }
-     c->audio_pkt[0].size = c->audio_pkt[1].size = 0;
-     c->audio_pkt[2].size = c->audio_pkt[3].size = 0;
- }
--- 
