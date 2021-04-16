@@ -47,6 +47,7 @@ Reto Kromer (@retokromer)
 - Elder Orb (@ElderOrb)
 - Ethan Gates (@EG-tech)
 - Fabio Utzig (@utzig)
+- Henry Borchers (@henryborchers)
 - Jonathan Farbowitz (@jfarbowitz)
 - Kieran O'Leary (@kieranjol)
 - Maxime Gervais (@g-maxime)
@@ -54,7 +55,7 @@ Reto Kromer (@retokromer)
 - Savannah Campbell (@savcampbell)
 - Smithsonian National Museum of African American History and Culture (@NMAAHC)
 
-Last updated on 2021-03-13.
+Last updated on 2021-04-16.
 
 ## Copyright, Licence and Disclaimer
 
