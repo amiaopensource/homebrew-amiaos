@@ -8,6 +8,7 @@ Homebrew tap for AMIA Open Source formulae:
 - **decklinksdk** — An unofficial repository for openly-licensed SDK files from Blackmagic’s Desktop Video software development kit. Note that decklinksdk is used by vrecord.
 - **ffmpegdecklink** — A static build of FFmpeg with Decklink. Note that ffmpegdecklink is used by vrecord.
 - **ffmprovisr** — Repository of useful FFmpeg command lines for archivists.
+- **grabbags** — Enhanced implementation of the Library of Congress’s BagIt Library.
 - **gtkdialog** — A small utility for fast and easy GUI building. Note that gtkdialog is used by vrecord.
 - **LTOpers** — Scripts for doing stuff with LTFS.
 - **mkvparse** — A simple Matroska (MKV) parser.
@@ -46,6 +47,7 @@ Reto Kromer (@retokromer)
 - Elder Orb (@ElderOrb)
 - Ethan Gates (@EG-tech)
 - Fabio Utzig (@utzig)
+- Henry Borchers (@henryborchers)
 - Jonathan Farbowitz (@jfarbowitz)
 - Kieran O'Leary (@kieranjol)
 - Maxime Gervais (@g-maxime)
@@ -53,7 +55,7 @@ Reto Kromer (@retokromer)
 - Savannah Campbell (@savcampbell)
 - Smithsonian National Museum of African American History and Culture (@NMAAHC)
 
-Last updated on 2021-03-13.
+Last updated on 2021-04-16.
 
 ## Copyright, Licence and Disclaimer
 
