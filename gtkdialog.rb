@@ -1,9 +1,14 @@
 class Gtkdialog < Formula
   desc "Small utility for fast and easy GUI building"
   homepage "https://code.google.com/archive/p/gtkdialog/"
-  url "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/gtkdialog/gtkdialog-0.8.3.tar.gz"
-  sha256 "ff89d2d7f1e6488e5df5f895716ac1d4198c2467a2a5dc1f51ab408a2faec38e"
-  revision 1
+  if OS.mac?
+    url "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/gtkdialog/gtkdialog-0.8.3.tar.gz"
+    sha256 "ff89d2d7f1e6488e5df5f895716ac1d4198c2467a2a5dc1f51ab408a2faec38e"
+  else
+    url "https://github.com/puppylinux-woof-CE/gtkdialog/archive/0.8.4c.tar.gz"
+    sha256 "fba198ca6aeb347de4e403751245a4c29faa1a57102a2b3413bda1690266ba06"
+  end
+  revision 2
 
   depends_on "atk" => :build
   depends_on "cairo" => :build
@@ -20,6 +25,7 @@ class Gtkdialog < Formula
   depends_on "libffi" => :build
   depends_on "libpng" => :build
   depends_on "libpthread-stubs" => :build
+  depends_on "libtiff" => :build
   depends_on "libx11" => :build
   depends_on "libxau" => :build
   depends_on "libxcb" => :build
@@ -31,13 +37,23 @@ class Gtkdialog < Formula
   depends_on "pkg-config" => :build
   depends_on "xorgproto" => :build
 
+  on_linux do
+    depends_on "autoconf" => :build
+    depends_on "automake" => :build  
+  end
+
   # Update patch to compile gtkdialog on macOS
   # See: http://www.murga-linux.com/puppy/viewtopic.php?t=108945
   patch :DATA if OS.mac?
 
   def install
-    system "./configure"
-    system "make"
+  	if OS.mac?
+      system "./configure"
+      system "make"
+    else
+      system "./autogen.sh"
+      system "make"
+    end
     bin.install "src/gtkdialog"
   end
 end
