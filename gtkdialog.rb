@@ -25,6 +25,7 @@ class Gtkdialog < Formula
   depends_on "libffi" => :build
   depends_on "libpng" => :build
   depends_on "libpthread-stubs" => :build
+  depends_on "libtiff" => :build
   depends_on "libx11" => :build
   depends_on "libxau" => :build
   depends_on "libxcb" => :build
