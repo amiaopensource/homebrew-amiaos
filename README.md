@@ -1,6 +1,7 @@
 # homebrew-amiaos
 Homebrew tap for AMIA Open Source formulae:
 
+- **astataudit** — Generate audiovisual metrics for audio via FFmpeg and BWF MetaEdit.
 - **audiorecorder** — Tool for calibration and recording of analog audio sources.
 - **bmdtools** — Basic capture and play programs for Blackmagic Design Decklink (forked from https://github.com/lu-zero/bmdtools).
 - **Cable Bible** — A comprehensive guide to cables and connectors used in audiovisual archiving.
