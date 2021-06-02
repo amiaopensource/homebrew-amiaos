@@ -3,6 +3,7 @@ class Ffmpegdecklink < Formula
   homepage "https://ffmpeg.org/"
   url "https://github.com/FFmpeg/FFmpeg/archive/refs/tags/n4.4.tar.gz"
   sha256 "bea6d9f91cdbe4c5ad98e0878955ad5077df3883ef321fd4668ee1076de793fe"
+  revision 1
   head "https://github.com/FFmpeg/FFmpeg.git"
   keg_only "anything that needs this will know where to look"
 
