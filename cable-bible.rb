@@ -1,9 +1,9 @@
 class CableBible < Formula
   desc "Guide to cables and connectors used in audiovisual archiving"
   homepage "https://github.com/amiaopensource/cable-bible"
-  url "https://github.com/amiaopensource/cable-bible/archive/v2019-02-03.tar.gz"
-  version "2019-02-03"
-  sha256 "760962f3c0d80976d015487d5428dd3d9556e70a815cc5e108b256d6b26a813b"
+  url "https://github.com/amiaopensource/cable-bible/archive/v2021-06-04.tar.gz"
+  version "2021-06-04"
+  sha256 "baf3c1a9f3bb9aa4acc38b59a73ad56f239d66a875e1d68ad4609ae6f960ecb4"
 
   def install
     bin.install "cable-bible"
