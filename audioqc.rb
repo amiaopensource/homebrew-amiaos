@@ -1,9 +1,9 @@
 class Audioqc < Formula
   desc "Tool for aiding automated audio quality control"
   homepage "https://github.com/amiaopensource/audioqc"
-  url "https://github.com/amiaopensource/audioqc/archive/refs/tags/2021-07-06.tar.gz"
-  version "2021-07-06"
-  sha256 "fdfc38d2ca00d58c7eae01d40ef68a81f200b0e05a10d44a60bbd7314a5aa754"
+  url "https://github.com/amiaopensource/audioqc/archive/refs/tags/2021-08-06.tar.gz"
+  version "2021-08-06"
+  sha256 "26af4ef192279a58861dccdd55675bcac21a251d7ef6d4b4e777fe5094fc7944"
   head "https://github.com/amiaopensource/audioqc.git"
 
   on_macos do
@@ -24,5 +24,6 @@ class Audioqc < Formula
   def install
     bin.install "audioqc"
     bin.install "audioqc.config"
+    bin.install "makespectrums"
   end
 end
