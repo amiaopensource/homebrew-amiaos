@@ -19,7 +19,7 @@ Homebrew tap for AMIA Open Source formulae:
 
 To tap, run `brew tap amiaopensource/amiaos` in your terminal.
 
-All the formulae work on macOS and some of them also on Linux (including the Windows Subsystem for Linux and Terminal).
+All the formulae work on macOS and some of them also on Linux, including on Windows Terminal and Windows Subsystem for Linux (WSL).
 
 ## Troubleshooting
 
@@ -57,7 +57,7 @@ Reto Kromer (@retokromer)
 - Savannah Campbell (@savcampbell)
 - Smithsonian National Museum of African American History and Culture (@NMAAHC)
 
-Last updated on 2021-04-16.
+Last updated on 2021-09-05.
 
 ## Copyright, Licence and Disclaimer
 
