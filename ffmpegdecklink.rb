@@ -52,6 +52,8 @@ class Ffmpegdecklink < Formula
       --disable-indev=jack
     ]
 
+    args << "--enable-neon" if os.mac? && Hardware::CPU.arm?
+
     args << "--enable-libiec61883" if (build.with? "iec61883") && OS.linux?
 
     # decklink options
