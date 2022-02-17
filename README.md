@@ -15,6 +15,7 @@ Homebrew tap for AMIA Open Source formulae:
 - **LTOpers** — Scripts for doing stuff with LTFS.
 - **mkvparse** — A simple Matroska (MKV) parser.
 - **pbprotracktor** — Make postgres calls to public broadcasting scheduling databases to produce a PBCore XML output.
+- **sccyou** — Create scc or srt outputs from video files which contain EIA-608 data.
 - **vrecord** — Open-source software for capturing a video signal and turning it into a digital file.
 
 To tap, run `brew tap amiaopensource/amiaos` in your terminal.
