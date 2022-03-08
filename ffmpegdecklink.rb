@@ -4,6 +4,7 @@ class Ffmpegdecklink < Formula
   url "https://ffmpeg.org/releases/ffmpeg-5.0.tar.xz"
   sha256 "51e919f7d205062c0fd4fae6243a84850391115104ccf1efc451733bc0ac7298"
   head "https://github.com/FFmpeg/FFmpeg.git"
+  revision 1
   keg_only "anything that needs this will know where to look"
 
   option "with-iec61883", "Enable DV device (Linux)" if OS.linux?
