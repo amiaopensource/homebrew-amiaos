@@ -7,7 +7,13 @@ class CableBible < Formula
 
   def install
     bin.install "cable-bible"
-    prefix.install "css", "images", "js", "README.md", "code_of_conduct.md", "index.html", "params.json",
-      "pinouts.html"
+    prefix.install "css",
+                   "images",
+                   "js",
+                   "README.md",
+                   "code_of_conduct.md",
+                   "index.html",
+                   "params.json",
+                   "pinouts.html"
   end
 end
