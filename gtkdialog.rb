@@ -3,7 +3,7 @@ class Gtkdialog < Formula
   homepage "https://code.google.com/archive/p/gtkdialog/"
   url "https://github.com/puppylinux-woof-CE/gtkdialog/archive/0.8.4d.tar.gz"
   sha256 "1d3619ef1aca2baa783b936e8c6bd67135621f47428049c8231db9ee366f73db"
-  revision 3
+  revision 4
 
   depends_on "atk" => :build
   depends_on "autoconf" => :build
@@ -16,7 +16,7 @@ class Gtkdialog < Formula
   depends_on "gettext" => :build
   depends_on "glib" => :build
   depends_on "graphite2" => :build
-  depends_on "gtk+" => :build
+  depends_on "gtk+"
   depends_on "harfbuzz" => :build
   depends_on "libepoxy" => :build
   depends_on "libffi" => :build
