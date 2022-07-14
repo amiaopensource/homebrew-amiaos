@@ -4,6 +4,7 @@ class CableBible < Formula
   url "https://gitlab.com/EG-tech/cable-bible/-/archive/v2022-02-24/cable-bible-v2022-02-24.tar.gz"
   version "2022-02-24"
   sha256 "9e426d1db0e8b98c9e95c401e149660567e66f5bffcc3f1d69468f8eef227505"
+  revision 1
 
   def install
     bin.install "cable-bible"
