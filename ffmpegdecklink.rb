@@ -1,9 +1,9 @@
 class Ffmpegdecklink < Formula
   desc "FFmpeg with --enable-decklink"
   homepage "https://ffmpeg.org/"
-  url "https://ffmpeg.org/releases/ffmpeg-5.0.1.tar.xz"
-  sha256 "ef2efae259ce80a240de48ec85ecb062cecca26e4352ffb3fda562c21a93007b"
-  head "https://github.com/FFmpeg/FFmpeg.git"
+  url "https://ffmpeg.org/releases/ffmpeg-5.1.tar.xz"
+  sha256 "55eb6aab5ee235550fa54a33eaf8bf1b4ec66c01453182b12f6a993d75698b03"
+  head "https://github.com/FFmpeg/FFmpeg.git", branch: "master"
   keg_only "anything that needs this will know where to look"
 
   option "with-iec61883", "Enable DV device (Linux)" if OS.linux?
