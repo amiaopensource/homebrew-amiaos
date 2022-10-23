@@ -1,8 +1,8 @@
 class Astataudit < Formula
   desc "Generate audiovisual metrics for audio via FFmpeg and BWF MetaEdit"
   homepage "https://github.com/amiaopensource/astataudit"
-  url "https://github.com/amiaopensource/astataudit/archive/refs/tags/20220309.1.tar.gz"
-  sha256 "d3aa9f687ac712be725379bb9f69dfe4d907ab11d53d5c8fc5175c02debdd72b"
+  url "https://github.com/amiaopensource/astataudit/archive/refs/tags/20221023.tar.gz"
+  sha256 "9ab44649d2564ed1cdb46bd30db459e1498803dd98e00c4c2cc325e4fe3d7194"
   head "https://github.com/amiaopensource/astataudit.git"
 
   depends_on "bwfmetaedit"
