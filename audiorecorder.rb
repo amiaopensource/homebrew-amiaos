@@ -13,7 +13,7 @@ class Audiorecorder < Formula
   depends_on "dialog"
   depends_on "ffmpeg"
   depends_on "mpv"
-  depends_on "sdl"
+  depends_on "sdl12-compat"
   depends_on "sox"
 
   def install

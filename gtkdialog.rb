@@ -16,7 +16,6 @@ class Gtkdialog < Formula
   depends_on "gettext" => :build
   depends_on "glib" => :build
   depends_on "graphite2" => :build
-  depends_on "gtk+"
   depends_on "harfbuzz" => :build
   depends_on "libepoxy" => :build
   depends_on "libffi" => :build
@@ -33,6 +32,8 @@ class Gtkdialog < Formula
   depends_on "pixman" => :build
   depends_on "pkg-config" => :build
   depends_on "xorgproto" => :build
+
+  depends_on "gtk+"
 
   # Update patch to compile gtkdialog on macOS
   # See: http://www.murga-linux.com/puppy/viewtopic.php?t=108945
