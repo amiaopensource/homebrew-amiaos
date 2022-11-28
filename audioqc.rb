@@ -8,8 +8,8 @@ class Audioqc < Formula
 
   on_macos do
     depends_on "bwfmetaedit"
-    depends_on "mediainfo"
     depends_on "mediaconch"
+    depends_on "mediainfo"
   end
 
   on_linux do
