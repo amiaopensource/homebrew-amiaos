@@ -9,7 +9,7 @@ class Pbprotracktor < Formula
 
   depends_on "jq"
   depends_on "mysql"
-  depends_on "postgresql"
+  depends_on "postgresql@14"
   depends_on "xmlstarlet"
 
   def install
