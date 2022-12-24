@@ -58,11 +58,11 @@ Reto Kromer (@retokromer)
 - Savannah Campbell (@savcampbell)
 - Smithsonian National Museum of African American History and Culture (@NMAAHC)
 
-Last updated on 2022-07-06.
+Last updated on 2022-12-24.
 
 ## Copyright, Licence and Disclaimer
 
-Copyright (c) 2014–2022 AMIA Open Source
+Copyright (c) 2014–2023 AMIA Open Source
 
 The formulae are released under a [MIT License](LICENSE).
 
