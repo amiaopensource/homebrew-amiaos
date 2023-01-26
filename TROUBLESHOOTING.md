@@ -2,6 +2,27 @@
 
 ## vrecord
 
+#### ffmpegdecklink error
+Sometimes Ubuntu users experience the error:
+```
+ERROR: libiec61883 not found
+```
+A resolution for this was reported in [this issue](https://github.com/amiaopensource/homebrew-amiaos/issues/335) of running:
+
+```
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv) \
+  && ln -sf /usr/include/libiec61883 "$(brew --prefix)/include/" \
+  && ln -sf /usr/include/libraw1394  "$(brew --prefix)/include/" \
+  && ln -sf /usr/include/libavc1394  "$(brew --prefix)/include/" \
+  && ln -sf /usr/lib/x86_64-linux-gnu/libiec61883* "$(brew --prefix)/lib/" \
+  && ln -sf /usr/lib/x86_64-linux-gnu/libraw1394*  "$(brew --prefix)/lib/" \
+  && ln -sf /usr/lib/x86_64-linux-gnu/libavc1394*  "$(brew --prefix)/lib/" \ 
+  && ln -sf /usr/lib/x86_64-linux-gnu/librom1394*  "$(brew --prefix)/lib/"
+  
+  brew install ffmpegdecklink --with-iec61883
+```
+
+#### Gtkdialog error
 Sometimes Ubuntu users experience the error:
 ```
 Makefile:338: recipe for target 'gtkdialog.info' failed
