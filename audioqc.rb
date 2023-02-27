@@ -1,9 +1,9 @@
 class Audioqc < Formula
   desc "Tool for aiding automated audio quality control"
   homepage "https://github.com/amiaopensource/audioqc"
-  url "https://github.com/amiaopensource/audioqc/archive/refs/tags/2022-03-29.tar.gz"
-  version "2022-03-29"
-  sha256 "9466f14489a9375a2ab09255d0a811222dd2a6327461c42421ab2f73b1e0327c"
+  url "https://github.com/amiaopensource/audioqc/archive/refs/tags/2023-02-27.tar.gz"
+  version "2023-02-27"
+  sha256 "a72f2aa0a0cf7036844c39dc805ee8459b1fd66fd639262ed48f437dff9c18b6"
   head "https://github.com/amiaopensource/audioqc.git"
 
   on_macos do
