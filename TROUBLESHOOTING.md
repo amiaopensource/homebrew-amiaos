@@ -21,8 +21,26 @@ eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv) \
   
   brew install ffmpegdecklink --with-iec61883
 ```
+#### Gtkdialog error (Mac)
+Some users of macOS post version 13 have had issues installing gtkdialog with an error similar to:
 
-#### Gtkdialog error
+```
+/bin/sh: makeinfo: command not found
+make[2]: *** [gtkdialog.info] Error 127
+make[1]: *** [all-recursive] Error 1
+make: *** [all] Error 2
+```
+where the gtkdialog build script is unable to find the makeinfo dependency.
+
+A successful work around has been found to be installing gtkdialog by running:
+
+```
+ln -sf "$(which makeinfo)" "$(brew --prefix)/Homebrew/Library/Homebrew/shims/mac/super"
+brew install gtkdialog
+```
+
+
+#### Gtkdialog error (Ubuntu)
 Sometimes Ubuntu users experience the error:
 ```
 Makefile:338: recipe for target 'gtkdialog.info' failed
