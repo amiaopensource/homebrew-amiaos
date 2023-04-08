@@ -4,14 +4,15 @@ class Vrecord < Formula
   url "https://github.com/amiaopensource/vrecord/archive/refs/tags/v2023-03-01.tar.gz"
   version "2023-03-01"
   sha256 "d7a6de526f8cf992a24e1456d3935b3a938e5f8220abc09c722a1da9608e8e5e"
+  revision 1
   head "https://github.com/amiaopensource/vrecord.git"
 
-  depends_on "amiaopensource/amiaos/deckcontrol"
   depends_on "amiaopensource/amiaos/ffmpegdecklink"
   depends_on "amiaopensource/amiaos/gtkdialog"
   depends_on "cowsay"
 
   on_macos do
+    depends_on "amiaopensource/amiaos/deckcontrol"
     depends_on "bash"
     depends_on "gnuplot" unless MacOS.version < :mojave
     depends_on "mediaarea/mediaarea/dvrescue"
