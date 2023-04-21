@@ -1,9 +1,8 @@
 class Gtkdialog < Formula
   desc "Small utility for fast and easy GUI building"
   homepage "https://code.google.com/archive/p/gtkdialog/"
-  url "https://github.com/puppylinux-woof-CE/gtkdialog/archive/0.8.4d.tar.gz"
-  sha256 "1d3619ef1aca2baa783b936e8c6bd67135621f47428049c8231db9ee366f73db"
-  revision 4
+  url "https://github.com/puppylinux-woof-CE/gtkdialog/archive/0.8.5.tar.gz"
+  sha256 "6bb3057cbd30921c3e04cc9a6071da6a8c19decbac547e38f8a104adefe2938f"
 
   depends_on "atk" => :build
   depends_on "autoconf" => :build
@@ -35,27 +34,9 @@ class Gtkdialog < Formula
 
   depends_on "gtk+"
 
-  # Update patch to compile gtkdialog on macOS
-  # See: http://www.murga-linux.com/puppy/viewtopic.php?t=108945
-  patch :DATA if OS.mac?
-
   def install
     system "./autogen.sh"
     system "make"
     bin.install "src/gtkdialog"
   end
 end
-
-__END__
-diff -urN a/src/variables.c b/src/variables.c
---- a/src/variables.c	2017-11-16 07:27:06.000000000 +0200
-+++ b/src/variables.c	2017-11-16 07:22:42.000000000 +0200
-@@ -1113,7 +1113,7 @@
- 		actual = root;
- 
- 	if (actual == NULL)
--		return;
-+		return 0;
- 
- 	if (actual->left != NULL)
- 		n = do_variables_count_widgets(actual->left, n);
