@@ -3,7 +3,7 @@ class Gtkdialog < Formula
   homepage "https://code.google.com/archive/p/gtkdialog/"
   url "https://github.com/puppylinux-woof-CE/gtkdialog/archive/0.8.4d.tar.gz"
   sha256 "1d3619ef1aca2baa783b936e8c6bd67135621f47428049c8231db9ee366f73db"
-  revision 4
+  revision 5
 
   depends_on "atk" => :build
   depends_on "autoconf" => :build
@@ -31,6 +31,7 @@ class Gtkdialog < Formula
   depends_on "pango" => :build
   depends_on "pixman" => :build
   depends_on "pkg-config" => :build
+  depends_on "texinfo" => :build # for makeinfo
   depends_on "xorgproto" => :build
 
   depends_on "gtk+"
@@ -40,6 +41,7 @@ class Gtkdialog < Formula
   patch :DATA if OS.mac?
 
   def install
+    ENV.append_to_cflags "-Wno-implicit-function-declaration" # Workaround for Xcode 14.3.
     system "./autogen.sh"
     system "make"
     bin.install "src/gtkdialog"
