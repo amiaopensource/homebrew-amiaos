@@ -2,7 +2,7 @@
 
 ## vrecord
 
-#### ffmpegdecklink error
+#### ffmpegdecklink error : libiec61883
 Sometimes Ubuntu users experience the error:
 ```
 ERROR: libiec61883 not found
@@ -21,6 +21,15 @@ eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv) \
   
   brew install ffmpegdecklink --with-iec61883
 ```
+
+#### ffmpegdecklink error : fontconfig
+
+Some Ubuntu users have reported an issue with being unable to install ffmpegdecklink with the following error:
+```
+ERROR: fontconfig not found using pkg-config
+```
+This was found to be resolved by running `brew reinstall bzip2 && brew reinstall fontconfig` and then again installing ffmpegdecklink.
+
 #### Gtkdialog error (Mac)
 Some users of macOS post version 13 have had issues installing gtkdialog with an error similar to:
 
