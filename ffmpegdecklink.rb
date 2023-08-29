@@ -1,10 +1,20 @@
 class Ffmpegdecklink < Formula
   desc "FFmpeg with --enable-decklink"
   homepage "https://ffmpeg.org/"
-  url "https://ffmpeg.org/releases/ffmpeg-6.0.tar.xz"
-  sha256 "57be87c22d9b49c112b6d24bc67d42508660e6b718b3db89c44e47e289137082"
   head "https://github.com/FFmpeg/FFmpeg.git", branch: "master"
   keg_only "anything that needs this will know where to look"
+
+  stable do
+    url "https://ffmpeg.org/releases/ffmpeg-6.0.tar.xz"
+    sha256 "57be87c22d9b49c112b6d24bc67d42508660e6b718b3db89c44e47e289137082"
+
+    # Fix for binutils, remove with `stable` block on next release
+    # https://www.linuxquestions.org/questions/slackware-14/regression-on-current-with-ffmpeg-4175727691/
+    patch do
+      url "https://github.com/FFmpeg/FFmpeg/commit/effadce6c756247ea8bae32dc13bb3e6f464f0eb.patch?full_index=1"
+      sha256 "9800c708313da78d537b61cfb750762bb8ad006ca9335b1724dbbca5669f5b24"
+    end
+  end
 
   option "with-iec61883", "Enable DV device (Linux)" if OS.linux?
   depends_on "nasm" => :build
