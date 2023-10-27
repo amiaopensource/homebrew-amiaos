@@ -45,6 +45,9 @@ class Ffmpegdecklink < Formula
   end
 
   def install
+    # Apple's new linker leads to duplicate symbol
+    ENV.append "LDFLAGS", "-Wl,-ld_classic" if DevelopmentTools.clang_build_version >= 1500
+
     args = %W[
       --prefix=#{prefix}
       --disable-shared
@@ -67,6 +70,7 @@ class Ffmpegdecklink < Formula
       --enable-libfontconfig
       --disable-libjack
       --disable-indev=jack
+      --disable-htmlpages
     ]
 
     args << "--enable-neon" if OS.mac? && Hardware::CPU.arm?
