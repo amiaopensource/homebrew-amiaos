@@ -70,6 +70,7 @@ class Ffmpegdecklink < Formula
       --enable-libfontconfig
       --disable-libjack
       --disable-indev=jack
+      --disable-htmlpages
     ]
 
     args << "--enable-neon" if OS.mac? && Hardware::CPU.arm?
