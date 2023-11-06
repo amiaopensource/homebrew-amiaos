@@ -5,7 +5,7 @@ class Ffmpegdecklink < Formula
   sha256 "619e706d662c8420859832ddc259cd4d4096a48a2ce1eefd052db9e440eef3dc"
   head "https://github.com/FFmpeg/FFmpeg.git", branch: "master"
   keg_only "anything that needs this will know where to look"
-  revision 1
+  revision 2
   version_scheme 1
 
   option "with-iec61883", "Enable DV device (Linux)" if OS.linux?
