@@ -50,6 +50,7 @@ class Ffmpegdecklink < Formula
       --enable-libx265
       --enable-libxvid
       --enable-libfontconfig
+      --disable-htmlpages
       --disable-libjack
       --disable-indev=jack
     ]
