@@ -36,7 +36,7 @@ Our code of conduct is [Contributor Covenant](CODE_OF_CONDUCT.md). All contribut
 
 ## Maintainers
 
-Reto Kromer (@retokromer)
+vacat
 
 ## Contributors
 
@@ -58,11 +58,11 @@ Reto Kromer (@retokromer)
 - Savannah Campbell (@savcampbell)
 - Smithsonian National Museum of African American History and Culture (@NMAAHC)
 
-Last updated on 2022-12-24.
+Last updated on 2023-12-31.
 
 ## Copyright, Licence and Disclaimer
 
-Copyright (c) 2014–2023 AMIA Open Source
+Copyright (c) 2014–2024 AMIA Open Source
 
 The formulae are released under a [MIT License](LICENSE).
 
