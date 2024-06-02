@@ -1,20 +1,20 @@
 class Vrecord < Formula
   desc "Capturing a video signal and turning it into a digital file"
   homepage "https://github.com/amiaopensource/vrecord"
-  url "https://github.com/amiaopensource/vrecord/archive/refs/tags/v2023-08-07.tar.gz"
-  version "2023-08-07"
-  sha256 "2572ea969a42de32499dc74c663878f73c2de34e2d3022c409008f057321d032"
+  url "https://github.com/amiaopensource/vrecord/archive/refs/tags/v2024-05-01.tar.gz"
+  version "2024-05-01"
+  sha256 "f35f04cd495aabcf23a398e3197b4146c43d365ec90169a8d00a6f221e488bc4"
   head "https://github.com/amiaopensource/vrecord.git"
 
   depends_on "amiaopensource/amiaos/ffmpegdecklink"
   depends_on "amiaopensource/amiaos/gtkdialog"
   depends_on "cowsay"
+  depends_on "mediaarea/mediaarea/dvrescue"
 
   on_macos do
     depends_on "amiaopensource/amiaos/deckcontrol"
     depends_on "bash"
     depends_on "gnuplot" unless MacOS.version < :mojave
-    depends_on "mediaarea/mediaarea/dvrescue"
     depends_on "mediaconch"
     depends_on "mkvtoolnix" unless MacOS.version < :mojave
     depends_on "mpv" unless MacOS.version < :mojave
