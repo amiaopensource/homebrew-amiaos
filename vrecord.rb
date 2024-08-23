@@ -1,9 +1,9 @@
 class Vrecord < Formula
   desc "Capturing a video signal and turning it into a digital file"
   homepage "https://github.com/amiaopensource/vrecord"
-  url "https://github.com/amiaopensource/vrecord/archive/refs/tags/v2024-07-29.tar.gz"
-  version "2024-07-29"
-  sha256 "aa2783631521a7776f210196359b419ec3e634a2f526069a100cca950c97dc4a"
+  url "https://github.com/amiaopensource/vrecord/archive/refs/tags/v2024-08-23.tar.gz"
+  version "2024-08-23"
+  sha256 "bbb8063f1e1489a48799cd6fa02c88ab713547bd0d4b3c2ed2b8cb8f0582848a"
   head "https://github.com/amiaopensource/vrecord.git", branch: "main"
 
   depends_on "amiaopensource/amiaos/ffmpegdecklink"
