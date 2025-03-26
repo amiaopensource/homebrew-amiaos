@@ -2,7 +2,6 @@ class Vrecord < Formula
   desc "Capturing a video signal and turning it into a digital file"
   homepage "https://github.com/amiaopensource/vrecord"
   url "https://github.com/amiaopensource/vrecord/archive/refs/tags/v2024-10-18.tar.gz"
-  version "2024-10-18"
   sha256 "f2c0a3bc9ad36686f07d8fba7364f296be9253aac7e6dfcad0320b85da628517"
   head "https://github.com/amiaopensource/vrecord.git", branch: "main"
 
@@ -13,12 +12,12 @@ class Vrecord < Formula
   on_macos do
     depends_on "amiaopensource/amiaos/deckcontrol"
     depends_on "bash"
-    depends_on "gnuplot" unless MacOS.version < :mojave
+    depends_on "gnuplot" if MacOS.version >= :mojave
     depends_on "mediaarea/mediaarea/dvrescue"
     depends_on "mediaconch"
-    depends_on "mkvtoolnix" unless MacOS.version < :mojave
-    depends_on "mpv" unless MacOS.version < :mojave
-    depends_on "qcli" unless MacOS.version < :mojave
+    depends_on "mkvtoolnix" if MacOS.version >= :mojave
+    depends_on "mpv" if MacOS.version >= :mojave
+    depends_on "qcli" if MacOS.version >= :mojave
     depends_on "xmlstarlet"
     if MacOS.version < :mojave
       def caveats
@@ -72,6 +71,6 @@ class Vrecord < Formula
   end
 
   test do
-    system "#{bin}/vrecord", "-h"
+    system "bin/"vrecord", "-h"
   end
 end
