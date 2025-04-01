@@ -71,6 +71,6 @@ class Vrecord < Formula
   end
 
   test do
-    system "bin/"vrecord", "-h"
+    system "bin/vrecord", "-h"
   end
 end
