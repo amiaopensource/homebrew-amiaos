@@ -4,7 +4,8 @@ class Vrecord < Formula
   url "https://github.com/amiaopensource/vrecord/archive/refs/tags/v2024-10-18.tar.gz"
   sha256 "f2c0a3bc9ad36686f07d8fba7364f296be9253aac7e6dfcad0320b85da628517"
   head "https://github.com/amiaopensource/vrecord.git", branch: "main"
-
+  revision 1
+  
   depends_on "amiaopensource/amiaos/ffmpegdecklink"
   depends_on "amiaopensource/amiaos/gtkdialog"
   depends_on "cowsay"
