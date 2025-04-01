@@ -58,11 +58,11 @@ vacat
 - Savannah Campbell (@savcampbell)
 - Smithsonian National Museum of African American History and Culture (@NMAAHC)
 
-Last updated on 2023-12-31.
+Last updated on 2025-04-01.
 
 ## Copyright, Licence and Disclaimer
 
-Copyright (c) 2014–2024 AMIA Open Source
+Copyright (c) 2014–2025 AMIA Open Source
 
 The formulae are released under a [MIT License](LICENSE).
 
