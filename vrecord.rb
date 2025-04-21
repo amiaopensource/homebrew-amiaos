@@ -4,6 +4,7 @@ class Vrecord < Formula
   url "https://github.com/amiaopensource/vrecord/archive/refs/tags/vrecord_v2025-04-21.tar.gz"
   sha256 "019d24ddd4b2d5bb0d467d27d42382fa689af7ab3f65fbfe835fa11d84aead33"
   head "https://github.com/amiaopensource/vrecord.git", branch: "main"
+  revision 1
 
   depends_on "amiaopensource/amiaos/ffmpegdecklink"
   depends_on "amiaopensource/amiaos/gtkdialog"
@@ -58,8 +59,6 @@ class Vrecord < Formula
     prefix.install "Resources/dvrecord.png"
     prefix.install "Resources/qcview.lua"
     prefix.install "Resources/vrecord_functions"
-    prefix.install "Resources/vrecord_policy_ffv1.xml"
-    prefix.install "Resources/vrecord_policy_uncompressed.xml"
     prefix.install "Resources/vrecord_logo.png"
     prefix.install "Resources/vrecord_logo_playback.png"
     prefix.install "Resources/vrecord_logo_audio.png"
