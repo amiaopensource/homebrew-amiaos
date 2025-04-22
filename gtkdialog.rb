@@ -3,9 +3,9 @@ class Gtkdialog < Formula
   homepage "https://code.google.com/archive/p/gtkdialog/"
   url "https://github.com/puppylinux-woof-CE/gtkdialog/archive/0.8.4d.tar.gz"
   sha256 "1d3619ef1aca2baa783b936e8c6bd67135621f47428049c8231db9ee366f73db"
-  revision 5
+  revision 6
 
-  depends_on "atk" => :build
+  depends_on "at-spi2-core" => :build
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "cairo" => :build
