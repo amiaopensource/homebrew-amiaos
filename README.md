@@ -4,7 +4,6 @@ Homebrew tap for AMIA Open Source formulae:
 - **astataudit** — Generate audiovisual metrics for audio via FFmpeg and BWF MetaEdit.
 - **audioqc** — An aid for performing automated QC of digitized audio collections.
 - **audiorecorder** — Tool for calibration and recording of analog audio sources.
-- **bmdtools** — Basic capture and play programs for Blackmagic Design Decklink (forked from https://github.com/lu-zero/bmdtools).
 - **Cable Bible** — A comprehensive guide to cables and connectors used in audiovisual archiving.
 - **deckcontrol** — Control an attached videodeck via Blackmagic Design Decklink SDK.
 - **decklinksdk** — An unofficial repository for openly-licensed SDK files from Blackmagic’s Desktop Video software development kit. Note that decklinksdk is used by vrecord.
