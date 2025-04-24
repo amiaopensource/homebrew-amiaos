@@ -2,8 +2,7 @@ class Mpv < Formula
   # based upon the last version of homebrew-core/Formula/mpv.rb at https://github.com/Homebrew/homebrew-core/commit/41444d526c40b93069b7f0c5414539deb0534179
   desc "Media player based on MPlayer and mplayer2"
   homepage "https://mpv.io"
-  url "https://github.com/amiaopensource/mpv/archive/2019-10-31.tar.gz"
-  version "2019-10-31"
+  url "https://github.com/amiaopensource/mpv/archive/refs/tags/2019-10-31.tar.gz"
   sha256 "3a76046fee81383d503ff1aca6668dd28d9f2c74b3aa08e7d73c403deb092676"
   head "https://github.com/mpv-player/mpv.git"
 
@@ -16,7 +15,7 @@ class Mpv < Formula
   depends_on "libarchive"
   depends_on "libass"
   depends_on "little-cms2"
-  depends_on "lua@5.1"
+  depends_on "lua@5.3"
   depends_on "mujs"
   depends_on "uchardet"
   depends_on "vapoursynth"
