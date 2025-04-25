@@ -9,8 +9,11 @@ class Qctparse < Formula
   sha256 "6ffa13bb71072038f7c708f57768a21ef8b93fdbdf8f51b6551c39bd0cb880c3"
   head "https://github.com/amiaopensource/qct-parse.git"
 
-  depends_on "python@3.11"
   depends_on "ffmpeg"
+  depends_on "python@3.11"
+
+  uses_from_macos "libxml2"
+  uses_from_macos "libxslt"
 
   resource "lxml" do
     url "https://files.pythonhosted.org/packages/e7/6b/20c3a4b24751377aaa6307eb230b66701024012c29dd374999cc92983269/lxml-5.3.0.tar.gz"
@@ -21,8 +24,8 @@ class Qctparse < Formula
   end
 
   test do
-    system "#{bin}/qct-parse", "--help"
-    system "#{bin}/overcatch", "--help"
-    system "#{bin}/makeqctoolsreport", "--help"
+    system bin/"qct-parse", "--help"
+    system bin/"overcatch", "--help"
+    system bin/"makeqctoolsreport", "--help"
   end
 end

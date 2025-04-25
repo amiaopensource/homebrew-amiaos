@@ -1,8 +1,7 @@
 class Audiorecorder < Formula
   desc "Tool for calibration and recording of analog audio sources"
   homepage "https://github.com/amiaopensource/audiorecorder"
-  url "https://github.com/amiaopensource/audiorecorder/archive/2019-05-21.tar.gz"
-  version "2019-05-21"
+  url "https://github.com/amiaopensource/audiorecorder/archive/refs/tags/2019-05-21.tar.gz"
   sha256 "c23d318e5c77fe8e6ccf637a5f8100625e2459a97b20a4f1c3cbb07b66ce7aa3"
   license "BSD-3-Clause"
   head "https://github.com/amiaopensource/audiorecorder.git"
@@ -43,6 +42,6 @@ class Audiorecorder < Formula
   end
 
   test do
-    system "#{bin}/audiorecorder", "-h"
+    system bin/"audiorecorder", "-h"
   end
 end

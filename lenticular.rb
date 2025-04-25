@@ -1,8 +1,7 @@
 class Lenticular < Formula
   desc "Digital restoration of lenticular colours"
   homepage "https://github.com/amiaopensource/lenticular"
-  url "https://github.com/amiaopensource/lenticular/archive/v2019-01-27.tar.gz"
-  version "2019-01-27"
+  url "https://github.com/amiaopensource/lenticular/archive/refs/tags/v2019-01-27.tar.gz"
   sha256 "831a397ecf8080395ac69374bc38ce2a305845cc057a5ef8c93caa3f148bff44"
   head "https://github.com/amiaopensource/lenticular.git"
 
@@ -22,8 +21,8 @@ class Lenticular < Formula
   end
 
   test do
-    system "#{bin}/lenticular"
-    system "#{bin}/framecropper" if build.with? "framecropper"
-    system "#{bin}/interpolationstudy" if build.with? "interpolationstudy"
+    system bin/"lenticular"
+    system bin/"framecropper" if build.with? "framecropper"
+    system bin/"interpolationstudy" if build.with? "interpolationstudy"
   end
 end
