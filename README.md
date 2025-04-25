@@ -35,7 +35,8 @@ Our code of conduct is [Contributor Covenant](CODE_OF_CONDUCT.md). All contribut
 
 ## Maintainers
 
-vacat
+- Andrew Weaver (@privatezero)
+- Reto Kromer (@retokromer)
 
 ## Contributors
 
@@ -57,7 +58,7 @@ vacat
 - Savannah Campbell (@savcampbell)
 - Smithsonian National Museum of African American History and Culture (@NMAAHC)
 
-Last updated on 2025-04-01.
+Last updated on 2025-04-25.
 
 ## Copyright, Licence and Disclaimer
 
