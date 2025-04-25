@@ -23,6 +23,6 @@ class Grabbags < Formula
 
   test do
     system "#{libexec}/bin/pip", "check"
-    system "#{bin}/grabbags", "--version"
+    system bin/"grabbags", "--version"
   end
 end
