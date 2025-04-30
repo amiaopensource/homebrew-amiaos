@@ -36,6 +36,7 @@ Our code of conduct is [Contributor Covenant](CODE_OF_CONDUCT.md). All contribut
 ## Maintainers
 
 - Andrew Weaver (@privatezero)
+- Dave Rice (@dericed)
 - Reto Kromer (@retokromer)
 
 ## Contributors
