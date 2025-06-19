@@ -17,14 +17,12 @@ class Ffmpegdecklink < Formula
   depends_on "lame"
   depends_on "libvorbis"
   depends_on "libvpx"
+  depends_on "openh264"
   depends_on "openjpeg"
   depends_on "opus"
   depends_on "sdl2"
   depends_on "snappy"
   depends_on "theora"
-  depends_on "x264"
-  depends_on "x265"
-  depends_on "xvid"
   depends_on "xz"
 
   def install
@@ -35,18 +33,16 @@ class Ffmpegdecklink < Formula
       --cc=#{ENV.cc}
       --host-cflags=#{ENV.cflags}
       --host-ldflags=#{ENV.ldflags}
-      --enable-gpl
+      --disable-gpl
       --enable-libfreetype
       --enable-libmp3lame
+      --enable-libopenh264
       --enable-libopenjpeg
       --enable-libopus
       --enable-libsnappy
       --enable-libtheora
       --enable-libvorbis
       --enable-libvpx
-      --enable-libx264
-      --enable-libx265
-      --enable-libxvid
       --enable-libfontconfig
       --disable-htmlpages
       --disable-libjack
@@ -58,7 +54,6 @@ class Ffmpegdecklink < Formula
     args << "--enable-libiec61883" if (build.with? "iec61883") && OS.linux?
 
     # decklink options
-    args << "--enable-nonfree"
     args << "--enable-decklink"
     args << "--extra-cflags=-I#{HOMEBREW_PREFIX}/include"
     args << "--extra-ldflags=-L#{HOMEBREW_PREFIX}/include"
