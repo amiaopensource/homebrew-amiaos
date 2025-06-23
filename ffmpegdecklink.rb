@@ -5,6 +5,7 @@ class Ffmpegdecklink < Formula
   sha256 "733984395e0dbbe5c046abda2dc49a5544e7e0e1e2366bba849222ae9e3a03b1"
   head "https://github.com/FFmpeg/FFmpeg.git", branch: "master"
   keg_only "anything that needs this will know where to look"
+  revision 1
 
   option "with-iec61883", "Enable DV device (Linux)" if OS.linux?
   depends_on "nasm" => :build
@@ -14,6 +15,7 @@ class Ffmpegdecklink < Formula
   depends_on "amiaopensource/amiaos/decklinksdk"
   depends_on "fontconfig"
   depends_on "freetype"
+  depends_on "harfbuzz"
   depends_on "lame"
   depends_on "libvorbis"
   depends_on "libvpx"
@@ -35,6 +37,7 @@ class Ffmpegdecklink < Formula
       --host-ldflags=#{ENV.ldflags}
       --disable-gpl
       --enable-libfreetype
+      --enable-libharfbuzz
       --enable-libmp3lame
       --enable-libopenh264
       --enable-libopenjpeg
