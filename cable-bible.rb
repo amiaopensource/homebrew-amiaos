@@ -16,4 +16,8 @@ class CableBible < Formula
                    "params.json",
                    "pinouts.html"
   end
+
+  test do
+    assert_path_exists bin/"cable-bible"
+  end
 end

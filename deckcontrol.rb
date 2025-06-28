@@ -11,4 +11,8 @@ class Deckcontrol < Formula
     system "make", "BMSDK=#{Formula["decklinksdk"].opt_include}"
     bin.install "deckcontrol"
   end
+
+  test do
+    assert_path_exists bin/"deckcontrol"
+  end
 end

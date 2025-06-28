@@ -25,4 +25,8 @@ class Audioqc < Formula
     bin.install "audioqc_methods.rb"
     bin.install "settings.csv"
   end
+
+  test do
+    assert_path_exists bin/"audioqc"
+  end
 end

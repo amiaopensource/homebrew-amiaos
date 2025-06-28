@@ -10,4 +10,8 @@ class Sccyou < Formula
   def install
     bin.install "sccyou"
   end
+
+  test do
+    assert_path_exists bin/"sccyou"
+  end
 end
