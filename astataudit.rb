@@ -12,4 +12,8 @@ class Astataudit < Formula
   def install
     bin.install "astataudit"
   end
+
+  test do
+    assert_path_exists bin/"astataudit"
+  end
 end
