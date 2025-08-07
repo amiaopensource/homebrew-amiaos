@@ -2,6 +2,18 @@
 
 ## vrecord
 
+#### ffmpegdecklink & ffmpeg-ma error : atomic
+Some macOS users have been unable to compile vrecord's FFmpeg dependencies  with the error:
+```
+fatal error: 'atomic' file not found
+```
+A resolution was reported [here](https://github.com/amiaopensource/vrecord/issues/852#issuecomment-2701891440) of fully reinstalling Command Line Tools with the commands:
+
+```
+sudo rm -rfv /Library/Developer/CommandLineTools
+xcode-select --install
+```
+
 #### ffmpegdecklink error : libiec61883
 Sometimes Ubuntu users experience the error:
 ```
