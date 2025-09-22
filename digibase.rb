@@ -13,4 +13,11 @@ class Digibase < Formula
     bin.install "finish_qc"
     bin.install "digibase_functions"
   end
+
+  test do
+    assert_path_exists bin/"setuptables"
+    assert_path_exists bin/"check_db"
+    assert_path_exists bin/"finish_qc"
+    assert_path_exists bin/"digibase_functions"
+  end
 end

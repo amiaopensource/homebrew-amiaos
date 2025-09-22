@@ -35,4 +35,13 @@ class Ltopers < Formula
       end
     end
   end
+
+  test do
+    assert_path_exists bin/"formatlto"
+    assert_path_exists bin/"ltopers"
+    assert_path_exists bin/"mountlto"
+    assert_path_exists bin/"readlto"
+    assert_path_exists bin/"renameschemas"
+    assert_path_exists bin/"verifylto"
+    assert_path_exists bin/"writelto"
 end

@@ -11,4 +11,10 @@ class Mkvparse < Formula
     bin.install "xml2mkv"
     bin.install "mkvparse.py"
   end
+
+  test do
+    assert_path_exists bin/"mkv2xml"
+    assert_path_exists bin/"xml2mkv"
+    assert_path_exists bin/"mkvparse.py"
+  end
 end
