@@ -17,4 +17,11 @@ class Pbprotracktor < Formula
     bin.install "rs_search"
     bin.install "rs_uploadfile"
   end
+
+  test do
+    assert_path_exists bin/"pbprotracktor"
+    assert_path_exists bin/"prot2rs"
+    assert_path_exists bin/"rs_search"
+    assert_path_exists bin/"rs_uploadfile"
+  end
 end
