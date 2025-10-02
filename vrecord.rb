@@ -3,6 +3,7 @@ class Vrecord < Formula
   homepage "https://github.com/amiaopensource/vrecord"
   url "https://github.com/amiaopensource/vrecord/archive/refs/tags/v2025-09-04.tar.gz"
   sha256 "06a375ae401dc9dfe3036226c64a6092c1ac5562dc17ac451605206a0de788c7"
+  revision 1
   head "https://github.com/amiaopensource/vrecord.git", branch: "main"
 
   depends_on "amiaopensource/amiaos/gtkdialog"
