@@ -44,4 +44,5 @@ class Ltopers < Formula
     assert_path_exists bin/"renameschemas"
     assert_path_exists bin/"verifylto"
     assert_path_exists bin/"writelto"
+  end
 end
