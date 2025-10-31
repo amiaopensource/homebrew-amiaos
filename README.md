@@ -31,7 +31,7 @@ Contributions are very welcome! Please consider the [Contributing Guidelines](CO
 
 ## Code of Conduct
 
-Our code of conduct is [Contributor Covenant](CODE_OF_CONDUCT.md). All contributors agree to abide by its terms. To report violations contact a member of the [Goverance Interest Group](https://github.com/amiaopensource/governance).
+Our code of conduct is [Contributor Covenant](CODE_OF_CONDUCT.md). All contributors agree to abide by its terms. To report violations contact a member of the [Governance Interest Group](https://github.com/amiaopensource/governance).
 
 ## Maintainers
 
@@ -61,7 +61,7 @@ Our code of conduct is [Contributor Covenant](CODE_OF_CONDUCT.md). All contribut
 
 Last updated on 2025-04-25.
 
-## Copyright, Licence and Disclaimer
+## Copyright, License and Disclaimer
 
 Copyright (c) 2014–2025 AMIA Open Source
 
