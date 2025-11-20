@@ -8,7 +8,7 @@ class Gtkdialog < Formula
     url "https://github.com/puppylinux-woof-CE/gtkdialog/archive/refs/tags/0.8.5e.tar.gz"
     sha256 "93561ed4042c113b85aa5550f51ae4e6980a5de6e083db5c358d6fc2fb2feb0a"
   end
-  revision 6
+  revision 7
 
   depends_on "at-spi2-core" => :build
   depends_on "autoconf" => :build
