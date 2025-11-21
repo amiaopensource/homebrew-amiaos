@@ -36,7 +36,7 @@ class Gtkdialog < Formula
   depends_on "gtk+"
 
   def install
-    ENV.append_to_cflags "-Wno-implicit-function-declaration" # Workaround for Xcode 14.3.
+    ENV.append_to_cflags "-Wno-implicit-function-declaration" # Workaround for Xcode >= 14.3.
     system "./autogen.sh"
     system "make"
     bin.install "src/gtkdialog"
