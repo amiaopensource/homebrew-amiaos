@@ -6,9 +6,9 @@ class Audioqc < Formula
   head "https://github.com/amiaopensource/audioqc.git"
 
   on_macos do
+    depends_on "ffmpeg"
     depends_on "mediaconch"
     depends_on "mediainfo"
-    depends_on "ffmpeg"
   end
 
   on_linux do
