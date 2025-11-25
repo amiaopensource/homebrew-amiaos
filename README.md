@@ -31,7 +31,7 @@ Contributions are very welcome! Please consider the [Contributing Guidelines](CO
 
 ## Code of Conduct
 
-Our code of conduct is [Contributor Covenant](CODE_OF_CONDUCT.md). All contributors agree to abide by its terms. To report violations contact a member of the [Goverance Interest Group](https://github.com/amiaopensource/governance).
+Our code of conduct is [Contributor Covenant](CODE_OF_CONDUCT.md). All contributors agree to abide by its terms. To report violations contact a member of the [Governance Interest Group](https://github.com/amiaopensource/governance).
 
 ## Maintainers
 
@@ -61,7 +61,7 @@ Our code of conduct is [Contributor Covenant](CODE_OF_CONDUCT.md). All contribut
 
 Last updated on 2025-04-25.
 
-## Copyright, Licence and Disclaimer
+## Copyright, License and Disclaimer
 
 Copyright (c) 2014–2025 AMIA Open Source
 
@@ -73,7 +73,7 @@ The formulae are provided "as is" without warranty or support of any kind.
 
 ## Abandoned project
 
-These projects are no longer developed nor maintaied. Yet please feel free to reactivate them, if you are interested in!
+These projects are no longer developed nor maintained. Yet please feel free to reactivate them, if you are interested in!
 
 - **digibase** — Uses MySQL to create a database which tracks tapes through a digitization workflow, designed to work with vrecord and [mediamicroservices](https://github.com/mediamicroservices).
 - **lenticular** — Digital restoration of lenticular colours from greyscale digitisations.
