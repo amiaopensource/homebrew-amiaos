@@ -52,6 +52,7 @@ class Vrecord < Formula
   end
 
   def install
+    bin.install "cchex_to_display"
     bin.install "vrecord"
     bin.install "vtest"
     prefix.install "Resources/audio_mode.gif"
