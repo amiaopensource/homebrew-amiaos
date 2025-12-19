@@ -1,9 +1,8 @@
 class Vrecord < Formula
   desc "Capturing a video signal and turning it into a digital file"
   homepage "https://github.com/amiaopensource/vrecord"
-  url "https://github.com/amiaopensource/vrecord/archive/refs/tags/v2025-09-04.tar.gz"
-  sha256 "06a375ae401dc9dfe3036226c64a6092c1ac5562dc17ac451605206a0de788c7"
-  revision 1
+  url "https://github.com/amiaopensource/vrecord/archive/refs/tags/v2025-12-18.tar.gz"
+  sha256 "bc127ca8b4617efb81d4de7ad8cb1b43e37a30c3e61b96de20dfc5740a24d7f2"
   head "https://github.com/amiaopensource/vrecord.git", branch: "main"
 
   depends_on "amiaopensource/amiaos/gtkdialog"
@@ -53,6 +52,7 @@ class Vrecord < Formula
   end
 
   def install
+    bin.install "cchex_to_display"
     bin.install "vrecord"
     bin.install "vtest"
     prefix.install "Resources/audio_mode.gif"
