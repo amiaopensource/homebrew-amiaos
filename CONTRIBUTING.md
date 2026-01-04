@@ -2,7 +2,7 @@
 
 ## Cross-Platform Software
 
-We encourage the writing of portable code. Often only little additional work is needed to allow the installation using Homebrew not only on **macOS** but also on a variety of **Linux** distributions. This has a wonderful side effect: people using the **Windows** Terminal or Subsystem for Linux (WSL) can easily install, use and update our software as well.
+We encourage the writing of portable code. Often only little additional work is needed to allow the installation using Homebrew not only on **macOS** but also on a variety of **Linux** distributions. This has a wonderful side effect: people using the **Windows** Subsystem for Linux ([WSL](https://github.com/microsoft/WSL)) can easily install, use and update our software as well.
 
 ## Versioning
 
