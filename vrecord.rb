@@ -4,6 +4,7 @@ class Vrecord < Formula
   url "https://github.com/amiaopensource/vrecord/archive/refs/tags/vrecord_v2026-03-03.tar.gz"
   sha256 "fc615a551ffdd8cba78ab0ea1e3913bc37532e8260604a3ce5c28098ac174c92"
   head "https://github.com/amiaopensource/vrecord.git", branch: "main"
+  revision 1
 
   depends_on "amiaopensource/amiaos/gtkdialog"
   depends_on "cowsay"
@@ -16,6 +17,7 @@ class Vrecord < Formula
     depends_on "gnuplot" if MacOS.version >= :mojave
     depends_on "mediaarea/mediaarea/dvrescue"
     depends_on "mediaconch"
+    depends_on "mediainfo"
     depends_on "mkvtoolnix" if MacOS.version >= :mojave
     depends_on "mpv" if MacOS.version >= :mojave
     depends_on "qcli" if MacOS.version >= :mojave
