@@ -1,8 +1,8 @@
 class Ffmprovisr < Formula
   desc "Repository of useful FFmpeg command-lines for archivists"
   homepage "https://github.com/amiaopensource/ffmprovisr"
-  url "https://github.com/amiaopensource/ffmprovisr/archive/refs/tags/v2025-09-30.tar.gz"
-  sha256 "2d6d477d554c41f75a494a328a6386944e4074946059361f3718d024d10ff214"
+  url "https://github.com/amiaopensource/ffmprovisr/archive/refs/tags/v2026-03-09.tar.gz"
+  sha256 "8c5634755b710aca93ea6aa6911ab340cb2cb187e0db5348a3353f626cf4e0d3"
 
   def install
     bin.install "scripts/ffmprovisr"
