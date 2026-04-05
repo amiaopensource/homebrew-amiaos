@@ -3,6 +3,7 @@ class Gtkdialog < Formula
   homepage "https://code.google.com/archive/p/gtkdialog/"
   url "https://github.com/puppylinux-woof-CE/gtkdialog/archive/refs/tags/0.8.5e.tar.gz"
   sha256 "93561ed4042c113b85aa5550f51ae4e6980a5de6e083db5c358d6fc2fb2feb0a"
+  revision 1
 
   depends_on "at-spi2-core" => :build
   depends_on "autoconf" => :build
@@ -34,9 +35,9 @@ class Gtkdialog < Formula
   depends_on "xorgproto" => :build
 
   depends_on "gtk+"
+  patch :DATA
 
   def install
-    ENV.append_to_cflags "-Wno-implicit-function-declaration" # Workaround for Xcode >= 14.3.
     system "./autogen.sh"
     system "make"
     bin.install "src/gtkdialog"
@@ -46,3 +47,9 @@ class Gtkdialog < Formula
     assert_path_exists "src/gtkdialog"
   end
 end
+
+__END__
+--- a/src/gtkdialog.c
++++ b/src/gtkdialog.c
+@@ -0,0 +1 @@
++int gtkdialog_parse(void);
