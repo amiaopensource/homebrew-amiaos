@@ -7,7 +7,6 @@ Homebrew tap for AMIA Open Source formulae:
 - **Cable Bible** — A comprehensive guide to cables and connectors used in audiovisual archiving.
 - **deckcontrol** — Control an attached videodeck via Blackmagic Design Decklink SDK.
 - **decklinksdk** — An unofficial repository for openly-licensed SDK files from Blackmagic’s Desktop Video software development kit. Note that decklinksdk is used by vrecord.
-- **ffmprovisr** — Repository of useful FFmpeg command lines for archivists.
 - **grabbags** — Enhanced implementation of the Library of Congress’s BagIt Library.
 - **gtkdialog** — A small utility for fast and easy GUI building. Note that gtkdialog is used by vrecord.
 - **LTOpers** — Scripts for doing stuff with LTFS.
@@ -58,7 +57,7 @@ Our code of conduct is [Contributor Covenant](CODE_OF_CONDUCT.md). All contribut
 - Savannah Campbell (@savcampbell)
 - Smithsonian National Museum of African American History and Culture (@NMAAHC)
 
-Last updated on 2026-02-24.
+Last updated on 2026-04-08.
 
 ## Copyright, License and Disclaimer
 
@@ -70,7 +69,7 @@ The formulae are provided "as is" without warranty or support of any kind.
 
 ---
 
-## Abandoned project
+## Abandoned formulae
 
 These projects are no longer developed nor maintained. Yet please feel free to reactivate them, if you are interested in!
 
@@ -78,3 +77,7 @@ These projects are no longer developed nor maintained. Yet please feel free to r
 - **ffmpegdecklink** — A static build of FFmpeg with Decklink. Note that ffmpegdecklink is used by vrecord [it was until 2025].
 - **lenticular** — Digital restoration of lenticular colours from greyscale digitisations.
 - **mpv** — A cross platform media player (forked from https://github.com/mpv-player/mpv)
+
+## Removed formula
+
+- **ffmprovisr** — Repository of useful FFmpeg command lines for archivists. [This resource is now “only” available online and no longer offline.]
