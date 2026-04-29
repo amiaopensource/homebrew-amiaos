@@ -3,6 +3,7 @@
 
 class Qctparse < Formula
   include Language::Python::Virtualenv
+
   desc "Scripts for automating analysis of QCTools reports"
   homepage "https://github.com/amiaopensource/qct-parse"
   url "https://github.com/amiaopensource/qct-parse/archive/refs/tags/v0.2.1.tar.gz"
