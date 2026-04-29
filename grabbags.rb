@@ -4,6 +4,7 @@
 # Homebrew release formula for grabbags
 class Grabbags < Formula
   include Language::Python::Virtualenv
+
   desc "Enhanced implementation of the Library of Congress's BagIt Library"
   homepage "https://github.com/amiaopensource/grabbags"
   url "https://github.com/amiaopensource/grabbags/archive/refs/tags/0.0.2.tar.gz"
