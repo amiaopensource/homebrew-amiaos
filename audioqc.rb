@@ -4,21 +4,11 @@ class Audioqc < Formula
   url "https://github.com/amiaopensource/audioqc/archive/refs/tags/2025-05-27.tar.gz"
   sha256 "6fab74b658e316d0a8b178647383ca41eabb273967de2b227232d1d303466ad9"
   head "https://github.com/amiaopensource/audioqc.git"
+  revision 1
 
-  on_macos do
-    depends_on "ffmpeg"
-    depends_on "mediaconch"
-    depends_on "mediainfo"
-  end
-
-  on_linux do
-    def caveats
-      <<~EOS
-        ** IMPORTANT FOR LINUX INSTALL **
-        Additional dependencies FFmpeg, FFprobe, MediaInfo and MediaConch must be installed prior to use.
-      EOS
-    end
-  end
+  depends_on "ffmpeg"
+  depends_on "mediaconch"
+  depends_on "mediainfo"
 
   def install
     bin.install "audioqc"
