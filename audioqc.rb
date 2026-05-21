@@ -1,8 +1,8 @@
 class Audioqc < Formula
   desc "Tool for aiding automated audio quality control"
   homepage "https://github.com/amiaopensource/audioqc"
-  url "https://github.com/amiaopensource/audioqc/archive/refs/tags/2026-05-20.tar.gz"
-  sha256 "371c8531b41b2e9ef774e540fddc598e0c7dc45c8f915fd4dfe87395d106f5ce"
+  url "https://github.com/amiaopensource/audioqc/archive/refs/tags/2026-05-22.tar.gz"
+  sha256 "3e08e9f06e8d4dbce0b2bd631b0c4a4f45734945a361559cdb27a03964f2e1f7"
   head "https://github.com/amiaopensource/audioqc.git"
 
   depends_on "ffmpeg"
@@ -11,8 +11,9 @@ class Audioqc < Formula
 
   def install
     bin.install "audioqc"
-    bin.install "audioqc_methods.rb"
-    bin.install "settings.csv"
+    etc.install "audioqc_methods.rb"
+    etc.install "settings.csv"
+    etc.install "media_conch_policy.xml"
   end
 
   test do
