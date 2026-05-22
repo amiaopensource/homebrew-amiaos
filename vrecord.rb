@@ -10,14 +10,14 @@ class Vrecord < Formula
   depends_on "cowsay"
   depends_on "mediaarea/mediaarea/ffmpeg-ma"
   depends_on "mediaarea/mediaarea/timecodexml"
+  depends_on "mediaconch"
+  depends_on "mediainfo"
 
   on_macos do
     depends_on "amiaopensource/amiaos/deckcontrol"
     depends_on "bash"
     depends_on "gnuplot" if MacOS.version >= :mojave
     depends_on "mediaarea/mediaarea/dvrescue"
-    depends_on "mediaconch"
-    depends_on "mediainfo"
     depends_on "mkvtoolnix" if MacOS.version >= :mojave
     depends_on "mpv" if MacOS.version >= :mojave
     depends_on "qcli" if MacOS.version >= :mojave
