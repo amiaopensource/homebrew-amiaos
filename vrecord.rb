@@ -41,12 +41,12 @@ class Vrecord < Formula
   end
 
   on_linux do
+    depends_on "qcli"
     def caveats
       <<~EOS
         ** IMPORTANT FOR LINUX INSTALL **
-        Additional install steps are necessary for a fully functioning Vrecord
-        install on Linux. This includes using the standard package manager to
-        install gnuplot, xmlstarlet, and mkvtoolnix. For more information please see:
+        Additional install steps may be necessary for a fully functioning Vrecord
+        install on Linux, particularly for some optional dependencies. For more information please see:
         https://github.com/amiaopensource/vrecord/blob/master/Resources/Documentation/linux_installation.md
       EOS
     end
