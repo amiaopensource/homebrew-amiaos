@@ -17,7 +17,7 @@ Homebrew tap for AMIA Open Source formulae:
 
 To tap, run `brew tap amiaopensource/amiaos` in your terminal.
 
-All the formulae work on macOS and most of them also on Linux, including on Windows Terminal and Windows Subsystem for Linux (WSL).
+All the formulae work on macOS and most of them also on Linux, including on Windows Subsystem for Linux (WSL).
 
 ## Troubleshooting
 
@@ -65,7 +65,7 @@ Copyright (c) 2014–2026 AMIA Open Source
 
 The formulae are released under a [MIT License](LICENSE).
 
-The formulae are provided "as is" without warranty or support of any kind.
+The formulae are provided “as is” without warranty or support of any kind.
 
 ---
 
@@ -74,10 +74,10 @@ The formulae are provided "as is" without warranty or support of any kind.
 These projects are no longer developed nor maintained. Yet please feel free to reactivate them, if you are interested in!
 
 - **digibase** — Uses MySQL to create a database which tracks tapes through a digitization workflow, designed to work with vrecord and [mediamicroservices](https://github.com/mediamicroservices).
-- **ffmpegdecklink** — A static build of FFmpeg with Decklink. Note that ffmpegdecklink is used by vrecord [it was until 2025].
+- **ffmpegdecklink** — A static build of FFmpeg with Decklink. It was used by vrecord until 2025.
 - **lenticular** — Digital restoration of lenticular colours from greyscale digitisations.
 - **mpv** — A cross platform media player (forked from https://github.com/mpv-player/mpv)
 
 ## Removed formula
 
-- **ffmprovisr** — Repository of useful FFmpeg command lines for archivists. [This resource is now “only” available online and no longer offline.]
+- **ffmprovisr** — Repository of useful FFmpeg command lines for archivists. This resource is now “only” available online and no longer offline.
