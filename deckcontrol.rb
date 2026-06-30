@@ -8,7 +8,7 @@ class Deckcontrol < Formula
   depends_on "amiaopensource/amiaos/decklinksdk" => :build
 
   def install
-    system "make", "BMSDK=#{Formula["decklinksdk"].opt_include}"
+    system "make", "BMSDK=#{formula_opt_include("decklinksdk")}"
     bin.install "deckcontrol"
   end
 
