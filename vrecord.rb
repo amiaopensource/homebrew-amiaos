@@ -1,8 +1,8 @@
 class Vrecord < Formula
   desc "Capturing a video signal and turning it into a digital file"
   homepage "https://github.com/amiaopensource/vrecord"
-  url "https://github.com/amiaopensource/vrecord/archive/refs/tags/vrecord_v2026-07-07.tar.gz"
-  sha256 "d167d47cd59ea598b6f5288172e67605089bd0d04f7b4f91e46b3384254b4a31"
+  url "https://github.com/amiaopensource/vrecord/archive/refs/tags/vrecord_v2026-08-27.tar.gz"
+  sha256 "d1b792e1de18e2dafa8c5c9aabaedf997ff3af388859bf3d471c5a0d1ca1a4b5"
   head "https://github.com/amiaopensource/vrecord.git", branch: "main"
 
   depends_on "amiaopensource/amiaos/gtkdialog"
@@ -15,32 +15,14 @@ class Vrecord < Formula
   on_macos do
     depends_on "amiaopensource/amiaos/deckcontrol"
     depends_on "bash"
-    depends_on "gnuplot" if MacOS.version >= :mojave
+    depends_on "gnuplot"
     depends_on "mediaarea/mediaarea/dvrescue"
-    depends_on "mkvtoolnix" if MacOS.version >= :mojave
-    depends_on "mpv" if MacOS.version >= :mojave
-    depends_on "qcli" if MacOS.version >= :mojave
+    depends_on "mkvtoolnix"
+    depends_on "mpv"
     depends_on "xmlstarlet"
-    if MacOS.version < :mojave
-      def caveats
-        <<~EOS
-          ** IMPORTANT FOR macOS INSTALL **
-          Additional install steps are necessary for a fully functioning Vrecord
-          install on macOS. Vrecord uses gnuplot, mkvtoolnix, mpv, and qcli for
-          some optional (though sometimes recommeded) features steps such as
-          embedding logs into Matroska files and generating QCTools reports.
-          These programs are automatically installed via homebrew if the Mac OS
-          is Mojave or greater, else we recommend finding supported installers
-          (for example mkvtoolnix via
-          https://mkvtoolnix.download/macos/MKVToolNix-46.0.0.dmg) or consider
-          updating your version of macOS.
-        EOS
-      end
-    end
   end
 
   on_linux do
-    depends_on "qcli"
     def caveats
       <<~EOS
         ** IMPORTANT FOR LINUX INSTALL **
