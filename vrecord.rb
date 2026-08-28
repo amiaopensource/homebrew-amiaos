@@ -22,17 +22,6 @@ class Vrecord < Formula
     depends_on "xmlstarlet"
   end
 
-  def caveats
-    if OS.linux?
-      <<~EOS
-        ** IMPORTANT FOR LINUX INSTALL **
-        Additional install steps may be necessary for a fully functioning Vrecord
-        install on Linux, particularly for some optional dependencies. For more information please see:
-        https://github.com/amiaopensource/vrecord/blob/master/Resources/Documentation/linux_installation.md
-      EOS
-    end
-  end
-
   def install
     bin.install "cchex_to_display"
     bin.install "vrecord"
@@ -49,6 +38,17 @@ class Vrecord < Formula
     prefix.install "Resources/vrecord_logo_documentation.png"
     man1.install "vrecord.1"
     man1.install "vtest.1"
+  end
+
+  def caveats
+    if OS.linux?
+      <<~EOS
+        ** IMPORTANT FOR LINUX INSTALL **
+        Additional install steps may be necessary for a fully functioning Vrecord
+        install on Linux, particularly for some optional dependencies. For more information please see:
+        https://github.com/amiaopensource/vrecord/blob/master/Resources/Documentation/linux_installation.md
+      EOS
+    end
   end
 
   test do
