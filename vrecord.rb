@@ -23,7 +23,7 @@ class Vrecord < Formula
   end
 
   def caveats
-    on_linux do
+    if OS.linux?
       <<~EOS
         ** IMPORTANT FOR LINUX INSTALL **
         Additional install steps may be necessary for a fully functioning Vrecord
