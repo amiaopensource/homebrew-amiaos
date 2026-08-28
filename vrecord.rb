@@ -22,8 +22,8 @@ class Vrecord < Formula
     depends_on "xmlstarlet"
   end
 
-  on_linux do
-    def caveats
+  def caveats
+    if OS.linux?
       <<~EOS
         ** IMPORTANT FOR LINUX INSTALL **
         Additional install steps may be necessary for a fully functioning Vrecord
