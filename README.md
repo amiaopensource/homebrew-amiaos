@@ -15,7 +15,11 @@ Homebrew tap for AMIA Open Source formulae:
 - **sccyou** — Create scc or srt outputs from video files which contain EIA-608 data.
 - **vrecord** — Open-source software for capturing a video signal and turning it into a digital file.
 
-To tap, run `brew tap amiaopensource/amiaos` in your terminal.
+Before installing the first app, run the following two commands in your terminal:
+```
+brew tap amiaopensource/amiaos
+brew trust amiaopensource/amiaos
+```
 
 All the formulae work on macOS and most of them also on Linux, including on Windows Subsystem for Linux (WSL).
 
